@@ -39,7 +39,7 @@ dag = DAG("ricochet_distribute",
           schedule_interval="0 0 * * *")
 
 web3 = Web3Hook(web3_conn_id='infura').http_client
-current_nonce = web3.eth.getTransactionCount(DISTRIBUTOR_WALLET_ADDRESS)
+current_nonce = web3.eth.getTransactionCount(HARVESTER_WALLET_ADDRESS)
 
 done = BashOperator(
     task_id='done',
