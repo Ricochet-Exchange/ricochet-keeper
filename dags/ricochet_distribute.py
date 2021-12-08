@@ -17,7 +17,7 @@ from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
 
-DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-address", "0xe07c9696e00f23Fc7bAE76d037A115bfF33E28be")
+DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
 
 default_args = {
