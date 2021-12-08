@@ -38,7 +38,7 @@ dag = DAG("ricochet_tellor_reporter",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="55 * * * *")
+          schedule_interval="*/5 * * * *")
 
 
 done = BashOperator(
@@ -67,7 +67,7 @@ for asset_id, request_id in ASSETS.items():
         price="{{task_instance.xcom_pull(task_ids='price_check_"+asset_id+"', key='return_value')}}",
         request_id=request_id,
         nonce=current_nonce + nonce_offset,
-        gas_multiplier=2,
+        gas_multiplier=1.1,
         gas=250000,
         dag=dag,
     )
