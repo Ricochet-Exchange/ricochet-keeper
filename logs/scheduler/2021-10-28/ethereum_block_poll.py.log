@@ -1,0 +1,428 @@
+[2021-10-28 12:28:15,251] {scheduler_job.py:182} INFO - Started process (PID=445) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:28:15,288] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:28:15,297] {logging_mixin.py:104} INFO - [2021-10-28 12:28:15,297] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:28:28,247] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:28:28,500] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_from_block_height 2021-09-05 13:45:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:28,555] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_to_block_height 2021-09-05 13:45:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:28,617] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_to_block_height 2021-09-05 17:15:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:28,674] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_from_block_height 2021-09-05 15:00:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:28,741] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_from_block_height 2021-09-05 19:00:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:28,893] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_from_block_height 2021-09-05 19:15:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:29,023] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_to_block_height 2021-09-05 19:15:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:29,139] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_from_block_height 2021-09-14 13:45:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:29,250] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_to_block_height 2021-09-14 13:45:00+00:00 [failed]> in state failed
+[2021-10-28 12:28:29,493] {logging_mixin.py:104} INFO - [2021-10-28 12:28:29,456] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:28:29,765] {logging_mixin.py:104} INFO - [2021-10-28 12:28:29,764] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:15:00+00:00
+[2021-10-28 12:28:29,867] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 14.635 seconds
+[2021-10-28 12:29:01,940] {scheduler_job.py:182} INFO - Started process (PID=507) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:29:01,953] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:29:01,964] {logging_mixin.py:104} INFO - [2021-10-28 12:29:01,958] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:29:28,931] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:29:29,612] {logging_mixin.py:104} INFO - [2021-10-28 12:29:29,371] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:29:30,100] {logging_mixin.py:104} INFO - [2021-10-28 12:29:30,094] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:15:00+00:00
+[2021-10-28 12:29:30,213] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 28.282 seconds
+[2021-10-28 12:29:32,737] {scheduler_job.py:182} INFO - Started process (PID=533) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:29:32,776] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:29:32,801] {logging_mixin.py:104} INFO - [2021-10-28 12:29:32,800] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:29:56,299] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:29:56,919] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_from_block_height 2021-09-14 14:00:00+00:00 [failed]> in state failed
+[2021-10-28 12:29:57,125] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_to_block_height 2021-09-14 14:00:00+00:00 [failed]> in state failed
+[2021-10-28 12:29:57,283] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_from_block_height 2021-10-28 12:00:00+00:00 [failed]> in state failed
+[2021-10-28 12:29:57,417] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_to_block_height 2021-10-28 12:00:00+00:00 [failed]> in state failed
+[2021-10-28 12:29:57,827] {logging_mixin.py:104} INFO - [2021-10-28 12:29:57,794] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:29:58,100] {logging_mixin.py:104} INFO - [2021-10-28 12:29:58,093] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:15:00+00:00
+[2021-10-28 12:29:58,203] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 25.534 seconds
+[2021-10-28 12:30:47,073] {scheduler_job.py:182} INFO - Started process (PID=627) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:30:47,086] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:30:47,106] {logging_mixin.py:104} INFO - [2021-10-28 12:30:47,105] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:31:11,921] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:31:12,085] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_from_block_height 2021-10-28 12:15:00+00:00 [failed]> in state failed
+[2021-10-28 12:31:12,150] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ethereum_block_poll.get_to_block_height 2021-10-28 12:15:00+00:00 [failed]> in state failed
+[2021-10-28 12:31:12,278] {logging_mixin.py:104} INFO - [2021-10-28 12:31:12,264] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:31:12,466] {logging_mixin.py:104} INFO - [2021-10-28 12:31:12,456] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:31:12,559] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 25.559 seconds
+[2021-10-28 12:32:02,007] {scheduler_job.py:182} INFO - Started process (PID=719) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:32:02,033] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:32:02,039] {logging_mixin.py:104} INFO - [2021-10-28 12:32:02,038] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:32:14,416] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:32:14,661] {logging_mixin.py:104} INFO - [2021-10-28 12:32:14,640] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:32:14,857] {logging_mixin.py:104} INFO - [2021-10-28 12:32:14,857] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:32:14,910] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 12.953 seconds
+[2021-10-28 12:32:45,454] {scheduler_job.py:182} INFO - Started process (PID=776) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:32:45,462] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:32:45,467] {logging_mixin.py:104} INFO - [2021-10-28 12:32:45,467] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:32:48,147] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:32:48,205] {logging_mixin.py:104} INFO - [2021-10-28 12:32:48,197] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:32:48,291] {logging_mixin.py:104} INFO - [2021-10-28 12:32:48,291] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:32:48,309] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.863 seconds
+[2021-10-28 12:33:18,920] {scheduler_job.py:182} INFO - Started process (PID=830) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:33:18,930] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:33:18,939] {logging_mixin.py:104} INFO - [2021-10-28 12:33:18,939] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:33:23,714] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:33:23,853] {logging_mixin.py:104} INFO - [2021-10-28 12:33:23,838] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:33:23,955] {logging_mixin.py:104} INFO - [2021-10-28 12:33:23,955] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:33:23,994] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 5.088 seconds
+[2021-10-28 12:33:54,202] {scheduler_job.py:182} INFO - Started process (PID=880) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:33:54,207] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:33:54,211] {logging_mixin.py:104} INFO - [2021-10-28 12:33:54,211] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:33:57,141] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:33:57,193] {logging_mixin.py:104} INFO - [2021-10-28 12:33:57,185] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:33:57,263] {logging_mixin.py:104} INFO - [2021-10-28 12:33:57,262] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:33:57,318] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.129 seconds
+[2021-10-28 12:34:27,603] {scheduler_job.py:182} INFO - Started process (PID=919) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:34:27,608] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:34:27,610] {logging_mixin.py:104} INFO - [2021-10-28 12:34:27,610] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:34:30,074] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:34:30,118] {logging_mixin.py:104} INFO - [2021-10-28 12:34:30,110] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:34:30,182] {logging_mixin.py:104} INFO - [2021-10-28 12:34:30,182] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:34:30,206] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.609 seconds
+[2021-10-28 12:35:00,600] {scheduler_job.py:182} INFO - Started process (PID=974) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:35:00,611] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:35:00,615] {logging_mixin.py:104} INFO - [2021-10-28 12:35:00,615] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:35:03,031] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:35:03,078] {logging_mixin.py:104} INFO - [2021-10-28 12:35:03,070] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:35:03,146] {logging_mixin.py:104} INFO - [2021-10-28 12:35:03,146] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:35:03,172] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.592 seconds
+[2021-10-28 12:35:33,548] {scheduler_job.py:182} INFO - Started process (PID=1030) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:35:33,552] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:35:33,555] {logging_mixin.py:104} INFO - [2021-10-28 12:35:33,554] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:35:35,962] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:35:36,007] {logging_mixin.py:104} INFO - [2021-10-28 12:35:36,000] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:35:36,067] {logging_mixin.py:104} INFO - [2021-10-28 12:35:36,067] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:35:36,117] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.576 seconds
+[2021-10-28 12:36:06,672] {scheduler_job.py:182} INFO - Started process (PID=1084) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:36:06,678] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:36:06,682] {logging_mixin.py:104} INFO - [2021-10-28 12:36:06,681] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:36:08,725] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:36:08,764] {logging_mixin.py:104} INFO - [2021-10-28 12:36:08,757] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:36:08,823] {logging_mixin.py:104} INFO - [2021-10-28 12:36:08,822] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:36:08,838] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.177 seconds
+[2021-10-28 12:36:39,056] {scheduler_job.py:182} INFO - Started process (PID=1141) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:36:39,059] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:36:39,061] {logging_mixin.py:104} INFO - [2021-10-28 12:36:39,061] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:36:41,235] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:36:41,277] {logging_mixin.py:104} INFO - [2021-10-28 12:36:41,270] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:36:41,333] {logging_mixin.py:104} INFO - [2021-10-28 12:36:41,333] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:36:41,348] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.297 seconds
+[2021-10-28 12:37:11,587] {scheduler_job.py:182} INFO - Started process (PID=1215) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:37:11,596] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:37:11,600] {logging_mixin.py:104} INFO - [2021-10-28 12:37:11,599] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:37:14,162] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:37:14,208] {logging_mixin.py:104} INFO - [2021-10-28 12:37:14,200] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:37:14,265] {logging_mixin.py:104} INFO - [2021-10-28 12:37:14,264] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:37:14,280] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.710 seconds
+[2021-10-28 12:37:44,662] {scheduler_job.py:182} INFO - Started process (PID=1273) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:37:44,667] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:37:44,670] {logging_mixin.py:104} INFO - [2021-10-28 12:37:44,670] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:37:47,636] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:37:47,688] {logging_mixin.py:104} INFO - [2021-10-28 12:37:47,678] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:37:47,757] {logging_mixin.py:104} INFO - [2021-10-28 12:37:47,756] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:37:47,777] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.123 seconds
+[2021-10-28 12:38:18,110] {scheduler_job.py:182} INFO - Started process (PID=1330) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:38:18,114] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:38:18,116] {logging_mixin.py:104} INFO - [2021-10-28 12:38:18,116] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:38:20,768] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:38:20,812] {logging_mixin.py:104} INFO - [2021-10-28 12:38:20,804] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:38:20,879] {logging_mixin.py:104} INFO - [2021-10-28 12:38:20,878] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:38:20,903] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.801 seconds
+[2021-10-28 12:38:51,202] {scheduler_job.py:182} INFO - Started process (PID=1383) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:38:51,207] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:38:51,210] {logging_mixin.py:104} INFO - [2021-10-28 12:38:51,209] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:38:54,043] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:38:54,085] {logging_mixin.py:104} INFO - [2021-10-28 12:38:54,077] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:38:54,150] {logging_mixin.py:104} INFO - [2021-10-28 12:38:54,150] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:38:54,166] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.970 seconds
+[2021-10-28 12:39:24,495] {scheduler_job.py:182} INFO - Started process (PID=1437) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:39:24,499] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:39:24,501] {logging_mixin.py:104} INFO - [2021-10-28 12:39:24,501] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:39:26,747] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:39:26,791] {logging_mixin.py:104} INFO - [2021-10-28 12:39:26,783] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:39:26,862] {logging_mixin.py:104} INFO - [2021-10-28 12:39:26,861] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:39:26,882] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.394 seconds
+[2021-10-28 12:39:56,979] {scheduler_job.py:182} INFO - Started process (PID=1492) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:39:56,983] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:39:56,987] {logging_mixin.py:104} INFO - [2021-10-28 12:39:56,987] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:39:59,763] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:39:59,808] {logging_mixin.py:104} INFO - [2021-10-28 12:39:59,799] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:39:59,873] {logging_mixin.py:104} INFO - [2021-10-28 12:39:59,872] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:39:59,890] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.924 seconds
+[2021-10-28 12:40:30,004] {scheduler_job.py:182} INFO - Started process (PID=1548) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:40:30,010] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:40:30,013] {logging_mixin.py:104} INFO - [2021-10-28 12:40:30,012] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:40:32,536] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:40:32,586] {logging_mixin.py:104} INFO - [2021-10-28 12:40:32,578] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:40:32,652] {logging_mixin.py:104} INFO - [2021-10-28 12:40:32,651] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:40:32,669] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.673 seconds
+[2021-10-28 12:41:03,230] {scheduler_job.py:182} INFO - Started process (PID=1600) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:41:03,233] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:41:03,235] {logging_mixin.py:104} INFO - [2021-10-28 12:41:03,235] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:41:05,501] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:41:05,545] {logging_mixin.py:104} INFO - [2021-10-28 12:41:05,537] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:41:05,602] {logging_mixin.py:104} INFO - [2021-10-28 12:41:05,601] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:41:05,617] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.392 seconds
+[2021-10-28 12:41:36,506] {scheduler_job.py:182} INFO - Started process (PID=1656) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:41:36,512] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:41:36,516] {logging_mixin.py:104} INFO - [2021-10-28 12:41:36,515] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:41:38,708] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:41:38,748] {logging_mixin.py:104} INFO - [2021-10-28 12:41:38,741] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:41:38,806] {logging_mixin.py:104} INFO - [2021-10-28 12:41:38,805] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:41:38,824] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.330 seconds
+[2021-10-28 12:42:08,985] {scheduler_job.py:182} INFO - Started process (PID=1710) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:42:08,988] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:42:08,991] {logging_mixin.py:104} INFO - [2021-10-28 12:42:08,990] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:42:11,583] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:42:11,632] {logging_mixin.py:104} INFO - [2021-10-28 12:42:11,624] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:42:11,693] {logging_mixin.py:104} INFO - [2021-10-28 12:42:11,693] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:42:11,713] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.734 seconds
+[2021-10-28 12:42:42,236] {scheduler_job.py:182} INFO - Started process (PID=1765) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:42:42,240] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:42:42,243] {logging_mixin.py:104} INFO - [2021-10-28 12:42:42,242] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:42:44,703] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:42:44,747] {logging_mixin.py:104} INFO - [2021-10-28 12:42:44,739] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:42:44,807] {logging_mixin.py:104} INFO - [2021-10-28 12:42:44,807] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:42:44,823] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.594 seconds
+[2021-10-28 12:43:15,074] {scheduler_job.py:182} INFO - Started process (PID=1819) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:43:15,079] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:43:15,081] {logging_mixin.py:104} INFO - [2021-10-28 12:43:15,081] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:43:17,099] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:43:17,144] {logging_mixin.py:104} INFO - [2021-10-28 12:43:17,135] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:43:17,211] {logging_mixin.py:104} INFO - [2021-10-28 12:43:17,211] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:43:17,227] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.160 seconds
+[2021-10-28 12:43:47,304] {scheduler_job.py:182} INFO - Started process (PID=1873) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:43:47,309] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:43:47,312] {logging_mixin.py:104} INFO - [2021-10-28 12:43:47,311] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:43:49,344] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:43:49,385] {logging_mixin.py:104} INFO - [2021-10-28 12:43:49,378] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:43:49,440] {logging_mixin.py:104} INFO - [2021-10-28 12:43:49,440] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:43:49,455] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.162 seconds
+[2021-10-28 12:44:19,911] {scheduler_job.py:182} INFO - Started process (PID=1937) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:44:19,915] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:44:19,918] {logging_mixin.py:104} INFO - [2021-10-28 12:44:19,917] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:44:22,128] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:44:22,170] {logging_mixin.py:104} INFO - [2021-10-28 12:44:22,162] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:44:22,226] {logging_mixin.py:104} INFO - [2021-10-28 12:44:22,226] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:44:22,242] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.337 seconds
+[2021-10-28 12:44:52,720] {scheduler_job.py:182} INFO - Started process (PID=2004) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:44:52,723] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:44:52,726] {logging_mixin.py:104} INFO - [2021-10-28 12:44:52,726] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:44:55,529] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:44:55,575] {logging_mixin.py:104} INFO - [2021-10-28 12:44:55,567] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:44:55,642] {logging_mixin.py:104} INFO - [2021-10-28 12:44:55,641] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:44:55,664] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.950 seconds
+[2021-10-28 12:45:26,004] {scheduler_job.py:182} INFO - Started process (PID=2060) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:45:26,008] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:45:26,010] {logging_mixin.py:104} INFO - [2021-10-28 12:45:26,010] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:45:28,381] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:45:28,423] {logging_mixin.py:104} INFO - [2021-10-28 12:45:28,415] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:45:28,486] {logging_mixin.py:104} INFO - [2021-10-28 12:45:28,486] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:45:28,502] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.503 seconds
+[2021-10-28 12:45:58,553] {scheduler_job.py:182} INFO - Started process (PID=2115) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:45:58,557] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:45:58,560] {logging_mixin.py:104} INFO - [2021-10-28 12:45:58,559] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:46:00,574] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:46:00,612] {logging_mixin.py:104} INFO - [2021-10-28 12:46:00,605] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:46:00,668] {logging_mixin.py:104} INFO - [2021-10-28 12:46:00,668] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:46:00,682] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.136 seconds
+[2021-10-28 12:46:30,989] {scheduler_job.py:182} INFO - Started process (PID=2169) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:46:30,993] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:46:30,995] {logging_mixin.py:104} INFO - [2021-10-28 12:46:30,994] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:46:33,001] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:46:33,038] {logging_mixin.py:104} INFO - [2021-10-28 12:46:33,032] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:46:33,094] {logging_mixin.py:104} INFO - [2021-10-28 12:46:33,094] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:46:33,108] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.125 seconds
+[2021-10-28 12:47:03,458] {scheduler_job.py:182} INFO - Started process (PID=2222) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:47:03,462] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:47:03,464] {logging_mixin.py:104} INFO - [2021-10-28 12:47:03,464] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:47:05,689] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:47:05,727] {logging_mixin.py:104} INFO - [2021-10-28 12:47:05,720] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:47:05,783] {logging_mixin.py:104} INFO - [2021-10-28 12:47:05,782] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:47:05,796] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.344 seconds
+[2021-10-28 12:47:36,254] {scheduler_job.py:182} INFO - Started process (PID=2275) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:47:36,259] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:47:36,261] {logging_mixin.py:104} INFO - [2021-10-28 12:47:36,261] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:47:38,552] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:47:38,594] {logging_mixin.py:104} INFO - [2021-10-28 12:47:38,586] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:47:38,668] {logging_mixin.py:104} INFO - [2021-10-28 12:47:38,668] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:47:38,686] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.437 seconds
+[2021-10-28 12:48:08,868] {scheduler_job.py:182} INFO - Started process (PID=2329) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:48:08,873] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:48:08,876] {logging_mixin.py:104} INFO - [2021-10-28 12:48:08,875] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:48:11,220] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:48:11,262] {logging_mixin.py:104} INFO - [2021-10-28 12:48:11,254] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:48:11,322] {logging_mixin.py:104} INFO - [2021-10-28 12:48:11,322] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:48:11,338] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.477 seconds
+[2021-10-28 12:48:41,423] {scheduler_job.py:182} INFO - Started process (PID=2386) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:48:41,426] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:48:41,428] {logging_mixin.py:104} INFO - [2021-10-28 12:48:41,428] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:48:43,531] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:48:43,567] {logging_mixin.py:104} INFO - [2021-10-28 12:48:43,560] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:48:43,627] {logging_mixin.py:104} INFO - [2021-10-28 12:48:43,626] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:48:43,641] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.224 seconds
+[2021-10-28 12:49:13,949] {scheduler_job.py:182} INFO - Started process (PID=2440) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:49:13,954] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:49:13,956] {logging_mixin.py:104} INFO - [2021-10-28 12:49:13,956] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:49:16,230] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:49:16,271] {logging_mixin.py:104} INFO - [2021-10-28 12:49:16,264] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:49:16,336] {logging_mixin.py:104} INFO - [2021-10-28 12:49:16,335] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:49:16,351] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.407 seconds
+[2021-10-28 12:49:46,663] {scheduler_job.py:182} INFO - Started process (PID=2511) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:49:46,667] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:49:46,669] {logging_mixin.py:104} INFO - [2021-10-28 12:49:46,669] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:49:49,065] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:49:49,113] {logging_mixin.py:104} INFO - [2021-10-28 12:49:49,104] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:49:49,187] {logging_mixin.py:104} INFO - [2021-10-28 12:49:49,187] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:49:49,222] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.564 seconds
+[2021-10-28 12:50:20,261] {scheduler_job.py:182} INFO - Started process (PID=2568) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:50:20,265] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:50:20,268] {logging_mixin.py:104} INFO - [2021-10-28 12:50:20,267] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:50:22,881] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:50:22,922] {logging_mixin.py:104} INFO - [2021-10-28 12:50:22,915] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:50:22,993] {logging_mixin.py:104} INFO - [2021-10-28 12:50:22,992] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:50:23,009] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.761 seconds
+[2021-10-28 12:50:53,803] {scheduler_job.py:182} INFO - Started process (PID=2623) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:50:53,807] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:50:53,810] {logging_mixin.py:104} INFO - [2021-10-28 12:50:53,809] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:50:56,145] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:50:56,184] {logging_mixin.py:104} INFO - [2021-10-28 12:50:56,177] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:50:56,245] {logging_mixin.py:104} INFO - [2021-10-28 12:50:56,245] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:50:56,261] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.465 seconds
+[2021-10-28 12:51:26,959] {scheduler_job.py:182} INFO - Started process (PID=2677) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:51:26,963] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:51:26,965] {logging_mixin.py:104} INFO - [2021-10-28 12:51:26,965] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:51:29,282] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:51:29,321] {logging_mixin.py:104} INFO - [2021-10-28 12:51:29,314] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:51:29,386] {logging_mixin.py:104} INFO - [2021-10-28 12:51:29,386] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:51:29,402] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.449 seconds
+[2021-10-28 12:51:59,475] {scheduler_job.py:182} INFO - Started process (PID=2728) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:51:59,479] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:51:59,481] {logging_mixin.py:104} INFO - [2021-10-28 12:51:59,481] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:52:01,755] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:52:01,798] {logging_mixin.py:104} INFO - [2021-10-28 12:52:01,791] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:52:01,862] {logging_mixin.py:104} INFO - [2021-10-28 12:52:01,862] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:52:01,878] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.408 seconds
+[2021-10-28 12:52:32,344] {scheduler_job.py:182} INFO - Started process (PID=2783) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:52:32,348] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:52:32,350] {logging_mixin.py:104} INFO - [2021-10-28 12:52:32,350] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:52:34,532] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:52:34,572] {logging_mixin.py:104} INFO - [2021-10-28 12:52:34,564] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:52:34,632] {logging_mixin.py:104} INFO - [2021-10-28 12:52:34,631] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:52:34,648] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 2.310 seconds
+[2021-10-28 12:53:05,658] {scheduler_job.py:182} INFO - Started process (PID=2836) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:53:05,663] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 12:53:05,665] {logging_mixin.py:104} INFO - [2021-10-28 12:53:05,665] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:53:08,509] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 12:53:08,558] {logging_mixin.py:104} INFO - [2021-10-28 12:53:08,549] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:53:08,635] {logging_mixin.py:104} INFO - [2021-10-28 12:53:08,634] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:30:00+00:00
+[2021-10-28 12:53:08,677] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.026 seconds
+[2021-10-28 13:02:19,310] {scheduler_job.py:182} INFO - Started process (PID=470) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:02:19,350] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:02:19,362] {logging_mixin.py:104} INFO - [2021-10-28 13:02:19,361] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:02:27,756] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:02:27,870] {logging_mixin.py:104} INFO - [2021-10-28 13:02:27,855] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:02:28,030] {logging_mixin.py:104} INFO - [2021-10-28 13:02:28,030] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:02:28,070] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 8.785 seconds
+[2021-10-28 13:02:59,058] {scheduler_job.py:182} INFO - Started process (PID=524) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:02:59,067] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:02:59,071] {logging_mixin.py:104} INFO - [2021-10-28 13:02:59,071] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:03:05,883] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:03:06,039] {logging_mixin.py:104} INFO - [2021-10-28 13:03:06,020] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:03:06,208] {logging_mixin.py:104} INFO - [2021-10-28 13:03:06,208] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:03:06,251] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 7.214 seconds
+[2021-10-28 13:03:36,510] {scheduler_job.py:182} INFO - Started process (PID=576) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:03:36,514] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:03:36,516] {logging_mixin.py:104} INFO - [2021-10-28 13:03:36,516] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:03:40,204] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:03:40,271] {logging_mixin.py:104} INFO - [2021-10-28 13:03:40,263] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:03:40,356] {logging_mixin.py:104} INFO - [2021-10-28 13:03:40,356] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:03:40,380] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.877 seconds
+[2021-10-28 13:04:10,789] {scheduler_job.py:182} INFO - Started process (PID=633) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:04:10,796] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:04:10,800] {logging_mixin.py:104} INFO - [2021-10-28 13:04:10,799] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:04:14,659] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:04:14,719] {logging_mixin.py:104} INFO - [2021-10-28 13:04:14,711] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:04:14,794] {logging_mixin.py:104} INFO - [2021-10-28 13:04:14,793] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:04:14,816] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 4.033 seconds
+[2021-10-28 13:04:44,961] {scheduler_job.py:182} INFO - Started process (PID=688) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:04:44,967] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:04:44,971] {logging_mixin.py:104} INFO - [2021-10-28 13:04:44,970] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:04:48,115] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:04:48,175] {logging_mixin.py:104} INFO - [2021-10-28 13:04:48,168] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:04:48,245] {logging_mixin.py:104} INFO - [2021-10-28 13:04:48,245] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:04:48,263] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.311 seconds
+[2021-10-28 13:05:18,507] {scheduler_job.py:182} INFO - Started process (PID=739) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:05:18,511] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:05:18,514] {logging_mixin.py:104} INFO - [2021-10-28 13:05:18,514] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:05:21,858] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:05:21,909] {logging_mixin.py:104} INFO - [2021-10-28 13:05:21,903] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:05:21,977] {logging_mixin.py:104} INFO - [2021-10-28 13:05:21,976] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:05:21,995] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.494 seconds
+[2021-10-28 13:05:52,969] {scheduler_job.py:182} INFO - Started process (PID=797) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:05:52,973] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:05:52,976] {logging_mixin.py:104} INFO - [2021-10-28 13:05:52,975] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:05:56,232] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:05:56,291] {logging_mixin.py:104} INFO - [2021-10-28 13:05:56,283] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:05:56,366] {logging_mixin.py:104} INFO - [2021-10-28 13:05:56,366] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:05:56,391] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.428 seconds
+[2021-10-28 13:06:26,679] {scheduler_job.py:182} INFO - Started process (PID=850) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:06:26,683] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:06:26,685] {logging_mixin.py:104} INFO - [2021-10-28 13:06:26,685] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:06:30,122] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:06:30,205] {logging_mixin.py:104} INFO - [2021-10-28 13:06:30,196] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:06:30,282] {logging_mixin.py:104} INFO - [2021-10-28 13:06:30,281] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:06:30,302] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.630 seconds
+[2021-10-28 13:14:42,774] {scheduler_job.py:182} INFO - Started process (PID=438) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:14:42,783] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:14:42,787] {logging_mixin.py:104} INFO - [2021-10-28 13:14:42,786] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:14:50,474] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:14:50,598] {logging_mixin.py:104} INFO - [2021-10-28 13:14:50,584] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:14:50,796] {logging_mixin.py:104} INFO - [2021-10-28 13:14:50,795] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T12:45:00+00:00
+[2021-10-28 13:14:50,842] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 8.078 seconds
+[2021-10-28 13:15:21,247] {scheduler_job.py:182} INFO - Started process (PID=490) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:15:21,273] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:15:21,281] {logging_mixin.py:104} INFO - [2021-10-28 13:15:21,280] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:15:32,757] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:15:32,867] {logging_mixin.py:104} INFO - [2021-10-28 13:15:32,857] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:15:33,080] {logging_mixin.py:104} INFO - [2021-10-28 13:15:33,079] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T13:00:00+00:00
+[2021-10-28 13:15:33,137] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 11.947 seconds
+[2021-10-28 13:16:03,692] {scheduler_job.py:182} INFO - Started process (PID=553) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:16:03,698] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:16:03,704] {logging_mixin.py:104} INFO - [2021-10-28 13:16:03,703] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:16:09,443] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:16:09,507] {logging_mixin.py:104} INFO - [2021-10-28 13:16:09,499] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:16:09,618] {logging_mixin.py:104} INFO - [2021-10-28 13:16:09,617] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T13:00:00+00:00
+[2021-10-28 13:16:09,645] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 5.963 seconds
+[2021-10-28 13:16:39,986] {scheduler_job.py:182} INFO - Started process (PID=607) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:16:39,990] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:16:39,994] {logging_mixin.py:104} INFO - [2021-10-28 13:16:39,994] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:16:43,826] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:16:43,888] {logging_mixin.py:104} INFO - [2021-10-28 13:16:43,880] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:16:43,965] {logging_mixin.py:104} INFO - [2021-10-28 13:16:43,964] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T13:00:00+00:00
+[2021-10-28 13:16:43,985] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 4.006 seconds
+[2021-10-28 13:17:14,953] {scheduler_job.py:182} INFO - Started process (PID=660) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:17:14,959] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:17:14,977] {logging_mixin.py:104} INFO - [2021-10-28 13:17:14,976] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:17:18,223] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:17:18,274] {logging_mixin.py:104} INFO - [2021-10-28 13:17:18,267] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:17:18,363] {logging_mixin.py:104} INFO - [2021-10-28 13:17:18,363] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T13:00:00+00:00
+[2021-10-28 13:17:18,383] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.458 seconds
+[2021-10-28 13:17:48,540] {scheduler_job.py:182} INFO - Started process (PID=722) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:17:48,545] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:17:48,548] {logging_mixin.py:104} INFO - [2021-10-28 13:17:48,548] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:17:51,753] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:17:51,815] {logging_mixin.py:104} INFO - [2021-10-28 13:17:51,807] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:17:51,882] {logging_mixin.py:104} INFO - [2021-10-28 13:17:51,882] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T13:00:00+00:00
+[2021-10-28 13:17:51,900] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.367 seconds
+[2021-10-28 13:18:22,182] {scheduler_job.py:182} INFO - Started process (PID=779) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:18:22,188] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:18:22,191] {logging_mixin.py:104} INFO - [2021-10-28 13:18:22,190] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:18:25,526] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:18:25,589] {logging_mixin.py:104} INFO - [2021-10-28 13:18:25,581] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:18:25,669] {logging_mixin.py:104} INFO - [2021-10-28 13:18:25,668] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T13:00:00+00:00
+[2021-10-28 13:18:25,692] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.516 seconds
+[2021-10-28 13:18:56,136] {scheduler_job.py:182} INFO - Started process (PID=833) to work on /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:18:56,140] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ethereum_block_poll.py for tasks to queue
+[2021-10-28 13:18:56,145] {logging_mixin.py:104} INFO - [2021-10-28 13:18:56,144] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:18:59,274] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ethereum_block_poll']) retrieved from /opt/airflow/dags/ethereum_block_poll.py
+[2021-10-28 13:18:59,344] {logging_mixin.py:104} INFO - [2021-10-28 13:18:59,336] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:18:59,422] {logging_mixin.py:104} INFO - [2021-10-28 13:18:59,421] {dag.py:2306} INFO - Setting next_dagrun for ethereum_block_poll to 2021-10-28T13:00:00+00:00
+[2021-10-28 13:18:59,446] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ethereum_block_poll.py took 3.321 seconds

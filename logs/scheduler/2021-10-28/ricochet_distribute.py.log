@@ -1,0 +1,399 @@
+[2021-10-28 12:28:30,125] {scheduler_job.py:182} INFO - Started process (PID=461) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:28:30,173] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:28:30,182] {logging_mixin.py:104} INFO - [2021-10-28 12:28:30,181] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:28:44,270] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:28:44,369] {logging_mixin.py:104} INFO - [2021-10-28 12:28:44,367] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:28:44,493] {logging_mixin.py:104} INFO - [2021-10-28 12:28:44,489] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:28:44,548] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 14.471 seconds
+[2021-10-28 12:29:58,594] {scheduler_job.py:182} INFO - Started process (PID=579) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:29:58,611] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:29:58,625] {logging_mixin.py:104} INFO - [2021-10-28 12:29:58,625] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:30:34,826] {logging_mixin.py:104} INFO - [2021-10-28 12:30:34,786] {timeout.py:36} ERROR - Process timed out, PID: 579
+[2021-10-28 12:30:34,852] {logging_mixin.py:104} WARNING - Exception ignored in: <function _collection_gced at 0x40038117b8>
+[2021-10-28 12:30:34,855] {logging_mixin.py:104} WARNING - Traceback (most recent call last):
+[2021-10-28 12:30:34,860] {logging_mixin.py:104} WARNING -   File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/event/registry.py", line 53, in _collection_gced
+[2021-10-28 12:30:34,895] {logging_mixin.py:104} WARNING -     def _collection_gced(ref):
+[2021-10-28 12:30:34,903] {logging_mixin.py:104} WARNING -   File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+[2021-10-28 12:30:34,913] {logging_mixin.py:104} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2021-10-28 12:30:34,919] {logging_mixin.py:104} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/ricochet_distribute.py after 30.0s, PID: 579
+[2021-10-28 12:31:44,856] {scheduler_job.py:182} INFO - Started process (PID=697) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:31:44,870] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:31:44,885] {logging_mixin.py:104} INFO - [2021-10-28 12:31:44,880] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:32:03,867] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:32:04,225] {logging_mixin.py:104} INFO - [2021-10-28 12:32:04,222] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:32:04,561] {logging_mixin.py:104} INFO - [2021-10-28 12:32:04,560] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:32:04,659] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 19.833 seconds
+[2021-10-28 12:32:35,411] {scheduler_job.py:182} INFO - Started process (PID=769) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:32:35,425] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:32:35,435] {logging_mixin.py:104} INFO - [2021-10-28 12:32:35,434] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:32:41,132] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:32:41,204] {logging_mixin.py:104} INFO - [2021-10-28 12:32:41,203] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:32:41,325] {logging_mixin.py:104} INFO - [2021-10-28 12:32:41,324] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:32:41,356] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 5.975 seconds
+[2021-10-28 12:33:11,857] {scheduler_job.py:182} INFO - Started process (PID=807) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:33:11,864] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:33:11,867] {logging_mixin.py:104} INFO - [2021-10-28 12:33:11,866] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:33:16,768] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:33:16,837] {logging_mixin.py:104} INFO - [2021-10-28 12:33:16,837] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:33:16,968] {logging_mixin.py:104} INFO - [2021-10-28 12:33:16,967] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:33:17,024] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 5.174 seconds
+[2021-10-28 12:33:48,122] {scheduler_job.py:182} INFO - Started process (PID=860) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:33:48,129] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:33:48,136] {logging_mixin.py:104} INFO - [2021-10-28 12:33:48,135] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:33:51,557] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:33:51,648] {logging_mixin.py:104} INFO - [2021-10-28 12:33:51,647] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:33:51,785] {logging_mixin.py:104} INFO - [2021-10-28 12:33:51,784] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:33:51,833] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.733 seconds
+[2021-10-28 12:34:22,904] {scheduler_job.py:182} INFO - Started process (PID=916) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:34:22,910] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:34:22,913] {logging_mixin.py:104} INFO - [2021-10-28 12:34:22,913] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:34:25,444] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:34:25,476] {logging_mixin.py:104} INFO - [2021-10-28 12:34:25,476] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:34:25,532] {logging_mixin.py:104} INFO - [2021-10-28 12:34:25,531] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:34:25,547] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.653 seconds
+[2021-10-28 12:34:56,496] {scheduler_job.py:182} INFO - Started process (PID=971) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:34:56,501] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:34:56,504] {logging_mixin.py:104} INFO - [2021-10-28 12:34:56,504] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:34:59,677] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:34:59,716] {logging_mixin.py:104} INFO - [2021-10-28 12:34:59,715] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:34:59,781] {logging_mixin.py:104} INFO - [2021-10-28 12:34:59,780] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:34:59,798] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.312 seconds
+[2021-10-28 12:35:30,552] {scheduler_job.py:182} INFO - Started process (PID=1027) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:35:30,556] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:35:30,559] {logging_mixin.py:104} INFO - [2021-10-28 12:35:30,558] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:35:33,333] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:35:33,372] {logging_mixin.py:104} INFO - [2021-10-28 12:35:33,372] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:35:33,463] {logging_mixin.py:104} INFO - [2021-10-28 12:35:33,463] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:35:33,495] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.951 seconds
+[2021-10-28 12:36:03,634] {scheduler_job.py:182} INFO - Started process (PID=1081) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:36:03,639] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:36:03,642] {logging_mixin.py:104} INFO - [2021-10-28 12:36:03,642] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:36:06,011] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:36:06,042] {logging_mixin.py:104} INFO - [2021-10-28 12:36:06,041] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:36:06,094] {logging_mixin.py:104} INFO - [2021-10-28 12:36:06,093] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:36:06,111] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.489 seconds
+[2021-10-28 12:36:36,604] {scheduler_job.py:182} INFO - Started process (PID=1138) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:36:36,608] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:36:36,611] {logging_mixin.py:104} INFO - [2021-10-28 12:36:36,611] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:36:38,919] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:36:38,951] {logging_mixin.py:104} INFO - [2021-10-28 12:36:38,951] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:36:39,004] {logging_mixin.py:104} INFO - [2021-10-28 12:36:39,003] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:36:39,018] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.422 seconds
+[2021-10-28 12:37:09,542] {scheduler_job.py:182} INFO - Started process (PID=1194) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:37:09,547] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:37:09,552] {logging_mixin.py:104} INFO - [2021-10-28 12:37:09,552] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:37:12,647] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:37:12,685] {logging_mixin.py:104} INFO - [2021-10-28 12:37:12,685] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:37:12,749] {logging_mixin.py:104} INFO - [2021-10-28 12:37:12,749] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:37:12,767] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.232 seconds
+[2021-10-28 12:37:43,018] {scheduler_job.py:182} INFO - Started process (PID=1265) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:37:43,023] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:37:43,026] {logging_mixin.py:104} INFO - [2021-10-28 12:37:43,025] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:37:46,436] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:37:46,485] {logging_mixin.py:104} INFO - [2021-10-28 12:37:46,485] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:37:46,556] {logging_mixin.py:104} INFO - [2021-10-28 12:37:46,556] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:37:46,575] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.564 seconds
+[2021-10-28 12:38:17,111] {scheduler_job.py:182} INFO - Started process (PID=1325) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:38:17,116] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:38:17,119] {logging_mixin.py:104} INFO - [2021-10-28 12:38:17,119] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:38:20,300] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:38:20,343] {logging_mixin.py:104} INFO - [2021-10-28 12:38:20,343] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:38:20,435] {logging_mixin.py:104} INFO - [2021-10-28 12:38:20,434] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:38:20,458] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.359 seconds
+[2021-10-28 12:38:51,202] {scheduler_job.py:182} INFO - Started process (PID=1382) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:38:51,207] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:38:51,212] {logging_mixin.py:104} INFO - [2021-10-28 12:38:51,212] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:38:54,365] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:38:54,396] {logging_mixin.py:104} INFO - [2021-10-28 12:38:54,396] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:38:54,449] {logging_mixin.py:104} INFO - [2021-10-28 12:38:54,449] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:38:54,463] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.271 seconds
+[2021-10-28 12:39:24,771] {scheduler_job.py:182} INFO - Started process (PID=1439) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:39:24,778] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:39:24,781] {logging_mixin.py:104} INFO - [2021-10-28 12:39:24,780] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:39:27,359] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:39:27,392] {logging_mixin.py:104} INFO - [2021-10-28 12:39:27,391] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:39:27,447] {logging_mixin.py:104} INFO - [2021-10-28 12:39:27,447] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:39:27,462] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.700 seconds
+[2021-10-28 12:39:57,667] {scheduler_job.py:182} INFO - Started process (PID=1494) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:39:57,676] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:39:57,681] {logging_mixin.py:104} INFO - [2021-10-28 12:39:57,680] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:40:00,572] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:40:00,608] {logging_mixin.py:104} INFO - [2021-10-28 12:40:00,608] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:40:00,669] {logging_mixin.py:104} INFO - [2021-10-28 12:40:00,668] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:40:00,686] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.033 seconds
+[2021-10-28 12:40:31,012] {scheduler_job.py:182} INFO - Started process (PID=1550) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:40:31,017] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:40:31,020] {logging_mixin.py:104} INFO - [2021-10-28 12:40:31,019] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:40:33,828] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:40:33,861] {logging_mixin.py:104} INFO - [2021-10-28 12:40:33,861] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:40:33,918] {logging_mixin.py:104} INFO - [2021-10-28 12:40:33,918] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:40:33,935] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.930 seconds
+[2021-10-28 12:41:04,263] {scheduler_job.py:182} INFO - Started process (PID=1602) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:41:04,268] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:41:04,271] {logging_mixin.py:104} INFO - [2021-10-28 12:41:04,270] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:41:06,781] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:41:06,814] {logging_mixin.py:104} INFO - [2021-10-28 12:41:06,813] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:41:06,873] {logging_mixin.py:104} INFO - [2021-10-28 12:41:06,873] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:41:06,889] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.633 seconds
+[2021-10-28 12:41:37,494] {scheduler_job.py:182} INFO - Started process (PID=1658) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:41:37,498] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:41:37,500] {logging_mixin.py:104} INFO - [2021-10-28 12:41:37,500] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:41:40,020] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:41:40,054] {logging_mixin.py:104} INFO - [2021-10-28 12:41:40,054] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:41:40,121] {logging_mixin.py:104} INFO - [2021-10-28 12:41:40,120] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:41:40,137] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.649 seconds
+[2021-10-28 12:42:10,366] {scheduler_job.py:182} INFO - Started process (PID=1712) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:42:10,370] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:42:10,373] {logging_mixin.py:104} INFO - [2021-10-28 12:42:10,372] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:42:13,134] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:42:13,164] {logging_mixin.py:104} INFO - [2021-10-28 12:42:13,164] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:42:13,221] {logging_mixin.py:104} INFO - [2021-10-28 12:42:13,220] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:42:13,238] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.879 seconds
+[2021-10-28 12:42:43,656] {scheduler_job.py:182} INFO - Started process (PID=1767) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:42:43,660] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:42:43,663] {logging_mixin.py:104} INFO - [2021-10-28 12:42:43,662] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:42:46,407] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:42:46,447] {logging_mixin.py:104} INFO - [2021-10-28 12:42:46,446] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:42:46,515] {logging_mixin.py:104} INFO - [2021-10-28 12:42:46,514] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:42:46,533] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.884 seconds
+[2021-10-28 12:43:16,688] {scheduler_job.py:182} INFO - Started process (PID=1821) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:43:16,693] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:43:16,696] {logging_mixin.py:104} INFO - [2021-10-28 12:43:16,695] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:43:19,511] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:43:19,547] {logging_mixin.py:104} INFO - [2021-10-28 12:43:19,547] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:43:19,609] {logging_mixin.py:104} INFO - [2021-10-28 12:43:19,609] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:43:19,627] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.944 seconds
+[2021-10-28 12:43:50,324] {scheduler_job.py:182} INFO - Started process (PID=1892) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:43:50,327] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:43:50,330] {logging_mixin.py:104} INFO - [2021-10-28 12:43:50,330] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:43:52,840] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:43:52,876] {logging_mixin.py:104} INFO - [2021-10-28 12:43:52,875] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:43:52,960] {logging_mixin.py:104} INFO - [2021-10-28 12:43:52,960] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:43:52,978] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.660 seconds
+[2021-10-28 12:44:23,028] {scheduler_job.py:182} INFO - Started process (PID=1949) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:44:23,032] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:44:23,035] {logging_mixin.py:104} INFO - [2021-10-28 12:44:23,035] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:44:25,769] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:44:25,806] {logging_mixin.py:104} INFO - [2021-10-28 12:44:25,805] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:44:25,873] {logging_mixin.py:104} INFO - [2021-10-28 12:44:25,873] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:44:25,890] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.870 seconds
+[2021-10-28 12:44:55,948] {scheduler_job.py:182} INFO - Started process (PID=2007) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:44:55,953] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:44:55,956] {logging_mixin.py:104} INFO - [2021-10-28 12:44:55,955] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:44:58,446] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:44:58,483] {logging_mixin.py:104} INFO - [2021-10-28 12:44:58,483] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:44:58,624] {logging_mixin.py:104} INFO - [2021-10-28 12:44:58,624] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:44:58,648] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.706 seconds
+[2021-10-28 12:45:29,493] {scheduler_job.py:182} INFO - Started process (PID=2063) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:45:29,497] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:45:29,499] {logging_mixin.py:104} INFO - [2021-10-28 12:45:29,499] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:45:32,150] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:45:32,185] {logging_mixin.py:104} INFO - [2021-10-28 12:45:32,185] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:45:32,245] {logging_mixin.py:104} INFO - [2021-10-28 12:45:32,244] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:45:32,264] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.777 seconds
+[2021-10-28 12:46:02,589] {scheduler_job.py:182} INFO - Started process (PID=2118) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:46:02,593] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:46:02,595] {logging_mixin.py:104} INFO - [2021-10-28 12:46:02,595] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:46:05,132] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:46:05,175] {logging_mixin.py:104} INFO - [2021-10-28 12:46:05,175] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:46:05,244] {logging_mixin.py:104} INFO - [2021-10-28 12:46:05,243] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:46:05,266] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.683 seconds
+[2021-10-28 12:46:36,065] {scheduler_job.py:182} INFO - Started process (PID=2172) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:46:36,068] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:46:36,070] {logging_mixin.py:104} INFO - [2021-10-28 12:46:36,070] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:46:38,364] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:46:38,401] {logging_mixin.py:104} INFO - [2021-10-28 12:46:38,401] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:46:38,460] {logging_mixin.py:104} INFO - [2021-10-28 12:46:38,460] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:46:38,476] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.416 seconds
+[2021-10-28 12:47:08,598] {scheduler_job.py:182} INFO - Started process (PID=2226) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:47:08,602] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:47:08,605] {logging_mixin.py:104} INFO - [2021-10-28 12:47:08,604] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:47:10,905] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:47:10,938] {logging_mixin.py:104} INFO - [2021-10-28 12:47:10,938] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:47:10,997] {logging_mixin.py:104} INFO - [2021-10-28 12:47:10,997] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:47:11,013] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.424 seconds
+[2021-10-28 12:47:41,567] {scheduler_job.py:182} INFO - Started process (PID=2296) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:47:41,571] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:47:41,573] {logging_mixin.py:104} INFO - [2021-10-28 12:47:41,573] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:47:44,051] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:47:44,083] {logging_mixin.py:104} INFO - [2021-10-28 12:47:44,083] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:47:44,139] {logging_mixin.py:104} INFO - [2021-10-28 12:47:44,139] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:47:44,156] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.595 seconds
+[2021-10-28 12:48:14,234] {scheduler_job.py:182} INFO - Started process (PID=2354) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:48:14,238] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:48:14,241] {logging_mixin.py:104} INFO - [2021-10-28 12:48:14,240] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:48:17,347] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:48:17,383] {logging_mixin.py:104} INFO - [2021-10-28 12:48:17,383] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:48:17,442] {logging_mixin.py:104} INFO - [2021-10-28 12:48:17,441] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:48:17,458] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.231 seconds
+[2021-10-28 12:48:47,731] {scheduler_job.py:182} INFO - Started process (PID=2410) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:48:47,737] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:48:47,740] {logging_mixin.py:104} INFO - [2021-10-28 12:48:47,740] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:48:50,570] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:48:50,605] {logging_mixin.py:104} INFO - [2021-10-28 12:48:50,605] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:48:50,661] {logging_mixin.py:104} INFO - [2021-10-28 12:48:50,661] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:48:50,678] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.953 seconds
+[2021-10-28 12:49:21,400] {scheduler_job.py:182} INFO - Started process (PID=2465) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:49:21,405] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:49:21,408] {logging_mixin.py:104} INFO - [2021-10-28 12:49:21,407] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:49:23,900] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:49:23,933] {logging_mixin.py:104} INFO - [2021-10-28 12:49:23,933] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:49:23,990] {logging_mixin.py:104} INFO - [2021-10-28 12:49:23,990] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:49:24,007] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.614 seconds
+[2021-10-28 12:49:54,365] {scheduler_job.py:182} INFO - Started process (PID=2518) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:49:54,371] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:49:54,374] {logging_mixin.py:104} INFO - [2021-10-28 12:49:54,373] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:49:56,708] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:49:56,743] {logging_mixin.py:104} INFO - [2021-10-28 12:49:56,743] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:49:56,800] {logging_mixin.py:104} INFO - [2021-10-28 12:49:56,800] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:49:56,815] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.462 seconds
+[2021-10-28 12:50:27,144] {scheduler_job.py:182} INFO - Started process (PID=2572) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:50:27,150] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:50:27,153] {logging_mixin.py:104} INFO - [2021-10-28 12:50:27,153] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:50:29,514] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:50:29,545] {logging_mixin.py:104} INFO - [2021-10-28 12:50:29,545] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:50:29,620] {logging_mixin.py:104} INFO - [2021-10-28 12:50:29,620] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:50:29,637] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.504 seconds
+[2021-10-28 12:50:59,881] {scheduler_job.py:182} INFO - Started process (PID=2627) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:50:59,885] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:50:59,886] {logging_mixin.py:104} INFO - [2021-10-28 12:50:59,886] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:51:02,243] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:51:02,274] {logging_mixin.py:104} INFO - [2021-10-28 12:51:02,274] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:51:02,326] {logging_mixin.py:104} INFO - [2021-10-28 12:51:02,326] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:51:02,340] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.464 seconds
+[2021-10-28 12:51:32,467] {scheduler_job.py:182} INFO - Started process (PID=2687) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:51:32,474] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:51:32,476] {logging_mixin.py:104} INFO - [2021-10-28 12:51:32,476] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:51:35,296] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:51:35,330] {logging_mixin.py:104} INFO - [2021-10-28 12:51:35,330] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:51:35,386] {logging_mixin.py:104} INFO - [2021-10-28 12:51:35,386] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:51:35,401] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 2.940 seconds
+[2021-10-28 12:52:05,614] {scheduler_job.py:182} INFO - Started process (PID=2749) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:52:05,626] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:52:05,630] {logging_mixin.py:104} INFO - [2021-10-28 12:52:05,630] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:52:09,420] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:52:09,463] {logging_mixin.py:104} INFO - [2021-10-28 12:52:09,462] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:52:09,531] {logging_mixin.py:104} INFO - [2021-10-28 12:52:09,531] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:52:09,550] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.950 seconds
+[2021-10-28 12:52:39,733] {scheduler_job.py:182} INFO - Started process (PID=2807) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:52:39,737] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 12:52:39,740] {logging_mixin.py:104} INFO - [2021-10-28 12:52:39,740] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:52:42,926] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 12:52:42,965] {logging_mixin.py:104} INFO - [2021-10-28 12:52:42,965] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:52:43,041] {logging_mixin.py:104} INFO - [2021-10-28 12:52:43,041] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T11:00:00+00:00
+[2021-10-28 12:52:43,056] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.329 seconds
+[2021-10-28 13:02:12,318] {scheduler_job.py:182} INFO - Started process (PID=448) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:02:12,352] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:02:12,355] {logging_mixin.py:104} INFO - [2021-10-28 13:02:12,355] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:02:23,171] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:02:23,404] {logging_mixin.py:104} INFO - [2021-10-28 13:02:23,404] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:02:23,772] {logging_mixin.py:104} INFO - [2021-10-28 13:02:23,772] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:02:23,857] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 11.546 seconds
+[2021-10-28 13:02:53,982] {scheduler_job.py:182} INFO - Started process (PID=513) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:02:53,989] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:02:53,993] {logging_mixin.py:104} INFO - [2021-10-28 13:02:53,992] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:03:00,690] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:03:00,813] {logging_mixin.py:104} INFO - [2021-10-28 13:03:00,813] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:03:01,013] {logging_mixin.py:104} INFO - [2021-10-28 13:03:01,012] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:03:01,098] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 7.125 seconds
+[2021-10-28 13:03:31,842] {scheduler_job.py:182} INFO - Started process (PID=556) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:03:31,845] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:03:31,847] {logging_mixin.py:104} INFO - [2021-10-28 13:03:31,847] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:03:36,214] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:03:36,265] {logging_mixin.py:104} INFO - [2021-10-28 13:03:36,265] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:03:36,401] {logging_mixin.py:104} INFO - [2021-10-28 13:03:36,400] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:03:36,436] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 4.600 seconds
+[2021-10-28 13:04:06,744] {scheduler_job.py:182} INFO - Started process (PID=610) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:04:06,748] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:04:06,750] {logging_mixin.py:104} INFO - [2021-10-28 13:04:06,750] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:04:10,658] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:04:10,744] {logging_mixin.py:104} INFO - [2021-10-28 13:04:10,741] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:04:10,849] {logging_mixin.py:104} INFO - [2021-10-28 13:04:10,847] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:04:10,881] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 4.143 seconds
+[2021-10-28 13:04:41,069] {scheduler_job.py:182} INFO - Started process (PID=682) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:04:41,078] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:04:41,082] {logging_mixin.py:104} INFO - [2021-10-28 13:04:41,081] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:04:44,738] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:04:44,789] {logging_mixin.py:104} INFO - [2021-10-28 13:04:44,788] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:04:44,867] {logging_mixin.py:104} INFO - [2021-10-28 13:04:44,866] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:04:44,901] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.839 seconds
+[2021-10-28 13:05:15,462] {scheduler_job.py:182} INFO - Started process (PID=737) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:05:15,467] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:05:15,471] {logging_mixin.py:104} INFO - [2021-10-28 13:05:15,470] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:05:19,328] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:05:19,392] {logging_mixin.py:104} INFO - [2021-10-28 13:05:19,391] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:05:19,467] {logging_mixin.py:104} INFO - [2021-10-28 13:05:19,466] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:05:19,492] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 4.038 seconds
+[2021-10-28 13:05:49,952] {scheduler_job.py:182} INFO - Started process (PID=794) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:05:49,955] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:05:49,957] {logging_mixin.py:104} INFO - [2021-10-28 13:05:49,957] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:05:53,579] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:05:53,629] {logging_mixin.py:104} INFO - [2021-10-28 13:05:53,629] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:05:53,701] {logging_mixin.py:104} INFO - [2021-10-28 13:05:53,701] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:05:53,724] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.777 seconds
+[2021-10-28 13:06:23,975] {scheduler_job.py:182} INFO - Started process (PID=848) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:06:23,984] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:06:23,991] {logging_mixin.py:104} INFO - [2021-10-28 13:06:23,990] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:06:27,508] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:06:27,559] {logging_mixin.py:104} INFO - [2021-10-28 13:06:27,559] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:06:27,691] {logging_mixin.py:104} INFO - [2021-10-28 13:06:27,690] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:06:27,719] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.754 seconds
+[2021-10-28 13:06:57,946] {scheduler_job.py:182} INFO - Started process (PID=904) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:06:57,950] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:06:57,952] {logging_mixin.py:104} INFO - [2021-10-28 13:06:57,952] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:14:37,828] {scheduler_job.py:182} INFO - Started process (PID=421) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:14:37,843] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:14:37,846] {logging_mixin.py:104} INFO - [2021-10-28 13:14:37,846] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:14:45,273] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:14:45,454] {logging_mixin.py:104} INFO - [2021-10-28 13:14:45,453] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:14:45,768] {logging_mixin.py:104} INFO - [2021-10-28 13:14:45,766] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:14:45,899] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 8.084 seconds
+[2021-10-28 13:15:17,014] {scheduler_job.py:182} INFO - Started process (PID=477) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:15:17,023] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:15:17,028] {logging_mixin.py:104} INFO - [2021-10-28 13:15:17,027] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:15:28,333] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:15:28,658] {logging_mixin.py:104} INFO - [2021-10-28 13:15:28,656] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:15:28,901] {logging_mixin.py:104} INFO - [2021-10-28 13:15:28,898] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:15:28,978] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 11.966 seconds
+[2021-10-28 13:15:59,616] {scheduler_job.py:182} INFO - Started process (PID=532) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:15:59,623] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:15:59,629] {logging_mixin.py:104} INFO - [2021-10-28 13:15:59,629] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:16:05,883] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:16:06,131] {logging_mixin.py:104} INFO - [2021-10-28 13:16:06,131] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:16:06,329] {logging_mixin.py:104} INFO - [2021-10-28 13:16:06,328] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:16:06,404] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 6.804 seconds
+[2021-10-28 13:16:36,963] {scheduler_job.py:182} INFO - Started process (PID=602) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:16:36,967] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:16:36,969] {logging_mixin.py:104} INFO - [2021-10-28 13:16:36,969] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:16:40,990] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:16:41,074] {logging_mixin.py:104} INFO - [2021-10-28 13:16:41,073] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:16:41,178] {logging_mixin.py:104} INFO - [2021-10-28 13:16:41,178] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:16:41,207] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 4.249 seconds
+[2021-10-28 13:17:11,774] {scheduler_job.py:182} INFO - Started process (PID=658) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:17:11,782] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:17:11,788] {logging_mixin.py:104} INFO - [2021-10-28 13:17:11,787] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:17:16,635] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:17:16,708] {logging_mixin.py:104} INFO - [2021-10-28 13:17:16,708] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:17:16,782] {logging_mixin.py:104} INFO - [2021-10-28 13:17:16,782] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:17:16,807] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 5.042 seconds
+[2021-10-28 13:17:47,540] {scheduler_job.py:182} INFO - Started process (PID=720) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:17:47,545] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:17:47,548] {logging_mixin.py:104} INFO - [2021-10-28 13:17:47,548] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:17:51,253] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:17:51,298] {logging_mixin.py:104} INFO - [2021-10-28 13:17:51,298] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:17:51,360] {logging_mixin.py:104} INFO - [2021-10-28 13:17:51,360] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:17:51,382] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.848 seconds
+[2021-10-28 13:18:22,178] {scheduler_job.py:182} INFO - Started process (PID=777) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:18:22,181] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:18:22,183] {logging_mixin.py:104} INFO - [2021-10-28 13:18:22,183] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:18:25,863] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:18:25,911] {logging_mixin.py:104} INFO - [2021-10-28 13:18:25,910] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:18:25,980] {logging_mixin.py:104} INFO - [2021-10-28 13:18:25,979] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:18:26,002] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.830 seconds
+[2021-10-28 13:18:56,119] {scheduler_job.py:182} INFO - Started process (PID=831) to work on /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:18:56,125] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_distribute.py for tasks to queue
+[2021-10-28 13:18:56,129] {logging_mixin.py:104} INFO - [2021-10-28 13:18:56,128] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:18:59,639] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_distribute']) retrieved from /opt/airflow/dags/ricochet_distribute.py
+[2021-10-28 13:18:59,685] {logging_mixin.py:104} INFO - [2021-10-28 13:18:59,685] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:18:59,749] {logging_mixin.py:104} INFO - [2021-10-28 13:18:59,748] {dag.py:2306} INFO - Setting next_dagrun for ricochet_distribute to 2021-10-28T12:00:00+00:00
+[2021-10-28 13:18:59,771] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_distribute.py took 3.663 seconds

@@ -1,0 +1,26 @@
+[2021-09-14 14:01:16,008] {scheduler_job.py:182} INFO - Started process (PID=127) to work on /opt/airflow/dags/ricochet_stream_closure.py
+[2021-09-14 14:01:16,024] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_closure.py for tasks to queue
+[2021-09-14 14:01:16,032] {logging_mixin.py:104} INFO - [2021-09-14 14:01:16,032] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_closure.py
+[2021-09-14 14:01:32,165] {logging_mixin.py:104} INFO - [2021-09-14 14:01:32,088] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/ricochet_stream_closure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ricochet_stream_closure.py", line 54, in <module>
+    dag=dag,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 185, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/airflow/dags/blocksec_plugin/ricochet_streamer_close_operator.py", line 35, in __init__
+    self.wallet = EthereumWalletHook(ethereum_wallet=ethereum_wallet)
+  File "/opt/airflow/dags/blocksec_plugin/ethereum_wallet_hook.py", line 9, in __init__
+    conn = self.get_connection(ethereum_wallet)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/connection.py", line 381, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `0xe07c9696e00f23Fc7bAE76d037A115bfF33E28be` isn't defined
+[2021-09-14 14:01:32,179] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/ricochet_stream_closure.py
+[2021-09-14 14:01:32,227] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_closure.py took 16.231 seconds

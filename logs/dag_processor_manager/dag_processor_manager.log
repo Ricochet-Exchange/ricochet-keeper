@@ -1,0 +1,1332 @@
+[2021-09-14 14:01:15,544] {dag_processing.py:604} INFO - Processing files using up to 2 processes at a time 
+[2021-09-14 14:01:15,548] {dag_processing.py:605} INFO - Process each file at most once every 30 seconds
+[2021-09-14 14:01:15,553] {dag_processing.py:607} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2021-09-14 14:01:15,558] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-09-14 14:01:15,886] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-09-14 14:01:15,965] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-09-14 14:01:15,968] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-09-14 13:56:15.967944+00:00
+[2021-09-14 14:01:16,123] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/ethereum_block_poll.py                                0           0
+/opt/airflow/dags/ricochet_distribute.py                                0           0
+/opt/airflow/dags/ricochet_stream_closure.py     127  0.11s             0           0
+/opt/airflow/dags/ricochet_stream_watch.py       126  0.12s             0           0
+/opt/airflow/dags/ricochet_tellor_reporter.py                           0           0
+================================================================================
+[2021-09-14 14:01:26,391] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-09-14 14:01:26,466] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-09-14 13:56:26.466304+00:00
+[2021-09-14 14:01:37,305] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-09-14 14:01:37,311] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-09-14 13:56:37.310588+00:00
+[2021-09-14 14:01:46,477] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ethereum_block_poll.py         703  14.13s            0           0
+/opt/airflow/dags/ricochet_distribute.py                                0           0
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  16.32s          2021-09-14T14:01:32
+/opt/airflow/dags/ricochet_tellor_reporter.py                           0           0
+/opt/airflow/dags/ricochet_stream_watch.py       705  13.99s            1           0  16.47s          2021-09-14T14:01:32
+================================================================================
+[2021-09-14 14:01:47,501] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-09-14 14:01:47,516] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-09-14 13:56:47.516604+00:00
+[2021-09-14 14:01:57,640] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-09-14 14:01:57,659] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-09-14 13:56:57.658798+00:00
+[2021-09-14 14:01:57,740] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-09-14 14:01:57,713] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-09-14 14:01:57,712] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-09-14 14:02:01,903] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-09-14 14:02:03,370] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-09-14 14:02:04,831] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 12:28:05,751] {dag_processing.py:604} INFO - Processing files using up to 2 processes at a time 
+[2021-10-28 12:28:05,754] {dag_processing.py:605} INFO - Process each file at most once every 30 seconds
+[2021-10-28 12:28:05,760] {dag_processing.py:607} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2021-10-28 12:28:05,764] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-10-28 12:28:06,164] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-10-28 12:28:06,359] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:28:06,375] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:23:06.374829+00:00
+[2021-10-28 12:28:06,700] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/ethereum_block_poll.py                                0           0
+/opt/airflow/dags/ricochet_distribute.py                                0           0
+/opt/airflow/dags/ricochet_stream_closure.py                            0           0
+/opt/airflow/dags/ricochet_stream_watch.py       413  0.36s             0           0
+/opt/airflow/dags/ricochet_tellor_reporter.py    411  0.37s             0           0
+================================================================================
+[2021-10-28 12:28:17,197] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:28:17,202] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:23:17.201732+00:00
+[2021-10-28 12:28:27,344] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:28:27,351] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:23:27.350785+00:00
+[2021-10-28 12:28:37,069] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_distribute.py         461  7.07s             0           0
+/opt/airflow/dags/ricochet_stream_closure.py     458  12.71s            0           0
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  14.77s          2021-10-28T12:28:29
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  8.85s           2021-10-28T12:28:15
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  18.01s          2021-10-28T12:28:24
+================================================================================
+[2021-10-28 12:28:37,552] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:28:37,574] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:23:37.574262+00:00
+[2021-10-28 12:28:48,332] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:28:48,355] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:23:48.355106+00:00
+[2021-10-28 12:28:58,747] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:28:58,757] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:23:58.757101+00:00
+[2021-10-28 12:29:07,560] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  14.91s          2021-10-28T12:28:39
+/opt/airflow/dags/ethereum_block_poll.py         507  5.70s             1           0  14.77s          2021-10-28T12:28:29
+/opt/airflow/dags/ricochet_distribute.py                                1           0  14.65s          2021-10-28T12:28:44
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  16.52s          2021-10-28T12:29:01
+/opt/airflow/dags/ricochet_tellor_reporter.py    499  13.05s            1           0  18.01s          2021-10-28T12:28:24
+================================================================================
+[2021-10-28 12:29:08,944] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:29:08,963] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:24:08.963038+00:00
+[2021-10-28 12:29:20,167] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:29:20,422] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:24:20.421992+00:00
+[2021-10-28 12:29:31,355] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:29:31,561] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:24:31.561048+00:00
+[2021-10-28 12:29:37,870] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  14.91s          2021-10-28T12:28:39
+/opt/airflow/dags/ethereum_block_poll.py         533  5.50s             1           0  30.24s          2021-10-28T12:29:32
+/opt/airflow/dags/ricochet_distribute.py                                1           0  14.65s          2021-10-28T12:28:44
+/opt/airflow/dags/ricochet_stream_watch.py       530  9.33s             1           0  16.52s          2021-10-28T12:29:01
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  33.79s          2021-10-28T12:29:28
+================================================================================
+[2021-10-28 12:29:42,294] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:29:42,521] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:24:42.500485+00:00
+[2021-10-28 12:29:52,908] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:29:52,928] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:24:52.927051+00:00
+[2021-10-28 12:30:03,353] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:30:03,529] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:25:03.528981+00:00
+[2021-10-28 12:30:08,457] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py     577  11.07s            0           1  14.91s          2021-10-28T12:28:39
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  26.37s          2021-10-28T12:29:58
+/opt/airflow/dags/ricochet_distribute.py         579  9.66s             1           0  14.65s          2021-10-28T12:28:44
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  28.66s          2021-10-28T12:29:56
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  33.79s          2021-10-28T12:29:28
+================================================================================
+[2021-10-28 12:30:14,716] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:30:14,725] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:25:14.725095+00:00
+[2021-10-28 12:30:25,909] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:30:26,113] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:25:26.112967+00:00
+[2021-10-28 12:30:36,836] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:30:37,112] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:25:37.065865+00:00
+[2021-10-28 12:30:38,722] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py     577  41.48s            0           1  14.91s          2021-10-28T12:28:39
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  26.37s          2021-10-28T12:29:58
+/opt/airflow/dags/ricochet_distribute.py         579  40.06s            1           0  14.65s          2021-10-28T12:28:44
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  28.66s          2021-10-28T12:29:56
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  33.79s          2021-10-28T12:29:28
+================================================================================
+[2021-10-28 12:30:48,809] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:30:48,877] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:25:48.876888+00:00
+[2021-10-28 12:30:49,165] {dag_processing.py:1170} ERROR - Processor for /opt/airflow/dags/ricochet_distribute.py with PID 579 started at 2021-10-28T12:29:58.516788+00:00 has timed out, killing it.
+[2021-10-28 12:30:49,230] {dag_processing.py:1170} ERROR - Processor for /opt/airflow/dags/ricochet_distribute.py with PID 579 started at 2021-10-28T12:29:58.516788+00:00 has timed out, killing it.
+[2021-10-28 12:30:50,219] {dag_processing.py:1170} ERROR - Processor for /opt/airflow/dags/ricochet_distribute.py with PID 579 started at 2021-10-28T12:29:58.516788+00:00 has timed out, killing it.
+[2021-10-28 12:30:50,297] {dag_processing.py:1170} ERROR - Processor for /opt/airflow/dags/ricochet_distribute.py with PID 579 started at 2021-10-28T12:29:58.516788+00:00 has timed out, killing it.
+[2021-10-28 12:31:14,628] {dag_processing.py:604} INFO - Processing files using up to 2 processes at a time 
+[2021-10-28 12:31:14,655] {dag_processing.py:605} INFO - Process each file at most once every 30 seconds
+[2021-10-28 12:31:14,663] {dag_processing.py:607} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2021-10-28 12:31:14,678] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-10-28 12:31:15,001] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-10-28 12:31:15,812] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:31:15,860] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:26:15.858154+00:00
+[2021-10-28 12:31:17,855] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/ethereum_block_poll.py                                0           0
+/opt/airflow/dags/ricochet_distribute.py                                0           0
+/opt/airflow/dags/ricochet_stream_closure.py                            0           0
+/opt/airflow/dags/ricochet_stream_watch.py       666  1.83s             0           0
+/opt/airflow/dags/ricochet_tellor_reporter.py    664  1.95s             0           0
+================================================================================
+[2021-10-28 12:31:28,099] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:31:28,121] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:26:28.120916+00:00
+[2021-10-28 12:31:38,427] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:31:38,488] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:26:38.487756+00:00
+[2021-10-28 12:31:48,784] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:31:48,794] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:26:48.793390+00:00
+[2021-10-28 12:31:48,972] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ethereum_block_poll.py                                0           0
+/opt/airflow/dags/ricochet_distribute.py         697  4.17s             0           0
+/opt/airflow/dags/ricochet_stream_closure.py     695  7.59s             0           0
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  25.64s          2021-10-28T12:31:41
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  29.25s          2021-10-28T12:31:44
+================================================================================
+[2021-10-28 12:31:59,244] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:31:59,307] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:26:59.301235+00:00
+[2021-10-28 12:32:10,967] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:32:10,973] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:27:10.972871+00:00
+[2021-10-28 12:32:19,189] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  20.44s          2021-10-28T12:32:01
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  13.26s          2021-10-28T12:32:15
+/opt/airflow/dags/ricochet_distribute.py                                1           0  20.13s          2021-10-28T12:32:04
+/opt/airflow/dags/ricochet_stream_watch.py       725  7.09s             1           0  25.64s          2021-10-28T12:31:41
+/opt/airflow/dags/ricochet_tellor_reporter.py    739  4.06s             1           0  29.25s          2021-10-28T12:31:44
+================================================================================
+[2021-10-28 12:32:21,213] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:32:21,217] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:27:21.217676+00:00
+[2021-10-28 12:32:31,397] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:32:31,403] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:27:31.403076+00:00
+[2021-10-28 12:32:41,828] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:32:41,833] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:27:41.833253+00:00
+[2021-10-28 12:32:49,343] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  5.51s           2021-10-28T12:32:37
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.91s           2021-10-28T12:32:48
+/opt/airflow/dags/ricochet_distribute.py                                1           0  6.09s           2021-10-28T12:32:41
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  10.29s          2021-10-28T12:32:22
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  10.13s          2021-10-28T12:32:25
+================================================================================
+[2021-10-28 12:32:51,905] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:32:51,910] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:27:51.910213+00:00
+[2021-10-28 12:33:02,060] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:33:02,066] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:28:02.066328+00:00
+[2021-10-28 12:33:12,298] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:33:12,302] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:28:12.302136+00:00
+[2021-10-28 12:33:19,887] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.02s           2021-10-28T12:33:10
+/opt/airflow/dags/ethereum_block_poll.py         830  1.01s             1           0  2.91s           2021-10-28T12:32:48
+/opt/airflow/dags/ricochet_distribute.py                                1           0  5.25s           2021-10-28T12:33:17
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  9.30s           2021-10-28T12:33:02
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  8.34s           2021-10-28T12:33:03
+================================================================================
+[2021-10-28 12:33:22,907] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:33:22,911] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:28:22.911658+00:00
+[2021-10-28 12:33:33,037] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:33:33,093] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:28:33.091789+00:00
+[2021-10-28 12:33:43,721] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:33:43,733] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:28:43.733281+00:00
+[2021-10-28 12:33:50,089] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  4.16s           2021-10-28T12:33:45
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  5.17s           2021-10-28T12:33:24
+/opt/airflow/dags/ricochet_distribute.py         860  2.09s             1           0  5.25s           2021-10-28T12:33:17
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  7.63s           2021-10-28T12:33:40
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  7.24s           2021-10-28T12:33:41
+================================================================================
+[2021-10-28 12:33:53,995] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:33:54,008] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:28:54.007626+00:00
+[2021-10-28 12:34:04,270] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:34:04,281] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:29:04.280866+00:00
+[2021-10-28 12:34:14,423] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:34:14,431] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:29:14.430710+00:00
+[2021-10-28 12:34:20,856] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.34s           2021-10-28T12:34:18
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.32s           2021-10-28T12:33:57
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.95s           2021-10-28T12:33:51
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  3.40s           2021-10-28T12:34:14
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.74s           2021-10-28T12:34:16
+================================================================================
+[2021-10-28 12:34:24,886] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:34:24,890] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:29:24.890295+00:00
+[2021-10-28 12:34:34,988] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:34:34,992] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:29:34.992100+00:00
+[2021-10-28 12:34:45,093] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:34:45,106] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:29:45.106246+00:00
+[2021-10-28 12:34:51,379] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py     968  2.32s             0           1  3.34s           2021-10-28T12:34:18
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.66s           2021-10-28T12:34:30
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.69s           2021-10-28T12:34:25
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.89s           2021-10-28T12:34:48
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.39s           2021-10-28T12:34:49
+================================================================================
+[2021-10-28 12:34:55,418] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:34:55,423] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:29:55.423218+00:00
+[2021-10-28 12:35:05,844] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:35:05,847] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:30:05.847618+00:00
+[2021-10-28 12:35:15,930] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:35:15,935] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:30:15.935559+00:00
+[2021-10-28 12:35:21,703] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py    1023  0.00s             0           1  2.44s           2021-10-28T12:34:51
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.65s           2021-10-28T12:35:03
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.37s           2021-10-28T12:34:59
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  3.38s           2021-10-28T12:35:21
+/opt/airflow/dags/ricochet_tellor_reporter.py   1018  1.72s             1           0  3.39s           2021-10-28T12:34:49
+================================================================================
+[2021-10-28 12:35:26,447] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:35:26,455] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:30:26.454858+00:00
+[2021-10-28 12:35:36,700] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:35:36,706] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:30:36.705553+00:00
+[2021-10-28 12:35:46,793] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:35:46,813] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:30:46.810387+00:00
+[2021-10-28 12:35:51,911] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.94s           2021-10-28T12:35:25
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.63s           2021-10-28T12:35:36
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.00s           2021-10-28T12:35:33
+/opt/airflow/dags/ricochet_stream_watch.py      1064  0.01s             1           0  3.38s           2021-10-28T12:35:21
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  4.45s           2021-10-28T12:35:24
+================================================================================
+[2021-10-28 12:35:57,317] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:35:57,322] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:30:57.322463+00:00
+[2021-10-28 12:36:07,643] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:36:07,646] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:31:07.646753+00:00
+[2021-10-28 12:36:14,690] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-10-28 12:36:14,769] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-10-28 12:36:17,818] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:36:17,822] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:31:17.822199+00:00
+[2021-10-28 12:36:21,960] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.84s           2021-10-28T12:35:58
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.23s           2021-10-28T12:36:08
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.55s           2021-10-28T12:36:06
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.77s           2021-10-28T12:35:54
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.59s           2021-10-28T12:35:58
+================================================================================
+[2021-10-28 12:36:28,001] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:36:28,004] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:31:28.004171+00:00
+[2021-10-28 12:36:38,034] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:36:38,038] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:31:38.038622+00:00
+[2021-10-28 12:36:48,081] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:36:48,085] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:31:48.085028+00:00
+[2021-10-28 12:36:52,134] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.51s           2021-10-28T12:36:31
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.33s           2021-10-28T12:36:41
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.47s           2021-10-28T12:36:39
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.29s           2021-10-28T12:36:27
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.97s           2021-10-28T12:36:32
+================================================================================
+[2021-10-28 12:36:58,175] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:36:58,179] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:31:58.179013+00:00
+[2021-10-28 12:37:08,490] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:37:08,494] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:32:08.494275+00:00
+[2021-10-28 12:37:18,852] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:37:18,864] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:32:18.863433+00:00
+[2021-10-28 12:37:22,372] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.38s           2021-10-28T12:37:04
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.76s           2021-10-28T12:37:14
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.27s           2021-10-28T12:37:12
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.56s           2021-10-28T12:37:00
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.90s           2021-10-28T12:37:04
+================================================================================
+[2021-10-28 12:37:28,986] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:37:28,989] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:32:28.989700+00:00
+[2021-10-28 12:37:39,541] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:37:39,553] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:32:39.553018+00:00
+[2021-10-28 12:37:49,619] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:37:49,624] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:32:49.623886+00:00
+[2021-10-28 12:37:52,688] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.46s           2021-10-28T12:37:37
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.16s           2021-10-28T12:37:47
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.61s           2021-10-28T12:37:46
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.59s           2021-10-28T12:37:33
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.93s           2021-10-28T12:37:37
+================================================================================
+[2021-10-28 12:37:59,774] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:37:59,777] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:32:59.777645+00:00
+[2021-10-28 12:38:09,971] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:38:09,975] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:33:09.974902+00:00
+[2021-10-28 12:38:20,093] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:38:20,098] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:33:20.097874+00:00
+[2021-10-28 12:38:22,943] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.43s           2021-10-28T12:38:10
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.85s           2021-10-28T12:38:20
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.42s           2021-10-28T12:38:20
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  3.16s           2021-10-28T12:38:06
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.11s           2021-10-28T12:38:11
+================================================================================
+[2021-10-28 12:38:30,564] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:38:30,579] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:33:30.578570+00:00
+[2021-10-28 12:38:41,062] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:38:41,065] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:33:41.065324+00:00
+[2021-10-28 12:38:51,125] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:38:51,133] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:33:51.132554+00:00
+[2021-10-28 12:38:53,191] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.58s           2021-10-28T12:38:43
+/opt/airflow/dags/ethereum_block_poll.py        1383  2.02s             1           0  2.85s           2021-10-28T12:38:20
+/opt/airflow/dags/ricochet_distribute.py        1382  2.02s             1           0  3.42s           2021-10-28T12:38:20
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.47s           2021-10-28T12:38:39
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.02s           2021-10-28T12:38:44
+================================================================================
+[2021-10-28 12:39:01,240] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:39:01,245] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:34:01.245096+00:00
+[2021-10-28 12:39:11,322] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:39:11,327] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:34:11.326917+00:00
+[2021-10-28 12:39:21,412] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:39:21,417] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:34:21.416313+00:00
+[2021-10-28 12:39:23,459] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.55s           2021-10-28T12:39:15
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.01s           2021-10-28T12:38:54
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.32s           2021-10-28T12:38:54
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.56s           2021-10-28T12:39:12
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.22s           2021-10-28T12:39:17
+================================================================================
+[2021-10-28 12:39:31,524] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:39:31,541] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:34:31.540237+00:00
+[2021-10-28 12:39:41,658] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:39:41,666] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:34:41.666216+00:00
+[2021-10-28 12:39:51,877] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:39:51,881] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:34:51.881340+00:00
+[2021-10-28 12:39:53,598] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.56s           2021-10-28T12:39:48
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.43s           2021-10-28T12:39:26
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.74s           2021-10-28T12:39:27
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.37s           2021-10-28T12:39:45
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.85s           2021-10-28T12:39:51
+================================================================================
+[2021-10-28 12:40:02,649] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:40:02,652] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:35:02.652741+00:00
+[2021-10-28 12:40:12,751] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:40:12,767] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:35:12.767045+00:00
+[2021-10-28 12:40:22,882] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:40:22,890] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:35:22.889286+00:00
+[2021-10-28 12:40:23,931] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.24s           2021-10-28T12:40:21
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.98s           2021-10-28T12:39:59
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.08s           2021-10-28T12:40:00
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.58s           2021-10-28T12:40:18
+/opt/airflow/dags/ricochet_tellor_reporter.py   1524  1.82s             1           0  3.85s           2021-10-28T12:39:51
+================================================================================
+[2021-10-28 12:40:33,123] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:40:33,126] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:35:33.126350+00:00
+[2021-10-28 12:40:43,741] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:40:43,752] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:35:43.752090+00:00
+[2021-10-28 12:40:54,183] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:40:54,189] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:35:54.189322+00:00
+[2021-10-28 12:40:54,216] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.27s           2021-10-28T12:40:53
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.71s           2021-10-28T12:40:32
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.97s           2021-10-28T12:40:33
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.30s           2021-10-28T12:40:51
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.98s           2021-10-28T12:40:25
+================================================================================
+[2021-10-28 12:41:04,219] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:41:04,222] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:36:04.222144+00:00
+[2021-10-28 12:41:14,684] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:41:14,690] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:36:14.689691+00:00
+[2021-10-28 12:41:14,938] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-10-28 12:41:15,036] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-10-28 12:41:24,350] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py    1630  0.50s             0           1  2.27s           2021-10-28T12:40:53
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.42s           2021-10-28T12:41:05
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.67s           2021-10-28T12:41:06
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.54s           2021-10-28T12:41:24
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.94s           2021-10-28T12:40:58
+================================================================================
+[2021-10-28 12:41:25,153] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:41:25,157] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:36:25.157218+00:00
+[2021-10-28 12:41:35,408] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:41:35,413] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:36:35.413428+00:00
+[2021-10-28 12:41:45,891] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:41:45,895] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:36:45.895356+00:00
+[2021-10-28 12:41:55,023] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.29s           2021-10-28T12:41:26
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.39s           2021-10-28T12:41:38
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.68s           2021-10-28T12:41:40
+/opt/airflow/dags/ricochet_stream_watch.py      1683  0.02s             1           0  2.54s           2021-10-28T12:41:24
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  4.21s           2021-10-28T12:41:32
+================================================================================
+[2021-10-28 12:41:56,038] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:41:56,047] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:36:56.046674+00:00
+[2021-10-28 12:42:06,299] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:42:06,303] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:37:06.303426+00:00
+[2021-10-28 12:42:16,763] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:42:16,792] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:37:16.789903+00:00
+[2021-10-28 12:42:25,334] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.89s           2021-10-28T12:42:00
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.77s           2021-10-28T12:42:11
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.91s           2021-10-28T12:42:13
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  4.28s           2021-10-28T12:41:59
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.78s           2021-10-28T12:42:05
+================================================================================
+[2021-10-28 12:42:26,965] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:42:26,971] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:37:26.970679+00:00
+[2021-10-28 12:42:37,135] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:42:37,139] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:37:37.139453+00:00
+[2021-10-28 12:42:47,558] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:42:47,562] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:37:47.562571+00:00
+[2021-10-28 12:42:55,677] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.49s           2021-10-28T12:42:32
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.63s           2021-10-28T12:42:44
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.92s           2021-10-28T12:42:46
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.70s           2021-10-28T12:42:32
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.50s           2021-10-28T12:42:38
+================================================================================
+[2021-10-28 12:42:57,707] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:42:57,713] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:37:57.713122+00:00
+[2021-10-28 12:43:08,467] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:43:08,495] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:38:08.495167+00:00
+[2021-10-28 12:43:19,072] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:43:19,077] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:38:19.076614+00:00
+[2021-10-28 12:43:26,289] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.61s           2021-10-28T12:43:05
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.20s           2021-10-28T12:43:17
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.98s           2021-10-28T12:43:19
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.69s           2021-10-28T12:43:05
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.48s           2021-10-28T12:43:12
+================================================================================
+[2021-10-28 12:43:29,314] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:43:29,323] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:38:29.322456+00:00
+[2021-10-28 12:43:39,542] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:43:39,545] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:38:39.545298+00:00
+[2021-10-28 12:43:50,286] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:43:50,291] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:38:50.291000+00:00
+[2021-10-28 12:43:56,516] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.76s           2021-10-28T12:43:38
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.22s           2021-10-28T12:43:49
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.69s           2021-10-28T12:43:52
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.94s           2021-10-28T12:43:38
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.65s           2021-10-28T12:43:45
+================================================================================
+[2021-10-28 12:44:00,536] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:44:00,539] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:39:00.539400+00:00
+[2021-10-28 12:44:10,639] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:44:10,642] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:39:10.642827+00:00
+[2021-10-28 12:44:20,895] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:44:20,898] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:39:20.898461+00:00
+[2021-10-28 12:44:26,929] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.20s           2021-10-28T12:44:10
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.37s           2021-10-28T12:44:22
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.90s           2021-10-28T12:44:25
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.27s           2021-10-28T12:44:11
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.60s           2021-10-28T12:44:17
+================================================================================
+[2021-10-28 12:44:30,983] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:44:30,986] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:39:30.986704+00:00
+[2021-10-28 12:44:41,055] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:44:41,058] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:39:41.058518+00:00
+[2021-10-28 12:44:51,677] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:44:51,680] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:39:51.679986+00:00
+[2021-10-28 12:44:57,700] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.12s           2021-10-28T12:44:43
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.98s           2021-10-28T12:44:55
+/opt/airflow/dags/ricochet_distribute.py        2007  1.77s             1           0  2.90s           2021-10-28T12:44:25
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.20s           2021-10-28T12:44:43
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.66s           2021-10-28T12:44:50
+================================================================================
+[2021-10-28 12:45:01,710] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:45:01,723] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:40:01.722191+00:00
+[2021-10-28 12:45:11,859] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:45:11,863] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:40:11.863716+00:00
+[2021-10-28 12:45:22,385] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:45:22,389] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:40:22.388810+00:00
+[2021-10-28 12:45:27,999] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.39s           2021-10-28T12:45:16
+/opt/airflow/dags/ethereum_block_poll.py        2060  2.01s             1           0  2.98s           2021-10-28T12:44:55
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.75s           2021-10-28T12:44:58
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.48s           2021-10-28T12:45:16
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.61s           2021-10-28T12:45:23
+================================================================================
+[2021-10-28 12:45:32,549] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:45:32,553] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:40:32.553017+00:00
+[2021-10-28 12:45:42,629] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:45:42,633] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:40:42.633355+00:00
+[2021-10-28 12:45:52,824] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:45:52,827] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:40:52.827420+00:00
+[2021-10-28 12:45:58,541] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.37s           2021-10-28T12:45:48
+/opt/airflow/dags/ethereum_block_poll.py        2115  0.00s             1           0  2.54s           2021-10-28T12:45:28
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.81s           2021-10-28T12:45:32
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.46s           2021-10-28T12:45:48
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.66s           2021-10-28T12:45:57
+================================================================================
+[2021-10-28 12:46:03,577] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:46:03,580] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:41:03.579974+00:00
+[2021-10-28 12:46:13,767] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:46:13,775] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:41:13.774960+00:00
+[2021-10-28 12:46:15,362] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-10-28 12:46:15,446] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-10-28 12:46:23,871] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:46:23,876] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:41:23.876119+00:00
+[2021-10-28 12:46:28,924] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.40s           2021-10-28T12:46:21
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.17s           2021-10-28T12:46:00
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.72s           2021-10-28T12:46:05
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.37s           2021-10-28T12:46:21
+/opt/airflow/dags/ricochet_tellor_reporter.py   2166  1.01s             1           0  2.66s           2021-10-28T12:45:57
+================================================================================
+[2021-10-28 12:46:33,979] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:46:33,990] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:41:33.990071+00:00
+[2021-10-28 12:46:44,183] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:46:44,186] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:41:44.186634+00:00
+[2021-10-28 12:46:54,294] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:46:54,297] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:41:54.297346+00:00
+[2021-10-28 12:46:59,408] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.10s           2021-10-28T12:46:53
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.16s           2021-10-28T12:46:33
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.45s           2021-10-28T12:46:38
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.15s           2021-10-28T12:46:54
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.56s           2021-10-28T12:46:30
+================================================================================
+[2021-10-28 12:47:04,478] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:47:04,482] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:42:04.482153+00:00
+[2021-10-28 12:47:14,869] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:47:14,872] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:42:14.872198+00:00
+[2021-10-28 12:47:24,967] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:47:24,971] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:42:24.971794+00:00
+[2021-10-28 12:47:29,482] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.20s           2021-10-28T12:47:26
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.38s           2021-10-28T12:47:05
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.49s           2021-10-28T12:47:11
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.46s           2021-10-28T12:47:27
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.77s           2021-10-28T12:47:04
+================================================================================
+[2021-10-28 12:47:35,206] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:47:35,210] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:42:35.210123+00:00
+[2021-10-28 12:47:45,764] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:47:45,767] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:42:45.767008+00:00
+[2021-10-28 12:47:55,860] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:47:55,863] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:42:55.863032+00:00
+[2021-10-28 12:47:59,752] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.49s           2021-10-28T12:47:58
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.47s           2021-10-28T12:47:38
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.63s           2021-10-28T12:47:44
+/opt/airflow/dags/ricochet_stream_watch.py      2321  1.86s             1           0  2.46s           2021-10-28T12:47:27
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.67s           2021-10-28T12:47:36
+================================================================================
+[2021-10-28 12:48:06,308] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:48:06,322] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:43:06.321245+00:00
+[2021-10-28 12:48:16,371] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:48:16,377] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:43:16.377312+00:00
+[2021-10-28 12:48:26,563] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:48:26,582] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:43:26.580334+00:00
+[2021-10-28 12:48:30,648] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py    2376  1.01s             0           1  2.49s           2021-10-28T12:47:58
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.51s           2021-10-28T12:48:11
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.27s           2021-10-28T12:48:17
+/opt/airflow/dags/ricochet_stream_watch.py      2381  0.00s             1           0  2.33s           2021-10-28T12:48:00
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.82s           2021-10-28T12:48:10
+================================================================================
+[2021-10-28 12:48:37,308] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:48:37,322] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:43:37.321364+00:00
+[2021-10-28 12:48:47,435] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:48:47,439] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:43:47.438769+00:00
+[2021-10-28 12:48:57,546] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:48:57,558] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:43:57.557200+00:00
+[2021-10-28 12:49:00,804] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.63s           2021-10-28T12:48:32
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.25s           2021-10-28T12:48:43
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.00s           2021-10-28T12:48:50
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.66s           2021-10-28T12:48:33
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.50s           2021-10-28T12:48:42
+================================================================================
+[2021-10-28 12:49:07,830] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:49:07,834] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:44:07.833907+00:00
+[2021-10-28 12:49:18,328] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:49:18,332] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:44:18.332049+00:00
+[2021-10-28 12:49:28,422] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:49:28,425] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:44:28.425461+00:00
+[2021-10-28 12:49:31,104] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.65s           2021-10-28T12:49:05
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.44s           2021-10-28T12:49:16
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.64s           2021-10-28T12:49:24
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.61s           2021-10-28T12:49:06
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.61s           2021-10-28T12:49:15
+================================================================================
+[2021-10-28 12:49:38,540] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:49:38,542] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:44:38.542781+00:00
+[2021-10-28 12:49:48,652] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:49:48,656] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:44:48.656301+00:00
+[2021-10-28 12:49:58,845] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:49:58,848] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:44:58.848165+00:00
+[2021-10-28 12:50:01,382] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.07s           2021-10-28T12:49:37
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.60s           2021-10-28T12:49:49
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.52s           2021-10-28T12:49:56
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.16s           2021-10-28T12:49:38
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.27s           2021-10-28T12:49:48
+================================================================================
+[2021-10-28 12:50:08,944] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:50:08,947] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:45:08.947424+00:00
+[2021-10-28 12:50:19,188] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:50:19,191] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:45:19.191032+00:00
+[2021-10-28 12:50:29,446] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:50:29,451] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:45:29.451157+00:00
+[2021-10-28 12:50:31,502] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.21s           2021-10-28T12:50:10
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.81s           2021-10-28T12:50:23
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.57s           2021-10-28T12:50:29
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.19s           2021-10-28T12:50:11
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.16s           2021-10-28T12:50:22
+================================================================================
+[2021-10-28 12:50:39,537] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:50:39,540] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:45:39.540293+00:00
+[2021-10-28 12:50:49,746] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:50:49,749] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:45:49.749678+00:00
+[2021-10-28 12:50:59,841] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:50:59,846] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:45:59.845910+00:00
+[2021-10-28 12:51:01,897] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.10s           2021-10-28T12:50:42
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.49s           2021-10-28T12:50:56
+/opt/airflow/dags/ricochet_distribute.py        2627  2.03s             1           0  2.57s           2021-10-28T12:50:29
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.14s           2021-10-28T12:50:43
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.74s           2021-10-28T12:50:55
+================================================================================
+[2021-10-28 12:51:10,375] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:51:10,398] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:46:10.398646+00:00
+[2021-10-28 12:51:15,443] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-10-28 12:51:15,542] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-10-28 12:51:20,817] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:51:20,820] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:46:20.820077+00:00
+[2021-10-28 12:51:30,964] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:51:30,974] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:46:30.973891+00:00
+[2021-10-28 12:51:32,011] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.35s           2021-10-28T12:51:15
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.49s           2021-10-28T12:51:29
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.49s           2021-10-28T12:51:02
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.42s           2021-10-28T12:51:16
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.60s           2021-10-28T12:51:28
+================================================================================
+[2021-10-28 12:51:41,110] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:51:41,112] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:46:41.112524+00:00
+[2021-10-28 12:51:51,354] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:51:51,360] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:46:51.360484+00:00
+[2021-10-28 12:52:01,465] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:52:01,470] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:47:01.470446+00:00
+[2021-10-28 12:52:02,513] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.14s           2021-10-28T12:51:49
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.44s           2021-10-28T12:52:01
+/opt/airflow/dags/ricochet_distribute.py                                1           0  2.98s           2021-10-28T12:51:35
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.88s           2021-10-28T12:51:50
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.72s           2021-10-28T12:52:01
+================================================================================
+[2021-10-28 12:52:11,591] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:52:11,602] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:47:11.602425+00:00
+[2021-10-28 12:52:21,809] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:52:21,813] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:47:21.813442+00:00
+[2021-10-28 12:52:32,305] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:52:32,309] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:47:32.308922+00:00
+[2021-10-28 12:52:33,339] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.48s           2021-10-28T12:52:22
+/opt/airflow/dags/ethereum_block_poll.py        2783  1.01s             1           0  2.44s           2021-10-28T12:52:01
+/opt/airflow/dags/ricochet_distribute.py                                1           0  4.02s           2021-10-28T12:52:09
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.58s           2021-10-28T12:52:23
+/opt/airflow/dags/ricochet_tellor_reporter.py   2781  1.01s             1           0  2.72s           2021-10-28T12:52:01
+================================================================================
+[2021-10-28 12:52:42,727] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:52:42,736] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:47:42.736447+00:00
+[2021-10-28 12:52:53,071] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:52:53,077] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:47:53.077463+00:00
+[2021-10-28 12:53:03,574] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 12:53:03,583] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:48:03.582907+00:00
+[2021-10-28 12:53:03,613] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.42s           2021-10-28T12:52:55
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  2.34s           2021-10-28T12:52:34
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.37s           2021-10-28T12:52:43
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.47s           2021-10-28T12:52:56
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  2.63s           2021-10-28T12:52:34
+================================================================================
+[2021-10-28 12:53:11,362] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 13:02:01,560] {dag_processing.py:604} INFO - Processing files using up to 2 processes at a time 
+[2021-10-28 13:02:01,566] {dag_processing.py:605} INFO - Process each file at most once every 30 seconds
+[2021-10-28 13:02:01,575] {dag_processing.py:607} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2021-10-28 13:02:01,578] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-10-28 13:02:01,903] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-10-28 13:02:02,061] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:02:02,065] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:57:02.065055+00:00
+[2021-10-28 13:02:02,662] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/ethereum_block_poll.py                                0           0
+/opt/airflow/dags/ricochet_distribute.py                                0           0
+/opt/airflow/dags/ricochet_stream_closure.py                            0           0
+/opt/airflow/dags/ricochet_stream_watch.py       443  0.36s             0           0
+/opt/airflow/dags/ricochet_tellor_reporter.py    441  0.37s             0           0
+================================================================================
+[2021-10-28 13:02:13,102] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:02:13,129] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:57:13.125316+00:00
+[2021-10-28 13:02:23,262] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:02:23,275] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:57:23.274708+00:00
+[2021-10-28 13:02:32,998] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  8.62s           2021-10-28T13:02:19
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  8.88s           2021-10-28T13:02:28
+/opt/airflow/dags/ricochet_distribute.py                                1           0  11.66s          2021-10-28T13:02:23
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  8.55s           2021-10-28T13:02:10
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  10.24s          2021-10-28T13:02:12
+================================================================================
+[2021-10-28 13:02:34,009] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:02:34,015] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:57:34.015649+00:00
+[2021-10-28 13:02:44,206] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:02:44,210] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:57:44.210295+00:00
+[2021-10-28 13:02:54,892] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:02:54,900] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:57:54.900064+00:00
+[2021-10-28 13:03:03,074] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  4.58s           2021-10-28T13:02:53
+/opt/airflow/dags/ethereum_block_poll.py         524  4.04s             1           0  8.88s           2021-10-28T13:02:28
+/opt/airflow/dags/ricochet_distribute.py                                1           0  7.22s           2021-10-28T13:03:01
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  7.77s           2021-10-28T13:02:48
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  7.76s           2021-10-28T13:02:50
+================================================================================
+[2021-10-28 13:03:05,098] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:03:05,103] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:58:05.103224+00:00
+[2021-10-28 13:03:15,232] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:03:15,241] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:58:15.240732+00:00
+[2021-10-28 13:03:25,470] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:03:25,501] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:58:25.500887+00:00
+[2021-10-28 13:03:33,840] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.42s           2021-10-28T13:03:31
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  7.28s           2021-10-28T13:03:06
+/opt/airflow/dags/ricochet_distribute.py         556  2.01s             1           0  7.22s           2021-10-28T13:03:01
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  9.07s           2021-10-28T13:03:28
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  7.66s           2021-10-28T13:03:29
+================================================================================
+[2021-10-28 13:03:35,852] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:03:35,856] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:58:35.856158+00:00
+[2021-10-28 13:03:46,135] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:03:46,140] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:58:46.140414+00:00
+[2021-10-28 13:03:56,206] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:03:56,213] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:58:56.212758+00:00
+[2021-10-28 13:04:03,990] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py     606  1.34s             0           1  3.42s           2021-10-28T13:03:31
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.92s           2021-10-28T13:03:40
+/opt/airflow/dags/ricochet_distribute.py                                1           0  4.66s           2021-10-28T13:03:36
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  4.10s           2021-10-28T13:04:02
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  4.73s           2021-10-28T13:04:03
+================================================================================
+[2021-10-28 13:04:06,681] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:04:06,687] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:59:06.687233+00:00
+[2021-10-28 13:04:16,846] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:04:16,852] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:59:16.852549+00:00
+[2021-10-28 13:04:26,939] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:04:26,943] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:59:26.942771+00:00
+[2021-10-28 13:04:34,053] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.22s           2021-10-28T13:04:05
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  4.09s           2021-10-28T13:04:14
+/opt/airflow/dags/ricochet_distribute.py                                1           0  4.24s           2021-10-28T13:04:10
+/opt/airflow/dags/ricochet_stream_watch.py       655  1.03s             1           0  4.10s           2021-10-28T13:04:02
+/opt/airflow/dags/ricochet_tellor_reporter.py    657  0.01s             1           0  4.73s           2021-10-28T13:04:03
+================================================================================
+[2021-10-28 13:04:37,083] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:04:37,087] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:59:37.087365+00:00
+[2021-10-28 13:04:47,417] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:04:47,427] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:59:47.426982+00:00
+[2021-10-28 13:04:58,029] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:04:58,043] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 12:59:58.043531+00:00
+[2021-10-28 13:05:04,148] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.62s           2021-10-28T13:04:40
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.35s           2021-10-28T13:04:48
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.88s           2021-10-28T13:04:44
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  3.74s           2021-10-28T13:04:36
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.99s           2021-10-28T13:04:38
+================================================================================
+[2021-10-28 13:05:08,238] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:05:08,242] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:00:08.241911+00:00
+[2021-10-28 13:05:18,458] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:05:18,465] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:00:18.465122+00:00
+[2021-10-28 13:05:28,579] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:05:28,589] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:00:28.589310+00:00
+[2021-10-28 13:05:34,664] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.49s           2021-10-28T13:05:13
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.53s           2021-10-28T13:05:22
+/opt/airflow/dags/ricochet_distribute.py                                1           0  4.07s           2021-10-28T13:05:19
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  3.19s           2021-10-28T13:05:10
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.91s           2021-10-28T13:05:12
+================================================================================
+[2021-10-28 13:05:38,692] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:05:38,695] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:00:38.694893+00:00
+[2021-10-28 13:05:48,860] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:05:48,869] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:00:48.869420+00:00
+[2021-10-28 13:05:59,041] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:05:59,058] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:00:59.057036+00:00
+[2021-10-28 13:06:05,153] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.21s           2021-10-28T13:05:47
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.46s           2021-10-28T13:05:56
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.81s           2021-10-28T13:05:53
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  3.11s           2021-10-28T13:05:43
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.69s           2021-10-28T13:05:46
+================================================================================
+[2021-10-28 13:06:09,191] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:06:09,195] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:01:09.195323+00:00
+[2021-10-28 13:06:19,544] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:06:19,548] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:01:19.548296+00:00
+[2021-10-28 13:06:29,679] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:06:29,682] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:01:29.682575+00:00
+[2021-10-28 13:06:35,345] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.38s           2021-10-28T13:06:21
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.67s           2021-10-28T13:06:30
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.82s           2021-10-28T13:06:27
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  3.47s           2021-10-28T13:06:17
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  4.08s           2021-10-28T13:06:20
+================================================================================
+[2021-10-28 13:06:39,840] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:06:39,844] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:01:39.844550+00:00
+[2021-10-28 13:06:49,946] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:06:49,977] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:01:49.975571+00:00
+[2021-10-28 13:07:00,979] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:07:01,046] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:02:01.045684+00:00
+[2021-10-28 13:07:01,200] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 13:07:01,207] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 13:07:08,261] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 13:14:30,619] {dag_processing.py:604} INFO - Processing files using up to 2 processes at a time 
+[2021-10-28 13:14:30,640] {dag_processing.py:605} INFO - Process each file at most once every 30 seconds
+[2021-10-28 13:14:30,644] {dag_processing.py:607} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2021-10-28 13:14:30,650] {dag_processing.py:755} INFO - Searching for files in /opt/airflow/dags
+[2021-10-28 13:14:31,111] {dag_processing.py:758} INFO - There are 5 files in /opt/airflow/dags
+[2021-10-28 13:14:31,201] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:14:31,205] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:09:31.205346+00:00
+[2021-10-28 13:14:31,346] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/ethereum_block_poll.py                                0           0
+/opt/airflow/dags/ricochet_distribute.py                                0           0
+/opt/airflow/dags/ricochet_stream_closure.py                            0           0
+/opt/airflow/dags/ricochet_stream_watch.py       416  0.12s             0           0
+/opt/airflow/dags/ricochet_tellor_reporter.py    414  0.13s             0           0
+================================================================================
+[2021-10-28 13:14:41,398] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:14:41,413] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:09:41.413457+00:00
+[2021-10-28 13:14:51,811] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:14:51,816] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:09:51.815957+00:00
+[2021-10-28 13:15:01,894] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:15:01,902] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:10:01.901862+00:00
+[2021-10-28 13:15:01,964] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  5.65s           2021-10-28T13:14:42
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  8.14s           2021-10-28T13:14:50
+/opt/airflow/dags/ricochet_distribute.py                                1           0  8.22s           2021-10-28T13:14:46
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  5.89s           2021-10-28T13:14:37
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  6.59s           2021-10-28T13:14:37
+================================================================================
+[2021-10-28 13:15:12,138] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:15:12,146] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:10:12.146047+00:00
+[2021-10-28 13:15:23,087] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:15:23,099] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:10:23.098569+00:00
+[2021-10-28 13:15:32,189] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  4.93s           2021-10-28T13:15:19
+/opt/airflow/dags/ethereum_block_poll.py         490  11.23s            1           0  8.14s           2021-10-28T13:14:50
+/opt/airflow/dags/ricochet_distribute.py                                1           0  12.15s          2021-10-28T13:15:29
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  6.87s           2021-10-28T13:15:14
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  6.96s           2021-10-28T13:15:14
+================================================================================
+[2021-10-28 13:15:33,176] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:15:33,180] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:10:33.180635+00:00
+[2021-10-28 13:15:43,298] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:15:43,305] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:10:43.305699+00:00
+[2021-10-28 13:15:53,415] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:15:53,424] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:10:53.424139+00:00
+[2021-10-28 13:16:02,594] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  4.78s           2021-10-28T13:15:58
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  12.22s          2021-10-28T13:15:33
+/opt/airflow/dags/ricochet_distribute.py         532  3.03s             1           0  12.15s          2021-10-28T13:15:29
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  8.61s           2021-10-28T13:15:53
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  9.51s           2021-10-28T13:15:54
+================================================================================
+[2021-10-28 13:16:03,603] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:16:03,610] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:11:03.609912+00:00
+[2021-10-28 13:16:13,699] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:16:13,703] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:11:13.703301+00:00
+[2021-10-28 13:16:23,795] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:16:23,805] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:11:23.804917+00:00
+[2021-10-28 13:16:32,847] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.18s           2021-10-28T13:16:32
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  6.02s           2021-10-28T13:16:09
+/opt/airflow/dags/ricochet_distribute.py                                1           0  6.94s           2021-10-28T13:16:06
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  4.16s           2021-10-28T13:16:28
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  4.82s           2021-10-28T13:16:30
+================================================================================
+[2021-10-28 13:16:33,855] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:16:33,870] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:11:33.868643+00:00
+[2021-10-28 13:16:44,006] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:16:44,012] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:11:44.011848+00:00
+[2021-10-28 13:16:54,108] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:16:54,117] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:11:54.116642+00:00
+[2021-10-28 13:17:03,250] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.18s           2021-10-28T13:16:32
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  4.04s           2021-10-28T13:16:44
+/opt/airflow/dags/ricochet_distribute.py                                1           0  4.32s           2021-10-28T13:16:41
+/opt/airflow/dags/ricochet_stream_watch.py       631  4.05s             1           0  4.16s           2021-10-28T13:16:28
+/opt/airflow/dags/ricochet_tellor_reporter.py    633  2.02s             1           0  4.82s           2021-10-28T13:16:30
+================================================================================
+[2021-10-28 13:17:04,392] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:17:04,397] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:12:04.397198+00:00
+[2021-10-28 13:17:14,748] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:17:14,764] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:12:14.763937+00:00
+[2021-10-28 13:17:25,002] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:17:25,006] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:12:25.006389+00:00
+[2021-10-28 13:17:33,495] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.42s           2021-10-28T13:17:06
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.56s           2021-10-28T13:17:18
+/opt/airflow/dags/ricochet_distribute.py                                1           0  5.11s           2021-10-28T13:17:16
+/opt/airflow/dags/ricochet_stream_watch.py       689  0.00s             1           0  4.27s           2021-10-28T13:17:03
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  4.48s           2021-10-28T13:17:05
+================================================================================
+[2021-10-28 13:17:35,077] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:17:35,081] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:12:35.081495+00:00
+[2021-10-28 13:17:45,426] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:17:45,448] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:12:45.445837+00:00
+[2021-10-28 13:17:55,894] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:17:55,898] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:12:55.898240+00:00
+[2021-10-28 13:18:04,003] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  3.65s           2021-10-28T13:17:40
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.40s           2021-10-28T13:17:51
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.89s           2021-10-28T13:17:51
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  3.68s           2021-10-28T13:17:37
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  4.27s           2021-10-28T13:17:40
+================================================================================
+[2021-10-28 13:18:06,025] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:18:06,029] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:13:06.028796+00:00
+[2021-10-28 13:18:16,114] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:18:16,118] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:13:16.118011+00:00
+[2021-10-28 13:18:26,716] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:18:26,721] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:13:26.720832+00:00
+[2021-10-28 13:18:34,062] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  2.92s           2021-10-28T13:18:13
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.55s           2021-10-28T13:18:25
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.86s           2021-10-28T13:18:26
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  2.85s           2021-10-28T13:18:10
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  3.43s           2021-10-28T13:18:14
+================================================================================
+[2021-10-28 13:18:36,817] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:18:36,820] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:13:36.820458+00:00
+[2021-10-28 13:18:47,130] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:18:47,134] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:13:47.134560+00:00
+[2021-10-28 13:18:58,104] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:18:58,108] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:13:58.108406+00:00
+[2021-10-28 13:19:04,495] {dag_processing.py:862} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ricochet_stream_closure.py                            0           1  4.12s           2021-10-28T13:18:47
+/opt/airflow/dags/ethereum_block_poll.py                                1           0  3.38s           2021-10-28T13:18:59
+/opt/airflow/dags/ricochet_distribute.py                                1           0  3.72s           2021-10-28T13:18:59
+/opt/airflow/dags/ricochet_stream_watch.py                              1           0  4.65s           2021-10-28T13:18:45
+/opt/airflow/dags/ricochet_tellor_reporter.py                           1           0  4.33s           2021-10-28T13:18:50
+================================================================================
+[2021-10-28 13:19:08,517] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:19:08,530] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:14:08.529789+00:00
+[2021-10-28 13:19:18,685] {dag_processing.py:1129} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-10-28 13:19:18,700] {dag_processing.py:1133} INFO - Failing jobs without heartbeat after 2021-10-28 13:14:18.700101+00:00
+[2021-10-28 13:19:20,402] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 13:19:20,412] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 13:19:24,576] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 13:19:26,662] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15
+[2021-10-28 13:19:28,235] {dag_processing.py:585} INFO - Exiting gracefully upon receiving signal 15

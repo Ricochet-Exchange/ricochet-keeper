@@ -1,0 +1,420 @@
+[2021-10-28 12:28:06,384] {scheduler_job.py:182} INFO - Started process (PID=413) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:28:06,398] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:28:06,431] {logging_mixin.py:104} INFO - [2021-10-28 12:28:06,422] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:28:14,584] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:28:14,765] {logging_mixin.py:104} INFO - [2021-10-28 12:28:14,746] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:28:14,990] {logging_mixin.py:104} INFO - [2021-10-28 12:28:14,989] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T10:50:00+00:00
+[2021-10-28 12:28:15,110] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 8.733 seconds
+[2021-10-28 12:28:45,412] {scheduler_job.py:182} INFO - Started process (PID=487) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:28:45,417] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:28:45,422] {logging_mixin.py:104} INFO - [2021-10-28 12:28:45,421] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:28:59,479] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:28:59,774] {logging_mixin.py:104} INFO - [2021-10-28 12:28:59,728] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:29:00,462] {logging_mixin.py:104} INFO - [2021-10-28 12:29:00,341] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:29:01,375] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 15.986 seconds
+[2021-10-28 12:29:28,603] {scheduler_job.py:182} INFO - Started process (PID=530) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:29:28,614] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:29:28,676] {logging_mixin.py:104} INFO - [2021-10-28 12:29:28,674] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:29:54,021] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:29:54,317] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ricochet_stream_watch.closures_0x387af38C133056a0744FB6e823CdB459AE3c5a1f 2021-10-28 10:50:00+00:00 [failed]> in state failed
+[2021-10-28 12:29:54,453] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ricochet_stream_watch.closures_0x5786D3754443C0D3D1DdEA5bB550ccc476FdF11D 2021-10-28 10:50:00+00:00 [failed]> in state failed
+[2021-10-28 12:29:54,577] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ricochet_stream_watch.closures_0x27C7D067A0C143990EC6ed2772E7136Cfcfaecd6 2021-10-28 10:50:00+00:00 [failed]> in state failed
+[2021-10-28 12:29:54,712] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: ricochet_stream_watch.closures_0x22CD7fa83Ae3381b66e8011930b92564a8E83366 2021-10-28 10:50:00+00:00 [failed]> in state failed
+[2021-10-28 12:29:55,239] {logging_mixin.py:104} INFO - [2021-10-28 12:29:55,178] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:29:55,784] {logging_mixin.py:104} INFO - [2021-10-28 12:29:55,781] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:29:56,120] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 27.571 seconds
+[2021-10-28 12:31:16,263] {scheduler_job.py:182} INFO - Started process (PID=666) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:31:16,328] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:31:16,443] {logging_mixin.py:104} INFO - [2021-10-28 12:31:16,376] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:31:39,459] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:31:39,809] {logging_mixin.py:104} INFO - [2021-10-28 12:31:39,738] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:31:40,227] {logging_mixin.py:104} INFO - [2021-10-28 12:31:40,226] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:31:40,344] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 24.347 seconds
+[2021-10-28 12:32:12,132] {scheduler_job.py:182} INFO - Started process (PID=725) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:32:12,146] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:32:12,159] {logging_mixin.py:104} INFO - [2021-10-28 12:32:12,158] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:32:21,903] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:32:22,048] {logging_mixin.py:104} INFO - [2021-10-28 12:32:22,013] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:32:22,260] {logging_mixin.py:104} INFO - [2021-10-28 12:32:22,260] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:32:22,307] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 10.186 seconds
+[2021-10-28 12:32:53,050] {scheduler_job.py:182} INFO - Started process (PID=779) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:32:53,058] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:32:53,065] {logging_mixin.py:104} INFO - [2021-10-28 12:32:53,064] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:33:01,691] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:33:01,846] {logging_mixin.py:104} INFO - [2021-10-28 12:33:01,825] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:33:02,084] {logging_mixin.py:104} INFO - [2021-10-28 12:33:02,083] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:33:02,136] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 9.115 seconds
+[2021-10-28 12:33:33,441] {scheduler_job.py:182} INFO - Started process (PID=833) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:33:33,459] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:33:33,472] {logging_mixin.py:104} INFO - [2021-10-28 12:33:33,469] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:33:40,560] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:33:40,624] {logging_mixin.py:104} INFO - [2021-10-28 12:33:40,613] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:33:40,712] {logging_mixin.py:104} INFO - [2021-10-28 12:33:40,712] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:33:40,742] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 7.368 seconds
+[2021-10-28 12:34:11,444] {scheduler_job.py:182} INFO - Started process (PID=899) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:34:11,455] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:34:11,459] {logging_mixin.py:104} INFO - [2021-10-28 12:34:11,458] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:34:14,633] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:34:14,680] {logging_mixin.py:104} INFO - [2021-10-28 12:34:14,672] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:34:14,747] {logging_mixin.py:104} INFO - [2021-10-28 12:34:14,747] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:34:14,767] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.332 seconds
+[2021-10-28 12:34:45,192] {scheduler_job.py:182} INFO - Started process (PID=943) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:34:45,196] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:34:45,199] {logging_mixin.py:104} INFO - [2021-10-28 12:34:45,199] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:34:47,890] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:34:47,934] {logging_mixin.py:104} INFO - [2021-10-28 12:34:47,926] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:34:48,002] {logging_mixin.py:104} INFO - [2021-10-28 12:34:48,002] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:34:48,021] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.839 seconds
+[2021-10-28 12:35:18,364] {scheduler_job.py:182} INFO - Started process (PID=1016) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:35:18,372] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:35:18,377] {logging_mixin.py:104} INFO - [2021-10-28 12:35:18,377] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:35:21,535] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:35:21,577] {logging_mixin.py:104} INFO - [2021-10-28 12:35:21,569] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:35:21,653] {logging_mixin.py:104} INFO - [2021-10-28 12:35:21,653] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:35:21,672] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.322 seconds
+[2021-10-28 12:35:51,925] {scheduler_job.py:182} INFO - Started process (PID=1064) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:35:51,929] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:35:51,932] {logging_mixin.py:104} INFO - [2021-10-28 12:35:51,932] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:35:54,503] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:35:54,557] {logging_mixin.py:104} INFO - [2021-10-28 12:35:54,548] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:35:54,620] {logging_mixin.py:104} INFO - [2021-10-28 12:35:54,619] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:35:54,637] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.718 seconds
+[2021-10-28 12:36:24,951] {scheduler_job.py:182} INFO - Started process (PID=1127) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:36:24,955] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:36:24,957] {logging_mixin.py:104} INFO - [2021-10-28 12:36:24,957] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:36:27,095] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:36:27,132] {logging_mixin.py:104} INFO - [2021-10-28 12:36:27,125] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:36:27,185] {logging_mixin.py:104} INFO - [2021-10-28 12:36:27,185] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:36:27,202] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.257 seconds
+[2021-10-28 12:36:57,504] {scheduler_job.py:182} INFO - Started process (PID=1186) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:36:57,508] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:36:57,511] {logging_mixin.py:104} INFO - [2021-10-28 12:36:57,510] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:36:59,894] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:36:59,934] {logging_mixin.py:104} INFO - [2021-10-28 12:36:59,926] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:36:59,991] {logging_mixin.py:104} INFO - [2021-10-28 12:36:59,990] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:37:00,014] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.516 seconds
+[2021-10-28 12:37:30,448] {scheduler_job.py:182} INFO - Started process (PID=1244) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:37:30,453] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:37:30,457] {logging_mixin.py:104} INFO - [2021-10-28 12:37:30,457] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:37:32,882] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:37:32,917] {logging_mixin.py:104} INFO - [2021-10-28 12:37:32,911] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:37:32,967] {logging_mixin.py:104} INFO - [2021-10-28 12:37:32,967] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:37:32,983] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.551 seconds
+[2021-10-28 12:38:03,852] {scheduler_job.py:182} INFO - Started process (PID=1301) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:38:03,857] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:38:03,861] {logging_mixin.py:104} INFO - [2021-10-28 12:38:03,861] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:38:06,837] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:38:06,875] {logging_mixin.py:104} INFO - [2021-10-28 12:38:06,867] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:38:06,930] {logging_mixin.py:104} INFO - [2021-10-28 12:38:06,930] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:38:06,947] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.104 seconds
+[2021-10-28 12:38:37,076] {scheduler_job.py:182} INFO - Started process (PID=1354) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:38:37,089] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:38:37,095] {logging_mixin.py:104} INFO - [2021-10-28 12:38:37,095] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:38:39,359] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:38:39,399] {logging_mixin.py:104} INFO - [2021-10-28 12:38:39,391] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:38:39,455] {logging_mixin.py:104} INFO - [2021-10-28 12:38:39,455] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:38:39,484] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.419 seconds
+[2021-10-28 12:39:09,609] {scheduler_job.py:182} INFO - Started process (PID=1408) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:39:09,613] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:39:09,617] {logging_mixin.py:104} INFO - [2021-10-28 12:39:09,617] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:39:11,992] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:39:12,038] {logging_mixin.py:104} INFO - [2021-10-28 12:39:12,030] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:39:12,093] {logging_mixin.py:104} INFO - [2021-10-28 12:39:12,093] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:39:12,108] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.508 seconds
+[2021-10-28 12:39:42,748] {scheduler_job.py:182} INFO - Started process (PID=1463) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:39:42,753] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:39:42,756] {logging_mixin.py:104} INFO - [2021-10-28 12:39:42,756] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:39:44,963] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:39:44,998] {logging_mixin.py:104} INFO - [2021-10-28 12:39:44,991] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:39:45,051] {logging_mixin.py:104} INFO - [2021-10-28 12:39:45,051] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:39:45,065] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.327 seconds
+[2021-10-28 12:40:15,850] {scheduler_job.py:182} INFO - Started process (PID=1519) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:40:15,855] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:40:15,858] {logging_mixin.py:104} INFO - [2021-10-28 12:40:15,858] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:40:18,271] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:40:18,312] {logging_mixin.py:104} INFO - [2021-10-28 12:40:18,305] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:40:18,371] {logging_mixin.py:104} INFO - [2021-10-28 12:40:18,370] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:40:18,388] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.545 seconds
+[2021-10-28 12:40:48,879] {scheduler_job.py:182} INFO - Started process (PID=1573) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:40:48,884] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:40:48,887] {logging_mixin.py:104} INFO - [2021-10-28 12:40:48,886] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:40:51,024] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:40:51,063] {logging_mixin.py:104} INFO - [2021-10-28 12:40:51,056] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:40:51,127] {logging_mixin.py:104} INFO - [2021-10-28 12:40:51,127] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:40:51,144] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.271 seconds
+[2021-10-28 12:41:21,864] {scheduler_job.py:182} INFO - Started process (PID=1628) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:41:21,870] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:41:21,874] {logging_mixin.py:104} INFO - [2021-10-28 12:41:21,873] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:41:24,211] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:41:24,250] {logging_mixin.py:104} INFO - [2021-10-28 12:41:24,243] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:41:24,307] {logging_mixin.py:104} INFO - [2021-10-28 12:41:24,307] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:41:24,323] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.472 seconds
+[2021-10-28 12:41:55,051] {scheduler_job.py:182} INFO - Started process (PID=1683) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:41:55,055] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:41:55,059] {logging_mixin.py:104} INFO - [2021-10-28 12:41:55,058] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:41:58,809] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:41:58,970] {logging_mixin.py:104} INFO - [2021-10-28 12:41:58,946] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:41:59,111] {logging_mixin.py:104} INFO - [2021-10-28 12:41:59,110] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:41:59,140] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 4.101 seconds
+[2021-10-28 12:42:29,386] {scheduler_job.py:182} INFO - Started process (PID=1736) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:42:29,390] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:42:29,392] {logging_mixin.py:104} INFO - [2021-10-28 12:42:29,392] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:42:31,930] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:42:31,974] {logging_mixin.py:104} INFO - [2021-10-28 12:42:31,967] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:42:32,034] {logging_mixin.py:104} INFO - [2021-10-28 12:42:32,034] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:42:32,050] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.670 seconds
+[2021-10-28 12:43:02,780] {scheduler_job.py:182} INFO - Started process (PID=1808) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:43:02,784] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:43:02,788] {logging_mixin.py:104} INFO - [2021-10-28 12:43:02,787] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:43:05,305] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:43:05,353] {logging_mixin.py:104} INFO - [2021-10-28 12:43:05,344] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:43:05,415] {logging_mixin.py:104} INFO - [2021-10-28 12:43:05,415] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:43:05,434] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.660 seconds
+[2021-10-28 12:43:35,798] {scheduler_job.py:182} INFO - Started process (PID=1865) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:43:35,803] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:43:35,806] {logging_mixin.py:104} INFO - [2021-10-28 12:43:35,805] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:43:38,504] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:43:38,555] {logging_mixin.py:104} INFO - [2021-10-28 12:43:38,545] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:43:38,650] {logging_mixin.py:104} INFO - [2021-10-28 12:43:38,649] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:43:38,688] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.899 seconds
+[2021-10-28 12:44:09,113] {scheduler_job.py:182} INFO - Started process (PID=1920) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:44:09,117] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:44:09,119] {logging_mixin.py:104} INFO - [2021-10-28 12:44:09,119] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:44:11,230] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:44:11,267] {logging_mixin.py:104} INFO - [2021-10-28 12:44:11,260] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:44:11,323] {logging_mixin.py:104} INFO - [2021-10-28 12:44:11,323] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:44:11,337] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.231 seconds
+[2021-10-28 12:44:41,426] {scheduler_job.py:182} INFO - Started process (PID=1975) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:44:41,429] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:44:41,431] {logging_mixin.py:104} INFO - [2021-10-28 12:44:41,431] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:44:43,493] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:44:43,526] {logging_mixin.py:104} INFO - [2021-10-28 12:44:43,520] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:44:43,575] {logging_mixin.py:104} INFO - [2021-10-28 12:44:43,575] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:44:43,590] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.169 seconds
+[2021-10-28 12:45:13,912] {scheduler_job.py:182} INFO - Started process (PID=2030) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:45:13,916] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:45:13,919] {logging_mixin.py:104} INFO - [2021-10-28 12:45:13,919] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:45:16,244] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:45:16,287] {logging_mixin.py:104} INFO - [2021-10-28 12:45:16,279] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:45:16,338] {logging_mixin.py:104} INFO - [2021-10-28 12:45:16,338] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:45:16,351] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.447 seconds
+[2021-10-28 12:45:46,429] {scheduler_job.py:182} INFO - Started process (PID=2087) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:45:46,433] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:45:46,435] {logging_mixin.py:104} INFO - [2021-10-28 12:45:46,435] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:45:48,734] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:45:48,777] {logging_mixin.py:104} INFO - [2021-10-28 12:45:48,769] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:45:48,834] {logging_mixin.py:104} INFO - [2021-10-28 12:45:48,833] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:45:48,849] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.426 seconds
+[2021-10-28 12:46:19,555] {scheduler_job.py:182} INFO - Started process (PID=2142) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:46:19,559] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:46:19,561] {logging_mixin.py:104} INFO - [2021-10-28 12:46:19,561] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:46:21,783] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:46:21,822] {logging_mixin.py:104} INFO - [2021-10-28 12:46:21,814] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:46:21,874] {logging_mixin.py:104} INFO - [2021-10-28 12:46:21,874] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:46:21,890] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.340 seconds
+[2021-10-28 12:46:52,305] {scheduler_job.py:182} INFO - Started process (PID=2196) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:46:52,308] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:46:52,311] {logging_mixin.py:104} INFO - [2021-10-28 12:46:52,310] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:46:54,322] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:46:54,358] {logging_mixin.py:104} INFO - [2021-10-28 12:46:54,351] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:46:54,408] {logging_mixin.py:104} INFO - [2021-10-28 12:46:54,408] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:46:54,422] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.123 seconds
+[2021-10-28 12:47:25,007] {scheduler_job.py:182} INFO - Started process (PID=2250) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:47:25,012] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:47:25,015] {logging_mixin.py:104} INFO - [2021-10-28 12:47:25,014] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:47:27,309] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:47:27,348] {logging_mixin.py:104} INFO - [2021-10-28 12:47:27,341] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:47:27,419] {logging_mixin.py:104} INFO - [2021-10-28 12:47:27,419] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:47:27,435] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.434 seconds
+[2021-10-28 12:47:57,906] {scheduler_job.py:182} INFO - Started process (PID=2321) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:47:57,910] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:47:57,912] {logging_mixin.py:104} INFO - [2021-10-28 12:47:57,912] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:48:00,087] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:48:00,124] {logging_mixin.py:104} INFO - [2021-10-28 12:48:00,117] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:48:00,177] {logging_mixin.py:104} INFO - [2021-10-28 12:48:00,177] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:48:00,193] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.293 seconds
+[2021-10-28 12:48:30,671] {scheduler_job.py:182} INFO - Started process (PID=2381) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:48:30,675] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:48:30,678] {logging_mixin.py:104} INFO - [2021-10-28 12:48:30,677] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:48:33,163] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:48:33,205] {logging_mixin.py:104} INFO - [2021-10-28 12:48:33,197] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:48:33,267] {logging_mixin.py:104} INFO - [2021-10-28 12:48:33,267] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:48:33,284] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.619 seconds
+[2021-10-28 12:49:03,683] {scheduler_job.py:182} INFO - Started process (PID=2435) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:49:03,687] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:49:03,690] {logging_mixin.py:104} INFO - [2021-10-28 12:49:03,690] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:49:06,140] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:49:06,178] {logging_mixin.py:104} INFO - [2021-10-28 12:49:06,171] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:49:06,232] {logging_mixin.py:104} INFO - [2021-10-28 12:49:06,232] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:49:06,248] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.574 seconds
+[2021-10-28 12:49:36,549] {scheduler_job.py:182} INFO - Started process (PID=2490) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:49:36,553] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:49:36,555] {logging_mixin.py:104} INFO - [2021-10-28 12:49:36,555] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:49:38,560] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:49:38,603] {logging_mixin.py:104} INFO - [2021-10-28 12:49:38,595] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:49:38,659] {logging_mixin.py:104} INFO - [2021-10-28 12:49:38,659] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:49:38,675] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.132 seconds
+[2021-10-28 12:50:08,981] {scheduler_job.py:182} INFO - Started process (PID=2543) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:50:08,984] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:50:08,986] {logging_mixin.py:104} INFO - [2021-10-28 12:50:08,986] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:50:11,039] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:50:11,072] {logging_mixin.py:104} INFO - [2021-10-28 12:50:11,066] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:50:11,124] {logging_mixin.py:104} INFO - [2021-10-28 12:50:11,123] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:50:11,137] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.162 seconds
+[2021-10-28 12:50:41,592] {scheduler_job.py:182} INFO - Started process (PID=2597) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:50:41,595] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:50:41,598] {logging_mixin.py:104} INFO - [2021-10-28 12:50:41,597] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:50:43,597] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:50:43,630] {logging_mixin.py:104} INFO - [2021-10-28 12:50:43,624] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:50:43,683] {logging_mixin.py:104} INFO - [2021-10-28 12:50:43,683] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:50:43,697] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.111 seconds
+[2021-10-28 12:51:14,458] {scheduler_job.py:182} INFO - Started process (PID=2652) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:51:14,462] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:51:14,465] {logging_mixin.py:104} INFO - [2021-10-28 12:51:14,464] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:51:16,728] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:51:16,766] {logging_mixin.py:104} INFO - [2021-10-28 12:51:16,758] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:51:16,825] {logging_mixin.py:104} INFO - [2021-10-28 12:51:16,825] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:51:16,841] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.389 seconds
+[2021-10-28 12:51:47,284] {scheduler_job.py:182} INFO - Started process (PID=2705) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:51:47,290] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:51:47,293] {logging_mixin.py:104} INFO - [2021-10-28 12:51:47,293] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:51:49,969] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:51:50,011] {logging_mixin.py:104} INFO - [2021-10-28 12:51:50,003] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:51:50,077] {logging_mixin.py:104} INFO - [2021-10-28 12:51:50,077] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:51:50,095] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.822 seconds
+[2021-10-28 12:52:20,823] {scheduler_job.py:182} INFO - Started process (PID=2757) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:52:20,828] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:52:20,831] {logging_mixin.py:104} INFO - [2021-10-28 12:52:20,830] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:52:23,247] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:52:23,286] {logging_mixin.py:104} INFO - [2021-10-28 12:52:23,278] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:52:23,345] {logging_mixin.py:104} INFO - [2021-10-28 12:52:23,345] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:52:23,362] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.544 seconds
+[2021-10-28 12:52:54,158] {scheduler_job.py:182} INFO - Started process (PID=2828) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:52:54,163] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 12:52:54,166] {logging_mixin.py:104} INFO - [2021-10-28 12:52:54,165] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:52:56,469] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 12:52:56,508] {logging_mixin.py:104} INFO - [2021-10-28 12:52:56,501] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 12:52:56,568] {logging_mixin.py:104} INFO - [2021-10-28 12:52:56,568] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 12:52:56,585] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.435 seconds
+[2021-10-28 13:02:02,120] {scheduler_job.py:182} INFO - Started process (PID=443) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:02:02,133] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:02:02,159] {logging_mixin.py:104} INFO - [2021-10-28 13:02:02,158] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:02:10,251] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:02:10,344] {logging_mixin.py:104} INFO - [2021-10-28 13:02:10,332] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:02:10,501] {logging_mixin.py:104} INFO - [2021-10-28 13:02:10,500] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:02:10,557] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 8.470 seconds
+[2021-10-28 13:02:41,206] {scheduler_job.py:182} INFO - Started process (PID=496) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:02:41,224] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:02:41,230] {logging_mixin.py:104} INFO - [2021-10-28 13:02:41,228] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:02:48,629] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:02:48,712] {logging_mixin.py:104} INFO - [2021-10-28 13:02:48,697] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:02:48,808] {logging_mixin.py:104} INFO - [2021-10-28 13:02:48,808] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:02:48,837] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 7.656 seconds
+[2021-10-28 13:03:19,461] {scheduler_job.py:182} INFO - Started process (PID=548) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:03:19,471] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:03:19,479] {logging_mixin.py:104} INFO - [2021-10-28 13:03:19,477] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:03:28,213] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:03:28,265] {logging_mixin.py:104} INFO - [2021-10-28 13:03:28,257] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:03:28,334] {logging_mixin.py:104} INFO - [2021-10-28 13:03:28,334] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:03:28,355] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 8.959 seconds
+[2021-10-28 13:03:58,569] {scheduler_job.py:182} INFO - Started process (PID=602) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:03:58,572] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:03:58,576] {logging_mixin.py:104} INFO - [2021-10-28 13:03:58,575] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:04:02,256] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:04:02,305] {logging_mixin.py:104} INFO - [2021-10-28 13:04:02,298] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:04:02,500] {logging_mixin.py:104} INFO - [2021-10-28 13:04:02,499] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:04:02,544] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.983 seconds
+[2021-10-28 13:04:33,063] {scheduler_job.py:182} INFO - Started process (PID=655) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:04:33,068] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:04:33,072] {logging_mixin.py:104} INFO - [2021-10-28 13:04:33,071] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:04:36,605] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:04:36,655] {logging_mixin.py:104} INFO - [2021-10-28 13:04:36,647] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:04:36,724] {logging_mixin.py:104} INFO - [2021-10-28 13:04:36,724] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:04:36,743] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.692 seconds
+[2021-10-28 13:05:07,269] {scheduler_job.py:182} INFO - Started process (PID=711) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:05:07,277] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:05:07,279] {logging_mixin.py:104} INFO - [2021-10-28 13:05:07,279] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:05:10,232] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:05:10,286] {logging_mixin.py:104} INFO - [2021-10-28 13:05:10,274] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:05:10,358] {logging_mixin.py:104} INFO - [2021-10-28 13:05:10,357] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:05:10,379] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.121 seconds
+[2021-10-28 13:05:40,782] {scheduler_job.py:182} INFO - Started process (PID=763) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:05:40,788] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:05:40,793] {logging_mixin.py:104} INFO - [2021-10-28 13:05:40,792] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:05:43,680] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:05:43,735] {logging_mixin.py:104} INFO - [2021-10-28 13:05:43,728] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:05:43,798] {logging_mixin.py:104} INFO - [2021-10-28 13:05:43,797] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:05:43,819] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.048 seconds
+[2021-10-28 13:06:14,275] {scheduler_job.py:182} INFO - Started process (PID=821) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:06:14,278] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:06:14,281] {logging_mixin.py:104} INFO - [2021-10-28 13:06:14,281] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:06:17,570] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:06:17,609] {logging_mixin.py:104} INFO - [2021-10-28 13:06:17,603] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:06:17,673] {logging_mixin.py:104} INFO - [2021-10-28 13:06:17,673] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:06:17,693] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.427 seconds
+[2021-10-28 13:06:47,955] {scheduler_job.py:182} INFO - Started process (PID=893) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:06:47,960] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:06:47,964] {logging_mixin.py:104} INFO - [2021-10-28 13:06:47,963] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:06:51,749] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:06:51,791] {logging_mixin.py:104} INFO - [2021-10-28 13:06:51,784] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:06:51,860] {logging_mixin.py:104} INFO - [2021-10-28 13:06:51,859] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:06:51,879] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.931 seconds
+[2021-10-28 13:14:31,241] {scheduler_job.py:182} INFO - Started process (PID=416) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:14:31,245] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:14:31,250] {logging_mixin.py:104} INFO - [2021-10-28 13:14:31,250] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:14:36,872] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:14:36,917] {logging_mixin.py:104} INFO - [2021-10-28 13:14:36,909] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:14:37,009] {logging_mixin.py:104} INFO - [2021-10-28 13:14:37,009] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:14:37,044] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 5.806 seconds
+[2021-10-28 13:15:08,429] {scheduler_job.py:182} INFO - Started process (PID=472) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:15:08,440] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:15:08,461] {logging_mixin.py:104} INFO - [2021-10-28 13:15:08,457] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:15:14,689] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:15:14,758] {logging_mixin.py:104} INFO - [2021-10-28 13:15:14,750] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:15:14,893] {logging_mixin.py:104} INFO - [2021-10-28 13:15:14,892] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:15:14,929] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 6.597 seconds
+[2021-10-28 13:15:45,426] {scheduler_job.py:182} INFO - Started process (PID=526) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:15:45,441] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:15:45,445] {logging_mixin.py:104} INFO - [2021-10-28 13:15:45,444] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:15:53,750] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:15:53,814] {logging_mixin.py:104} INFO - [2021-10-28 13:15:53,804] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:15:53,910] {logging_mixin.py:104} INFO - [2021-10-28 13:15:53,909] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:15:53,944] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 8.532 seconds
+[2021-10-28 13:16:24,674] {scheduler_job.py:182} INFO - Started process (PID=577) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:16:24,678] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:16:24,681] {logging_mixin.py:104} INFO - [2021-10-28 13:16:24,680] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:16:28,654] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:16:28,703] {logging_mixin.py:104} INFO - [2021-10-28 13:16:28,696] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:16:28,775] {logging_mixin.py:104} INFO - [2021-10-28 13:16:28,774] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:16:28,794] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 4.126 seconds
+[2021-10-28 13:16:59,252] {scheduler_job.py:182} INFO - Started process (PID=631) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:16:59,258] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:16:59,264] {logging_mixin.py:104} INFO - [2021-10-28 13:16:59,263] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:17:03,269] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:17:03,337] {logging_mixin.py:104} INFO - [2021-10-28 13:17:03,320] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:17:03,415] {logging_mixin.py:104} INFO - [2021-10-28 13:17:03,415] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:17:03,440] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 4.200 seconds
+[2021-10-28 13:17:33,560] {scheduler_job.py:182} INFO - Started process (PID=689) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:17:33,565] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:17:33,568] {logging_mixin.py:104} INFO - [2021-10-28 13:17:33,568] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:17:37,017] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:17:37,059] {logging_mixin.py:104} INFO - [2021-10-28 13:17:37,052] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:17:37,117] {logging_mixin.py:104} INFO - [2021-10-28 13:17:37,117] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:17:37,136] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 3.585 seconds
+[2021-10-28 13:18:08,082] {scheduler_job.py:182} INFO - Started process (PID=749) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:18:08,086] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:18:08,088] {logging_mixin.py:104} INFO - [2021-10-28 13:18:08,088] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:18:10,776] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:18:10,808] {logging_mixin.py:104} INFO - [2021-10-28 13:18:10,802] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:18:10,864] {logging_mixin.py:104} INFO - [2021-10-28 13:18:10,863] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:18:10,885] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 2.809 seconds
+[2021-10-28 13:18:41,136] {scheduler_job.py:182} INFO - Started process (PID=804) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:18:41,140] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:18:41,143] {logging_mixin.py:104} INFO - [2021-10-28 13:18:41,142] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:18:45,584] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['ricochet_stream_watch']) retrieved from /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:18:45,636] {logging_mixin.py:104} INFO - [2021-10-28 13:18:45,627] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-10-28 13:18:45,713] {logging_mixin.py:104} INFO - [2021-10-28 13:18:45,713] {dag.py:2306} INFO - Setting next_dagrun for ricochet_stream_watch to 2021-10-28T11:50:00+00:00
+[2021-10-28 13:18:45,732] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/ricochet_stream_watch.py took 4.604 seconds
+[2021-10-28 13:19:15,905] {scheduler_job.py:182} INFO - Started process (PID=857) to work on /opt/airflow/dags/ricochet_stream_watch.py
+[2021-10-28 13:19:15,912] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_stream_watch.py for tasks to queue
+[2021-10-28 13:19:15,920] {logging_mixin.py:104} INFO - [2021-10-28 13:19:15,916] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_stream_watch.py

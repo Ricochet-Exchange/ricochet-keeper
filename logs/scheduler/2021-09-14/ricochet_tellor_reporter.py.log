@@ -1,0 +1,4 @@
+[2021-09-14 14:01:53,229] {scheduler_job.py:182} INFO - Started process (PID=1269) to work on /opt/airflow/dags/ricochet_tellor_reporter.py
+[2021-09-14 14:01:53,234] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/ricochet_tellor_reporter.py for tasks to queue
+[2021-09-14 14:01:53,239] {logging_mixin.py:104} INFO - [2021-09-14 14:01:53,238] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/ricochet_tellor_reporter.py
+[2021-09-14 14:02:05,909] {logging_mixin.py:104} INFO - [2021-09-14 14:02:05,908] {process_utils.py:207} INFO - Waiting up to 5 seconds for processes to exit...
