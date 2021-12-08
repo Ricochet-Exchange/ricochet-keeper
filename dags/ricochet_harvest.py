@@ -32,7 +32,7 @@ default_args = {
 }
 
 
-dag = DAG("ricochet_distribute",
+dag = DAG("ricochet_harvest",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
