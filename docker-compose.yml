@@ -44,7 +44,7 @@
 version: '3'
 x-airflow-common:
   &airflow-common
-  image: registry.digitalocean.com/blocksec/airflow:1.0.4
+  image: mikeghen/tellor-airflow
   environment:
     &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
