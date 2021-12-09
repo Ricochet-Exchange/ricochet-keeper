@@ -92,4 +92,4 @@ confirm_swap = EthereumTransactionConfirmationSensor(
     dag=dag
 )
 
-    done << confirm_swap << swap
+done << confirm_swap << swap << confirm_approve << approve
