@@ -29,7 +29,7 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
     def __init__(self,
                  web3_conn_id='web3_default',
                  ethereum_wallet='default_wallet',
-                 router_address,
+                 router_address=None,
                  amount_in=0,
                  amount_out_min=0,
                  path=[],
