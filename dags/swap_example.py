@@ -78,6 +78,7 @@ swap = UniswapSwapExactTokensForETHOperator(
     router_address="0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
     amount_in=10000000000000000000,
     amount_out_min=0,
+    to=SWAPPER_WALLET_ADDRESS,
     path=["0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174","0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270"],
     dag=dag
 )
