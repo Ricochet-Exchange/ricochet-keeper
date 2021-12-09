@@ -64,18 +64,3 @@ class RicochetDistributeOperator(BaseOperator):
         transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
         print("Sent distribute... transaction hash: {0}".format(transaction_hash.hex()))
         return str(transaction_hash.hex()) # Return for use with EthereumTransactionConfirmationSensor
-
-    def get_gas_price(self):
-        is_success = False
-        while not is_success:
-            try:
-                url = "https://ethgasstation.info/json/ethgasAPI.json"
-                r = requests.get(url=url)
-                data = r.json()
-                is_success = True
-            except Exception as e:
-                print("FAILED: ", e)
-                print("Will retry...")
-                sleep(10)
-
-        return int(data[self.gas_key] / 10)

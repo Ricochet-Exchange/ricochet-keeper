@@ -18,7 +18,7 @@ from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
 
-REPORTER_WALLET_ADDRESS = Variable.get("reporter-address", "0xe07c9696e00f23Fc7bAE76d037A115bfF33E28be")
+REPORTER_WALLET_ADDRESS = Variable.get("reporter-address")
 TELLOR_CONTRACT_ADDRESS = Variable.get("tellor-address", "0xACC2d27400029904919ea54fFc0b18Bf07C57875")
 ASSETS = Variable.get("tellor-assets", {"ethereum": 1, "wrapped-btc": 60}, deserialize_json=True)
 
@@ -38,7 +38,7 @@ dag = DAG("ricochet_tellor_reporter",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="55 * * * *")
+          schedule_interval="*/5 * * * *")
 
 
 done = BashOperator(
@@ -67,7 +67,7 @@ for asset_id, request_id in ASSETS.items():
         price="{{task_instance.xcom_pull(task_ids='price_check_"+asset_id+"', key='return_value')}}",
         request_id=request_id,
         nonce=current_nonce + nonce_offset,
-        gas_multiplier=2,
+        gas_multiplier=1.1,
         gas=250000,
         dag=dag,
     )

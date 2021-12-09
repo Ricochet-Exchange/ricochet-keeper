@@ -17,7 +17,7 @@ from web3 import Web3
 from json import loads
 import requests
 
-CLOSER_WALLET_ADDRESS = Variable.get("closer-address", "0xe07c9696e00f23Fc7bAE76d037A115bfF33E28be")
+CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
 
 default_args = {

@@ -12,13 +12,13 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
-from blocksec_plugin.ricochet_distribute_operator import RicochetDistributeOperator
+from blocksec_plugin.ricochet_harvest_operator import RicochetHarvestOperator
 from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
 
-DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-address")
-EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
+HARVESTER_WALLET_ADDRESS = Variable.get("harvester-address")
+EXCHANGE_ADDRESSES = Variable.get("ricochet-lp-addresses", deserialize_json=True)
 
 default_args = {
     "owner": "ricochet",
@@ -32,14 +32,14 @@ default_args = {
 }
 
 
-dag = DAG("ricochet_distribute",
+dag = DAG("ricochet_harvest",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="0 * * * *")
+          schedule_interval="0 0 * * *")
 
 web3 = Web3Hook(web3_conn_id='infura').http_client
-current_nonce = web3.eth.getTransactionCount(DISTRIBUTOR_WALLET_ADDRESS)
+current_nonce = web3.eth.getTransactionCount(HARVESTER_WALLET_ADDRESS)
 
 done = BashOperator(
     task_id='done',
@@ -48,11 +48,11 @@ done = BashOperator(
 )
 
 for nonce_offset, exchange_address in enumerate(EXCHANGE_ADDRESSES):
-    distribute = RicochetDistributeOperator(
-        task_id="distribute_" + exchange_address,
+    distribute = RicochetHarvestOperator(
+        task_id="harvest_" + exchange_address,
         web3_conn_id="infura",
-        ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
-        gas_multiplier=1.2,
+        ethereum_wallet=HARVESTER_WALLET_ADDRESS,
+        gas_multiplier=1.1,
         gas=3000000,
         contract_address=exchange_address,
         nonce=current_nonce + nonce_offset,
@@ -60,9 +60,9 @@ for nonce_offset, exchange_address in enumerate(EXCHANGE_ADDRESSES):
     )
 
     confirm_distribute = EthereumTransactionConfirmationSensor(
-        task_id="confirm_distribute_" + exchange_address,
+        task_id="confirm_harvest_" + exchange_address,
         web3_conn_id="infura",
-        transaction_hash="{{task_instance.xcom_pull(task_ids='distribute_" + exchange_address + "')}}",
+        transaction_hash="{{task_instance.xcom_pull(task_ids='harvest_" + exchange_address + "')}}",
         confirmations=1,
         poke_interval=5,
         timeout=60 * 20,

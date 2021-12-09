@@ -16,7 +16,7 @@ from blocksec_plugin.abis import RICOCHET_ABI
 from json import loads
 import requests
 
-CLOSER_WALLET_ADDRESS = Variable.get("closer-address", "0xe07c9696e00f23Fc7bAE76d037A115bfF33E28be")
+CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
 
 default_args = {
     "owner": "ricochet",
