@@ -3,7 +3,7 @@ from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
 import requests,json
-from time import sleep
+from time import time
 
 SWAP_ABI = '''[{
     "inputs":[
@@ -48,7 +48,7 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
         self.path = path
         self.to = to
         if not deadline:
-            self.deadline = now + 300
+            self.deadline = time() + 300
         else:
             self.deadline = dealine
         self.web3_conn_id = web3_conn_id
