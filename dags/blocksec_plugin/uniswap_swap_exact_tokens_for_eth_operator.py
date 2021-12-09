@@ -43,8 +43,6 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
                  **kwargs):
         super().__init__(*args, **kwargs)
         self.router_address = router_address
-        self.input_token = input_token
-        self.output_token = output_token
         self.amount_in = amount_in
         self.amount_out_min = amount_out_min
         self.path = path
