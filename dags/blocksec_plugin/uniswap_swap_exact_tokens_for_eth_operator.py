@@ -76,7 +76,7 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
                                                                 self.amount_out_min,
                                                                 self.path,
                                                                 self.to,
-                                                                self.deadline)\
+                                                                int(self.deadline))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
                                            gasPrice = int(self.web3.eth.gasPrice *\
