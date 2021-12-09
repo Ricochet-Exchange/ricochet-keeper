@@ -5,13 +5,7 @@ from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
 import requests,json
 from time import sleep
 
-DISTRIBUTE_ABI = '''[{
-      "inputs": [],
-      "name": "distribute",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }]'''
+DISTRIBUTE_ABI = '''[{"inputs":[],"name":"harvest","outputs":[],"stateMutability":"nonpayable","type":"function"}]'''
 
 class RicochetHarvestOperator(BaseOperator):
     """
