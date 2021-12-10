@@ -131,7 +131,7 @@ downgrade = SuperTokenDowngradeOperator(
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
     gas_multiplier=1.1,
     gas=3000000,
-    contract_address=USDCX_CONTRACT_ADDRESS,
+    contract_address=USDCX_TOKEN_ADDRESS,
     amount=600000000000000000, # 0.6 USDCx
     dag=dag
 )
