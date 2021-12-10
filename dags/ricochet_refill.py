@@ -104,7 +104,7 @@ confirm_deposit = EthereumTransactionConfirmationSensor(
 )
 
 borrow = RexBankBorrowOperator(
-    task_id="deposit",
+    task_id="borrow",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
     gas_multiplier=1.1,
