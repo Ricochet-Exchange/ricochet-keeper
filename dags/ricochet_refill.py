@@ -161,7 +161,7 @@ approve_swap = ERC20ApprovalOperator(
 confirm_approve_swap = EthereumTransactionConfirmationSensor(
     task_id="confirm_approve_swap",
     web3_conn_id="infura",
-    transaction_hash="{{task_instance.xcom_pull(task_ids='confirm_approve_swap')}}",
+    transaction_hash="{{task_instance.xcom_pull(task_ids='approve_swap')}}",
     confirmations=1,
     poke_interval=5,
     timeout=60 * 20,
