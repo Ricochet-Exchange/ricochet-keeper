@@ -126,7 +126,7 @@ confirm_borrow = EthereumTransactionConfirmationSensor(
 
 
 downgrade = SuperTokenDowngradeOperator(
-    task_id="deposit",
+    task_id="downgrade",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
     gas_multiplier=1.1,
