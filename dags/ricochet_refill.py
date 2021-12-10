@@ -13,9 +13,11 @@ from blocksec_plugin.web3_hook import Web3Hook
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
-from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.erc20_approve_operator import ERC20ApprovalOperator
 from blocksec_plugin.uniswap_swap_exact_tokens_for_eth_operator import UniswapSwapExactTokensForETHOperator
+from blocksec_plugin.supertoken_downgrade_operator import SuperTokenDowngradeOperator
+from blocksec_plugin.rex_bank_borrow import RexBankBorrowOperator
+from blocksec_plugin.rex_bank_deposit import RexBankDepositOperator
 from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
