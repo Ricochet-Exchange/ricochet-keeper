@@ -132,7 +132,7 @@ downgrade = SuperTokenDowngradeOperator(
     gas_multiplier=1.1,
     gas=3000000,
     contract_address=USDCX_TOKEN_ADDRESS,
-    amount=600000000000000000, # 0.6 USDCx
+    amount=500000000000000000, # 0.6 USDCx
     dag=dag
 )
 
