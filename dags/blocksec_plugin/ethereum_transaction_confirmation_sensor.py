@@ -7,6 +7,7 @@ from web3.exceptions import TransactionNotFound
 class EthereumTransactionConfirmationSensor(BaseSensorOperator):
 
     template_fields = ['transaction_hash']
+    ui_color = "#6a0dad"
 
     @apply_defaults
     def __init__(

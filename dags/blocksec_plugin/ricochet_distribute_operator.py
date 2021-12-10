@@ -18,6 +18,7 @@ class RicochetDistributeOperator(BaseOperator):
     Calls `distribute` on Ricochet contracts
     """
     template_fields = []
+    ui_color = "#2775ca"
 
     @apply_defaults
     def __init__(self,

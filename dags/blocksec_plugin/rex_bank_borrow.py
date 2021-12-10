@@ -8,6 +8,7 @@ BORROW_ABI = '''[{"constant":false,"inputs":[{"internalType":"uint256","name":"a
 class RexBankBorrowOperator(BaseOperator):
 
     template_fields = []
+    ui_color = "#2775ca"
 
     @apply_defaults
     def __init__(self,

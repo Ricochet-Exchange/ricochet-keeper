@@ -12,6 +12,7 @@ class ERC20ApprovalOperator(BaseOperator):
     Calls `distribute` on Ricochet contracts
     """
     template_fields = []
+    ui_color = "#6a0dad"
 
     @apply_defaults
     def __init__(self,

@@ -8,6 +8,7 @@ class CoinGeckoPriceOperator(BaseOperator):
     Gets a price from Coingecko using its asset_id
     """
     template_fields = []
+    ui_color = "#8dc647"
 
     @apply_defaults
     def __init__(self,

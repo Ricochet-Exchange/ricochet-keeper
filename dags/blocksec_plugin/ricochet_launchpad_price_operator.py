@@ -10,6 +10,7 @@ class RicochetLaunchpadPrice(BaseOperator):
     Checks the price of a Ricochet Launchpad
     """
     template_fields = []
+    ui_color = "#2775ca"
 
     @apply_defaults
     def __init__(self,
