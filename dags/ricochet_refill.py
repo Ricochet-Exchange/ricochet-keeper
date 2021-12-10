@@ -42,7 +42,7 @@ default_args = {
 }
 
 
-dag = DAG("swap_example",
+dag = DAG("ricochet_refill",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
