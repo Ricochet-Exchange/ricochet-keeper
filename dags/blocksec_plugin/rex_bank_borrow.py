@@ -11,7 +11,7 @@ class RexBankBorrowOperator(BaseOperator):
 
     @apply_defaults
     def __init__(self,
-                 amount
+                 amount,
                  web3_conn_id='web3_default',
                  ethereum_wallet='default_wallet',
                  contract_address=None,
