@@ -153,7 +153,7 @@ approve_swap = ERC20ApprovalOperator(
     gas_multiplier=1.1,
     gas=3000000,
     contract_address=USDC_TOKEN_ADDRESS,
-    spender=REX_BANK_ADDRESS,
+    spender=ROUTER_ADDRESS,
     amount=600000, # 1 RIC
     dag=dag
 )
