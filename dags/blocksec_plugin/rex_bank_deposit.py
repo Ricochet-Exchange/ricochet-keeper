@@ -21,6 +21,7 @@ class RexBankDepositOperator(BaseOperator):
                  *args,
                  **kwargs):
         super().__init__(*args, **kwargs)
+        self.amount = amount
         self.web3_conn_id = web3_conn_id
         self.ethereum_wallet = ethereum_wallet
         self.contract_address = contract_address
