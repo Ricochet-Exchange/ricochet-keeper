@@ -24,6 +24,7 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
     * Assumes amount of tokens has been approved already
     """
     template_fields = []
+    ui_color = "#EBBAB9"
 
     @apply_defaults
     def __init__(self,

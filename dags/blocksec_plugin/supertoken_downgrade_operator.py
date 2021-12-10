@@ -10,6 +10,7 @@ class SuperTokenDowngradeOperator(BaseOperator):
     Downgrades a supertoken
     """
     template_fields = []
+    ui_color = "#ADF5FF"
 
     @apply_defaults
     def __init__(self,

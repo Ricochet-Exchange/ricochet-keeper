@@ -12,7 +12,7 @@ class RicochetStreamerCloseOperator(BaseOperator):
     Closes a streamers stream using `closeStream`
     """
     template_fields = ['streamer_address', 'exchange_address', 'nonce']
-    ui_color = "#2775ca"
+    ui_color = "#ADF5FF"
 
 
     @apply_defaults

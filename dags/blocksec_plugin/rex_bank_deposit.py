@@ -7,7 +7,7 @@ VAULT_DEPOSIT_ABI = '''[{"constant":false,"inputs":[{"internalType":"uint256","n
 
 class RexBankDepositOperator(BaseOperator):
     template_fields = []
-    ui_color = "#2775ca"
+    ui_color = "#ADF5FF"
 
     @apply_defaults
     def __init__(self,
