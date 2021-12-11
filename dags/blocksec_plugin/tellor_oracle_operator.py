@@ -55,10 +55,9 @@ class TellorOracleOperator(BaseOperator):
         self.gas = gas
         self.web3 = Web3Hook(web3_conn_id=self.web3_conn_id).http_client
         self.wallet = EthereumWalletHook(ethereum_wallet=self.ethereum_wallet)
-        if nonce:
-            self.nonce = nonce
-        else: # Look up the last nonce for this wallet
-            self.nonce = self.web3.eth.getTransactionCount(self.wallet.public_address)
+        self.nonce = nonce or self.web3.eth.getTransactionCount(
+             self.wallet.public_address
+         )
 
     def execute(self, context):
         # Create the contract factory
