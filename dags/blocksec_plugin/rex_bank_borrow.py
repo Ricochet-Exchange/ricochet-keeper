@@ -49,10 +49,10 @@ class RexBankBorrowOperator(BaseOperator):
             # Max borrow
             vault = contract.functions.vaults(self.wallet.public_address).call()
             print("vault",vault)
-            price = contract.function.getCollateralTokenPrice().call()
+            price = contract.functions.getCollateralTokenPrice().call()
             price /= 1000000
             print("price", price)
-            self.amount = vault["collateralAmount"] * price * 0.6 - vault["debtAmount"]
+            self.amount = vault[0] * price * 0.6 - vault[1]
 
         deposit = contract.functions.vaultBorrow(int(self.amount))\
                                          .buildTransaction(dict(
