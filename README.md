@@ -54,6 +54,8 @@ After starting up Airflow, navigate to `Admin > Connections` and setup the follo
   * `watch-schedule-interval` - Watch stream dag (Default - `50 * * * *`)
   * `tellor-schedule-interval` - Reporting to Tellor (Default - `*/5 * * * *`)
   * `swap-schedule-interval` - Swap RIC stream to matic (Default - `0 * * * *`)
+  * `block-poll-schedule-interval` - Block poll (Default - `*/15 * * * *`)
+  * `close-schedule-interval` - Close streams (Default - `None`) 
 
 # Run
 Run the keeper using Docker Compose
