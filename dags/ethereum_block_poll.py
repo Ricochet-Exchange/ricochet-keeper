@@ -39,7 +39,7 @@ from blocksec_plugin.abis import RICOCHET_ABI
 from datetime import datetime, timedelta
 from json import loads
 
-
+SCHEDULE_INTERVAL = Variable.get("block-poll-schedule-interval", "*/15 * * * *")
 
 default_args = {
     "owner": "ricochet",
@@ -53,7 +53,7 @@ default_args = {
 }
 
 
-dag = DAG("ethereum_block_poll", catchup=False, default_args=default_args, schedule_interval="*/15 * * * *")
+dag = DAG("ethereum_block_poll", catchup=False, default_args=default_args, schedule_interval=SCHEDULE_INTERVAL)
 
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
 
