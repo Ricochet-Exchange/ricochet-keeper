@@ -59,7 +59,7 @@ class ERC20ApprovalOperator(BaseOperator):
         withdraw_txn = contract.functions.approve(self.spender, int(self.amount))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
-                                           gasPrice = int(self.web3.eth.gasPrice *\
+                                           gasPrice = int(min(30,self.web3.eth.gasPrice) *\
                                                       self.gas_multiplier),
                                            gas = self.gas
                                           ))
