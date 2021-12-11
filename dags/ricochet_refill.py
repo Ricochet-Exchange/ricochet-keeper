@@ -202,7 +202,7 @@ confirm_swap = EthereumTransactionConfirmationSensor(
     dag=dag
 )
 
-approve_deposit >> confirm_approve_deposit >>\
+balance >> approve_deposit >> confirm_approve_deposit >>\
 deposit >> confirm_deposit >>\
 borrow >> confirm_borrow >>\
 downgrade >> confirm_downgrade >>\
