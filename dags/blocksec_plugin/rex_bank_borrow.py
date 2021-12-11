@@ -45,7 +45,7 @@ class RexBankBorrowOperator(BaseOperator):
         # Create the contract factory
         contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
         # Form the signed transaction
-        if self.amount < 0:
+        if int(self.amount) < 0:
             # Max borrow
             vault = contract.functions.vaults(self.wallet.public_address).call()
             print("vault",vault)

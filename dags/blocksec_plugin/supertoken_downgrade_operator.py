@@ -43,7 +43,7 @@ class SuperTokenDowngradeOperator(BaseOperator):
     def execute(self, context):
         # Create the contract factory
         contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
-        if self.amount < 0:
+        if int(self.amount) < 0:
             # Max downgrade
             self.amount = contract.functions.balanceOf(self.wallet.public_address).call()
         # Form the signed transaction
