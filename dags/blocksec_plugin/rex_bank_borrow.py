@@ -3,7 +3,9 @@ from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
 
-BORROW_ABI = '''[{"constant":false,"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"vaultBorrow","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]'''
+BORROW_ABI = '''[{"constant":false,"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"vaultBorrow","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},
+{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"vaults","outputs":[{"internalType":"uint256","name":"collateralAmount","type":"uint256"},{"internalType":"uint256","name":"debtAmount","type":"uint256"},{"internalType":"uint256","name":"createdAt","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},
+{"inputs":[],"name":"getCollateralTokenPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]'''
 
 class RexBankBorrowOperator(BaseOperator):
 
@@ -38,10 +40,20 @@ class RexBankBorrowOperator(BaseOperator):
         else: # Look up the last nonce for this wallet
             self.nonce = self.web3.eth.getTransactionCount(self.wallet.public_address)
 
+
     def execute(self, context):
         # Create the contract factory
         contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
         # Form the signed transaction
+        if self.amount < 0:
+            # Max borrow
+            vault = contract.functions.vaults(self.wallet.public_address).call()
+            print("vault",vault)
+            price = contract.function.getCollateralTokenPrice().call()
+            price =/ 1000000
+            print("price", price)
+            self.amount = vault["collateralAmount"] * price * 0.6 - vault["debtAmount"]
+
         deposit = contract.functions.vaultBorrow(self.amount)\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),

@@ -18,6 +18,7 @@ from blocksec_plugin.uniswap_swap_exact_tokens_for_eth_operator import UniswapSw
 from blocksec_plugin.supertoken_downgrade_operator import SuperTokenDowngradeOperator
 from blocksec_plugin.rex_bank_borrow import RexBankBorrowOperator
 from blocksec_plugin.rex_bank_deposit import RexBankDepositOperator
+from blocksec_plugin.erc20_balanceof_operator import ERC20BalanceOfOperator
 from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
@@ -60,6 +61,14 @@ done = BashOperator(
     dag=dag,
 )
 
+balance = ERC20BalanceOfOperator(
+    task_id="balance",
+    web3_conn_id="infura",
+    contract_address=RIC_TOKEN_ADDRESS,
+    account=SWAPPER_WALLET_ADDRESS,
+    dag=dag
+)
+
 approve_deposit = ERC20ApprovalOperator(
     task_id="approve_deposit",
     web3_conn_id="infura",
@@ -68,7 +77,7 @@ approve_deposit = ERC20ApprovalOperator(
     gas=3000000,
     contract_address=RIC_TOKEN_ADDRESS,
     spender=REX_BANK_ADDRESS,
-    amount=1000000000000000000, # 1 RIC
+    amount="{{task_instance.xcom_pull(task_ids='balance')}}",
     dag=dag
 )
 
@@ -89,7 +98,7 @@ deposit = RexBankDepositOperator(
     gas_multiplier=1.1,
     gas=3000000,
     contract_address=REX_BANK_ADDRESS,
-    amount=1000000000000000000, # 1 RIC
+    amount="{{task_instance.xcom_pull(task_ids='balance')}}", # 1 RIC
     dag=dag
 )
 
@@ -110,7 +119,7 @@ borrow = RexBankBorrowOperator(
     gas_multiplier=1.1,
     gas=3000000,
     contract_address=REX_BANK_ADDRESS,
-    amount=600000000000000000, # 0.6 USDCx
+    amount=-1, # max borrow
     dag=dag
 )
 
@@ -132,7 +141,7 @@ downgrade = SuperTokenDowngradeOperator(
     gas_multiplier=1.1,
     gas=3000000,
     contract_address=USDCX_TOKEN_ADDRESS,
-    amount=500000000000000000, # 0.6 USDCx
+    amount=-1, # 0.6 USDCx
     dag=dag
 )
 
@@ -154,7 +163,7 @@ approve_swap = ERC20ApprovalOperator(
     gas=3000000,
     contract_address=USDC_TOKEN_ADDRESS,
     spender=ROUTER_ADDRESS,
-    amount=600000, # 1 RIC
+    amount=-1, # 1 RIC
     dag=dag
 )
 
@@ -176,7 +185,7 @@ swap = UniswapSwapExactTokensForETHOperator(
     gas_multiplier=1.2,
     gas=3000000,
     router_address=ROUTER_ADDRESS,
-    amount_in=600000,
+    amount_in=-1,
     amount_out_min=0,
     to=SWAPPER_WALLET_ADDRESS,
     path=[USDC_TOKEN_ADDRESS, MATIC_TOKEN_ADDRESS],

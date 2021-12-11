@@ -3,8 +3,8 @@ from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
 
-DOWNGRADE_ABI = '''[{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"downgrade","outputs":[],"stateMutability":"nonpayable","type":"function"}]'''
-
+DOWNGRADE_ABI = '''[{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"downgrade","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+'''
 class SuperTokenDowngradeOperator(BaseOperator):
     """
     Downgrades a supertoken
@@ -43,6 +43,9 @@ class SuperTokenDowngradeOperator(BaseOperator):
     def execute(self, context):
         # Create the contract factory
         contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
+        if self.amount < 0:
+            # Max downgrade
+            self.amount = contract.functions.balanceOf(self.wallet.public_address).call()
         # Form the signed transaction
         withdraw_txn = contract.functions.downgrade(self.amount)\
                                          .buildTransaction(dict(

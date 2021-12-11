@@ -17,6 +17,9 @@ SWAP_ABI = '''[{
     "outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],
     "stateMutability":"nonpayable","type":"function"
 }]'''
+ERC20_ABI = '''
+[{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+'''
 
 class UniswapSwapExactTokensForETHOperator(BaseOperator):
     """
@@ -72,6 +75,11 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
             self.contract_address, self.wallet.public_address
         ))
         contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
+        if self.amount < 0:
+            # Max swap
+            input_token = self.web3.eth.contract(self.path[0], abi=ERC20_ABI)
+            self.amount = input_token.functions.balanceOf(self.wallet.public_address).call()
+
         # Form the signed transaction
         withdraw_txn = contract.functions.swapExactTokensForETH(self.amount_in,
                                                                 self.amount_out_min,
