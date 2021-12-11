@@ -47,7 +47,7 @@ After starting up Airflow, navigate to `Admin > Connections` and setup the follo
   * Set the `Login` to the public address
   * Set the `Password` to the private key for the public address
 
-# Optional 
+## Optional 
 * Navigate to `Admin > Variables` and add the following to change dag schedule:
   * `distribution-schedule-interval` - Dag `distribute` (Default - `0 * * * *`)
   * `harvester-schedule-interval` - Dag `harvester` (Default - `0 * * * *`)
