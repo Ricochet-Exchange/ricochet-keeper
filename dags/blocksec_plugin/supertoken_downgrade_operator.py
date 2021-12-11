@@ -47,7 +47,7 @@ class SuperTokenDowngradeOperator(BaseOperator):
             # Max downgrade
             self.amount = contract.functions.balanceOf(self.wallet.public_address).call()
         # Form the signed transaction
-        withdraw_txn = contract.functions.downgrade(self.amount)\
+        withdraw_txn = contract.functions.downgrade(int(self.amount))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
                                            gasPrice = int(self.web3.eth.gasPrice *\

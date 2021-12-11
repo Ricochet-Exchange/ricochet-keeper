@@ -41,7 +41,7 @@ class RexBankDepositOperator(BaseOperator):
         # Create the contract factory
         contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
         # Form the signed transaction
-        deposit = contract.functions.vaultDeposit(self.amount)\
+        deposit = contract.functions.vaultDeposit(int(self.amount))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
                                            gasPrice = int(self.web3.eth.gasPrice *\

@@ -54,7 +54,7 @@ class RexBankBorrowOperator(BaseOperator):
             print("price", price)
             self.amount = vault["collateralAmount"] * price * 0.6 - vault["debtAmount"]
 
-        deposit = contract.functions.vaultBorrow(self.amount)\
+        deposit = contract.functions.vaultBorrow(int(self.amount))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
                                            gasPrice = int(self.web3.eth.gasPrice *\

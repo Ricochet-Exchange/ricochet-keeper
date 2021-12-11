@@ -56,7 +56,7 @@ class ERC20ApprovalOperator(BaseOperator):
             # Max approve
             self.amount = contract.functions.balanceOf(self.wallet.public_address).call()
         # Form the signed transaction
-        withdraw_txn = contract.functions.approve(self.spender, self.amount)\
+        withdraw_txn = contract.functions.approve(self.spender, int(self.amount))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
                                            gasPrice = int(self.web3.eth.gasPrice *\
