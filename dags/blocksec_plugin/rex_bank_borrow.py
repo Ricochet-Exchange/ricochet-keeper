@@ -50,7 +50,7 @@ class RexBankBorrowOperator(BaseOperator):
             vault = contract.functions.vaults(self.wallet.public_address).call()
             print("vault",vault)
             price = contract.function.getCollateralTokenPrice().call()
-            price =/ 1000000
+            price /= 1000000
             print("price", price)
             self.amount = vault["collateralAmount"] * price * 0.6 - vault["debtAmount"]
 
