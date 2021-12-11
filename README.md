@@ -47,6 +47,14 @@ After starting up Airflow, navigate to `Admin > Connections` and setup the follo
   * Set the `Login` to the public address
   * Set the `Password` to the private key for the public address
 
+# Optional 
+* Navigate to `Admin > Variables` and add the following to change dag schedule:
+  * `distribution-schedule-interval` - Dag `distribute` (Default - `0 * * * *`)
+  * `harvester-schedule-interval` - Dag `harvester` (Default - `0 * * * *`)
+  * `watch-schedule-interval` - Watch stream dag (Default - `50 * * * *`)
+  * `tellor-schedule-interval` - Reporting to Tellor (Default - `*/5 * * * *`)
+  * `swap-schedule-interval` - Swap RIC stream to matic (Default - `0 * * * *`)
+
 # Run
 Run the keeper using Docker Compose
 ```
