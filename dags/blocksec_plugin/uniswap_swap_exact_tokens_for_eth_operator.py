@@ -75,10 +75,10 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
             self.contract_address, self.wallet.public_address
         ))
         contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
-        if int(self.amount) < 0:
+        if int(self.amount_in) < 0:
             # Max swap
             input_token = self.web3.eth.contract(self.path[0], abi=ERC20_ABI)
-            self.amount = input_token.functions.balanceOf(self.wallet.public_address).call()
+            self.amount_in = input_token.functions.balanceOf(self.wallet.public_address).call()
 
         # Form the signed transaction
         withdraw_txn = contract.functions.swapExactTokensForETH(self.amount_in,
