@@ -6,7 +6,7 @@ from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
 VAULT_DEPOSIT_ABI = '''[{"constant":false,"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"vaultDeposit","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]'''
 
 class RexBankDepositOperator(BaseOperator):
-    template_fields = []
+    template_fields = ['amount']
     ui_color = "#ADF5FF"
 
     @apply_defaults

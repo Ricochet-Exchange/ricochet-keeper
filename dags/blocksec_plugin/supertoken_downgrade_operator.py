@@ -9,7 +9,7 @@ class SuperTokenDowngradeOperator(BaseOperator):
     """
     Downgrades a supertoken
     """
-    template_fields = []
+    template_fields = ['amount']
     ui_color = "#ADF5FF"
 
     @apply_defaults
