@@ -71,7 +71,7 @@ class TellorOracleOperator(BaseOperator):
         withdraw_txn = contract.functions.submitValue(self.request_id, int(self.price))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
-                                           gasPrice = int(min(30,self.web3.eth.gasPrice) *\
+                                           gasPrice = int(self.web3.eth.gasPrice *\
                                                       self.gas_multiplier),
                                            gas = self.gas
                                           ))

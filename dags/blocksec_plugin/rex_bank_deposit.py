@@ -44,7 +44,7 @@ class RexBankDepositOperator(BaseOperator):
         deposit = contract.functions.vaultDeposit(int(self.amount))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
-                                           gasPrice = int(min(30,self.web3.eth.gasPrice) *\
+                                           gasPrice = int(self.web3.eth.gasPrice *\
                                                       self.gas_multiplier),
                                            gas = self.gas
                                           ))
