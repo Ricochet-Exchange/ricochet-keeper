@@ -12,9 +12,9 @@ class ContractInteractionOperator(BaseOperator):
     @apply_defaults
     def __init__(self,
                  contract_address,
-                 function,
-                 args,
                  abi_json,
+                 function=None,
+                 args=None,
                  web3_conn_id='web3_default',
                  ethereum_wallet='default_wallet',
                  gas_key="fast",
@@ -29,12 +29,17 @@ class ContractInteractionOperator(BaseOperator):
         self.contract_address = contract_address
         self.function = function
         self.args = args
-        self.abi_json = abi
         self.gas_key = gas_key
         self.gas_multiplier = gas_multiplier
         self.gas = gas
         self.web3 = Web3Hook(web3_conn_id=self.web3_conn_id).http_client
         self.wallet = EthereumWalletHook(ethereum_wallet=self.ethereum_wallet)
+
+        try: # check if this is set, otherwise set it with
+            self.abi_json
+        except AttributeError:
+            self.abi_json = abi_json
+
         if nonce:
             self.nonce = nonce
         else: # Look up the last nonce for this wallet

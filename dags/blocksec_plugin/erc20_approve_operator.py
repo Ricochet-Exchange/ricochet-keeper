@@ -7,12 +7,9 @@ ERC20_ABI = '''[{"inputs":[{"internalType":"address","name":"spender","type":"ad
 '''
 
 class ERC20ApprovalOperator(ContractInteractionOperator):
-    """
-    Calls `distribute` on Ricochet contracts
-    """
-    template_fields = ['amount']
-    ui_color = "#BC9EC1"
 
+    template_fields = ['spender', 'amount']
+    ui_color = "#BC9EC1"
 
     @apply_defaults
     def __init__(self,
@@ -20,10 +17,7 @@ class ERC20ApprovalOperator(ContractInteractionOperator):
                  amount,
                  *args,
                  **kwargs):
-        super().__init__(*args, **kwargs)
-        self.spender = spender
-        self.amount = amount
-        self.abi_json = ERC20_ABI
+        super().__init__(abi_json=ERC20_ABI, *args, **kwargs)
 
         # Check if the approve should use the max balance
         if int(self.amount) < 0:
@@ -32,6 +26,4 @@ class ERC20ApprovalOperator(ContractInteractionOperator):
         # Setup args for ContractInteractionOperator's execute method
         self.args = {"spender": self.spender, "amount": int(self.amount)}
 
-
-    def execute(self, context):
-        super().execute(self, context)
+        self.function = self.contract.functions.approve
