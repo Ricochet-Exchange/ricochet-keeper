@@ -19,6 +19,7 @@ import requests
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
+SCHEDULE_INTERVAL = Variable.get("distribution-schedule-interval", "0 * * * *")
 
 default_args = {
     "owner": "ricochet",
@@ -36,7 +37,7 @@ dag = DAG("ricochet_distribute",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="0 * * * *")
+          schedule_interval=SCHEDULE_INTERVAL)
 
 web3 = Web3Hook(web3_conn_id='infura').http_client
 current_nonce = web3.eth.getTransactionCount(DISTRIBUTOR_WALLET_ADDRESS)

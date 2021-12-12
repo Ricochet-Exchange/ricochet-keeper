@@ -21,6 +21,7 @@ import requests
 REPORTER_WALLET_ADDRESS = Variable.get("reporter-address")
 TELLOR_CONTRACT_ADDRESS = Variable.get("tellor-address", "0xACC2d27400029904919ea54fFc0b18Bf07C57875")
 ASSETS = Variable.get("tellor-assets", {"ethereum": 1, "wrapped-btc": 60}, deserialize_json=True)
+SCHEDULE_INTERVAL = Variable.get("tellor-schedule-interval", "*/5 * * * *")
 
 default_args = {
     "owner": "ricochet",
@@ -38,7 +39,7 @@ dag = DAG("ricochet_tellor_reporter",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="*/5 * * * *")
+          schedule_interval=SCHEDULE_INTERVAL)
 
 
 done = BashOperator(

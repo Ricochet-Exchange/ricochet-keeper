@@ -17,6 +17,7 @@ from json import loads
 import requests
 
 CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
+SCHEDULE_INTERVAL = Variable.get("close-schedule-interval", None)
 
 default_args = {
     "owner": "ricochet",
@@ -34,7 +35,7 @@ dag = DAG("ricochet_stream_closure",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval=None)
+          schedule_interval=SCHEDULE_INTERVAL)
 
 
 done = BashOperator(

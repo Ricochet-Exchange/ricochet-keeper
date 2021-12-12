@@ -19,6 +19,7 @@ from json import loads
 import requests
 
 SWAPPER_WALLET_ADDRESS = Variable.get("distributor-address")
+SCHEDULE_INTERVAL = Variable.get("swap-schedule-interval", "0 * * * *")
 
 default_args = {
     "owner": "ricochet",
@@ -36,7 +37,7 @@ dag = DAG("swap_example",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="0 * * * *")
+          schedule_interval=SCHEDULE_INTERVAL)
 
 web3 = Web3Hook(web3_conn_id='infura').http_client
 current_nonce = web3.eth.getTransactionCount(SWAPPER_WALLET_ADDRESS)

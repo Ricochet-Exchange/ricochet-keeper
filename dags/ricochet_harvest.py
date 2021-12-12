@@ -19,6 +19,7 @@ import requests
 
 HARVESTER_WALLET_ADDRESS = Variable.get("harvester-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-lp-addresses", deserialize_json=True)
+SCHEDULE_INTERVAL = Variable.get("harvester-schedule-interval", "0 * * * *")
 
 default_args = {
     "owner": "ricochet",
@@ -36,7 +37,7 @@ dag = DAG("ricochet_harvest",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="0 0 * * *")
+          schedule_interval=SCHEDULE_INTERVAL)
 
 web3 = Web3Hook(web3_conn_id='infura').http_client
 current_nonce = web3.eth.getTransactionCount(HARVESTER_WALLET_ADDRESS)

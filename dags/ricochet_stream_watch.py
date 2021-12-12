@@ -19,6 +19,7 @@ import requests
 
 CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
+SCHEDULE_INTERVAL = Variable.get("watch-schedule-interval", "50 * * * *")
 
 default_args = {
     "owner": "ricochet",
@@ -36,7 +37,7 @@ dag = DAG("ricochet_stream_watch",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="50 * * * *")
+          schedule_interval=SCHEDULE_INTERVAL)
 
 
 done = BashOperator(
