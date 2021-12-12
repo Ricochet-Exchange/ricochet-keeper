@@ -17,6 +17,8 @@ class ERC20ApprovalOperator(ContractInteractionOperator):
                  amount,
                  *args,
                  **kwargs):
+        self.spender = spender
+        self.amount = amount
         super().__init__(abi_json=ERC20_ABI, *args, **kwargs)
 
         # Check if the approve should use the max balance
@@ -24,6 +26,6 @@ class ERC20ApprovalOperator(ContractInteractionOperator):
             amount = self.contract.functions.balanceOf(self.wallet.public_address).call()
 
         # Setup args for ContractInteractionOperator's execute method
-        self.function_args = {"spender": spender, "amount": int(amount)}
+        self.function_args = {"spender": self.spender, "amount": int(self.amount)}
 
         self.function = self.contract.functions.approve
