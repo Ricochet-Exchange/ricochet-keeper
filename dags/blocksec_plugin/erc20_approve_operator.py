@@ -24,6 +24,6 @@ class ERC20ApprovalOperator(ContractInteractionOperator):
             self.amount = self.contract.functions.balanceOf(self.wallet.public_address).call()
 
         # Setup args for ContractInteractionOperator's execute method
-        self.args = {"spender": self.spender, "amount": int(self.amount)}
+        self.function_args = {"spender": self.spender, "amount": int(self.amount)}
 
         self.function = self.contract.functions.approve
