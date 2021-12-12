@@ -2,8 +2,7 @@ from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
-import requests,json
-from time import sleep
+
 
 ERC20_ABI = '''[{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},
 {"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
@@ -11,7 +10,7 @@ ERC20_ABI = '''[{"inputs":[{"internalType":"address","name":"spender","type":"ad
 
 class ERC20ApprovalOperator(BaseOperator):
     """
-    Calls `distribute` on Ricochet contracts
+    Calls `approve` on ERC20 tokens
     """
     template_fields = ['amount']
     ui_color = "#BC9EC1"

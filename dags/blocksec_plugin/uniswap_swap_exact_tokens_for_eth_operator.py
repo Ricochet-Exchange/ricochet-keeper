@@ -29,6 +29,7 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
     template_fields = []
     ui_color = "#EBBAB9"
 
+
     @apply_defaults
     def __init__(self,
                  web3_conn_id='web3_default',
@@ -79,7 +80,6 @@ class UniswapSwapExactTokensForETHOperator(BaseOperator):
             # Max swap
             input_token = self.web3.eth.contract(self.path[0], abi=ERC20_ABI)
             self.amount_in = input_token.functions.balanceOf(self.wallet.public_address).call()
-
         # Form the signed transaction
         withdraw_txn = contract.functions.swapExactTokensForETH(self.amount_in,
                                                                 self.amount_out_min,
