@@ -14,7 +14,6 @@ class RicochetStreamerListOperator(BaseOperator):
     Checks for all UpdatedStream events on Ricochet and saves them into a file
     """
     template_fields = []
-    ui_color = "#ADF5FF"
 
     @apply_defaults
     def __init__(self,

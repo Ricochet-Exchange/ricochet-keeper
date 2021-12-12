@@ -1,19 +1,13 @@
-from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
-from blocksec_plugin.web3_hook import Web3Hook
-from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
+from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
 
+APPROVE_ABI = '''[{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}]'''
 
-ERC20_ABI = '''[{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},
-{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
-'''
-
-class ERC20ApprovalOperator(BaseOperator):
+class ERC20ApprovalOperator(ContractInteractionOperator):
     """
-    Calls `approve` on ERC20 tokens
+    Calls `distribute` on Ricochet contracts
     """
-    template_fields = ['amount']
-    ui_color = "#BC9EC1"
+    template_fields = []
 
     @apply_defaults
     def __init__(self,
@@ -28,42 +22,38 @@ class ERC20ApprovalOperator(BaseOperator):
                  nonce=None,
                  *args,
                  **kwargs):
-        super().__init__(*args, **kwargs)
-        self.spender = spender
-        self.amount = amount
-        self.web3_conn_id = web3_conn_id
-        self.ethereum_wallet = ethereum_wallet
-        self.contract_address = contract_address
-        self.abi_json = ERC20_ABI
-        self.gas_key = gas_key
-        self.gas_multiplier = gas_multiplier
-        self.gas = gas
-        self.web3 = Web3Hook(web3_conn_id=self.web3_conn_id).http_client
-        self.wallet = EthereumWalletHook(ethereum_wallet=self.ethereum_wallet)
-        if nonce:
-            self.nonce = nonce
-        else: # Look up the last nonce for this wallet
-            self.nonce = self.web3.eth.getTransactionCount(self.wallet.public_address)
+        super().__init__(web3_conn_id, 
+                        ethereum_wallet,
+                        contract_address,
+                        spender,
+                        amount,
+                        gas_key,
+                        gas_multiplier,
+                        gas,
+                        nonce,
+                        *args,
+                        **kwargs)
+        self.abi_json = APPROVE_ABI
 
     def execute(self, context):
         # Create the contract factory
         print("Processing approve of {0} by EOA {1}".format(
             self.contract_address, self.wallet.public_address
         ))
-        contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
-        if int(self.amount) < 0:
-            # Max approve
-            self.amount = contract.functions.balanceOf(self.wallet.public_address).call()
-        # Form the signed transaction
-        withdraw_txn = contract.functions.approve(self.spender, int(self.amount))\
-                                         .buildTransaction(dict(
-                                           nonce=int(self.nonce),
-                                           gasPrice = int(self.web3.eth.gasPrice *\
-                                                      self.gas_multiplier),
-                                           gas = self.gas
-                                          ))
-        signed_txn = self.web3.eth.account.signTransaction(withdraw_txn, self.wallet.private_key)
-        # Send the transaction
-        transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
+
+        transaction_hash = super().transact(self.contract_address, self.abi_json, 'approve', self.spender, self.amount)
+
+        # contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
+        # # Form the signed transaction
+        # withdraw_txn = contract.functions.approve(self.spender, self.amount)\
+        #                                  .buildTransaction(dict(
+        #                                    nonce=int(self.nonce),
+        #                                    gasPrice = int(self.web3.eth.gasPrice *\
+        #                                               self.gas_multiplier),
+        #                                    gas = self.gas
+        #                                   ))
+        # signed_txn = self.web3.eth.account.signTransaction(withdraw_txn, self.wallet.private_key)
+        # # Send the transaction
+        # transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
         print(f"Sent approve({self.spender}, {self.amount}) txn hash: {transaction_hash.hex()}")
         return str(transaction_hash.hex()) # Return for use with EthereumTransactionConfirmationSensor

@@ -1,8 +1,6 @@
-from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
-from blocksec_plugin.web3_hook import Web3Hook
-from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
-import requests,json
+from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
+import requests
 from time import sleep
 
 SUBMIT_VALUE_ABI = '''[{
@@ -24,7 +22,7 @@ SUBMIT_VALUE_ABI = '''[{
       "type": "function"
     }]'''
 
-class TellorOracleOperator(BaseOperator):
+class TellorOracleOperator(ContractInteractionOperator):
     """
     Calls `withdrawRewards` on TPS contracts
     """
@@ -43,21 +41,18 @@ class TellorOracleOperator(BaseOperator):
                  nonce=None,
                  *args,
                  **kwargs):
-        super().__init__(*args, **kwargs)
-        self.web3_conn_id = web3_conn_id
-        self.ethereum_wallet = ethereum_wallet
-        self.contract_address = contract_address
-        self.price = price
-        self.request_id = request_id
+        super().__init__(price,
+                        web3_conn_id,
+                        ethereum_wallet,
+                        contract_address,
+                        request_id,
+                        gas_key,
+                        gas_multiplier,
+                        gas,
+                        nonce,
+                        *args,
+                        **kwargs)
         self.abi_json = SUBMIT_VALUE_ABI
-        self.gas_key = gas_key
-        self.gas_multiplier = gas_multiplier
-        self.gas = gas
-        self.web3 = Web3Hook(web3_conn_id=self.web3_conn_id).http_client
-        self.wallet = EthereumWalletHook(ethereum_wallet=self.ethereum_wallet)
-        self.nonce = nonce or self.web3.eth.getTransactionCount(
-             self.wallet.public_address
-         )
 
     def execute(self, context):
         # Create the contract factory
@@ -65,18 +60,21 @@ class TellorOracleOperator(BaseOperator):
             self.request_id, self.price,
             self.contract_address, self.wallet.public_address
         ))
-        contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
-        # Form the signed transaction
-        withdraw_txn = contract.functions.submitValue(self.request_id, int(self.price))\
-                                         .buildTransaction(dict(
-                                           nonce=int(self.nonce),
-                                           gasPrice = int(self.web3.eth.gasPrice *\
-                                                      self.gas_multiplier),
-                                           gas = self.gas
-                                          ))
-        signed_txn = self.web3.eth.account.signTransaction(withdraw_txn, self.wallet.private_key)
-        # Send the transaction
-        transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
+
+        transaction_hash = super().transact(self.contract_address, self.abi_json, 'submitValue', self.request_id, int(self.price))
+
+        # contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
+        # # Form the signed transaction
+        # withdraw_txn = contract.functions.submitValue(self.request_id, int(self.price))\
+        #                                  .buildTransaction(dict(
+        #                                    nonce=int(self.nonce),
+        #                                    gasPrice = int(self.web3.eth.gasPrice *\
+        #                                               self.gas_multiplier),
+        #                                    gas = self.gas
+        #                                   ))
+        # signed_txn = self.web3.eth.account.signTransaction(withdraw_txn, self.wallet.private_key)
+        # # Send the transaction
+        # transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
         print("Sent submitValue({0},{1})... transaction hash: {2}".format(self.request_id, self.price, transaction_hash.hex()))
         return str(transaction_hash.hex()) # Return for use with EthereumTransactionConfirmationSensor
 
