@@ -14,7 +14,7 @@ class ContractInteractionOperator(BaseOperator):
                  contract_address,
                  abi_json,
                  function=None,
-                 args=None,
+                 function_args=None,
                  web3_conn_id='web3_default',
                  ethereum_wallet='default_wallet',
                  gas_key="fast",
@@ -28,7 +28,7 @@ class ContractInteractionOperator(BaseOperator):
         self.ethereum_wallet = ethereum_wallet
         self.contract_address = contract_address
         self.function = function
-        self.args = args
+        self.function_args = function_args
         self.gas_key = gas_key
         self.gas_multiplier = gas_multiplier
         self.gas = gas
@@ -48,8 +48,8 @@ class ContractInteractionOperator(BaseOperator):
 
 
     def execute(self, context):
-        print(f"Executing {self.function} with args {self.args} on {self.contract_address}")
-        raw_txn = self.function(**args)\
+        print(f"Executing {self.function} with args {self.function_args} on {self.contract_address}")
+        raw_txn = self.function(**function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
                                gasPrice = int(self.web3.eth.gasPrice *\
