@@ -2,16 +2,18 @@ from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
-import requests,json
-from time import sleep
 
-APPROVE_ABI = '''[{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}]'''
+
+ERC20_ABI = '''[{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},
+{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+'''
 
 class ERC20ApprovalOperator(BaseOperator):
     """
-    Calls `distribute` on Ricochet contracts
+    Calls `approve` on ERC20 tokens
     """
-    template_fields = []
+    template_fields = ['amount']
+    ui_color = "#BC9EC1"
 
     @apply_defaults
     def __init__(self,
@@ -32,7 +34,7 @@ class ERC20ApprovalOperator(BaseOperator):
         self.web3_conn_id = web3_conn_id
         self.ethereum_wallet = ethereum_wallet
         self.contract_address = contract_address
-        self.abi_json = APPROVE_ABI
+        self.abi_json = ERC20_ABI
         self.gas_key = gas_key
         self.gas_multiplier = gas_multiplier
         self.gas = gas
@@ -49,8 +51,11 @@ class ERC20ApprovalOperator(BaseOperator):
             self.contract_address, self.wallet.public_address
         ))
         contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
+        if int(self.amount) < 0:
+            # Max approve
+            self.amount = contract.functions.balanceOf(self.wallet.public_address).call()
         # Form the signed transaction
-        withdraw_txn = contract.functions.approve(self.spender, self.amount)\
+        withdraw_txn = contract.functions.approve(self.spender, int(self.amount))\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
                                            gasPrice = int(self.web3.eth.gasPrice *\

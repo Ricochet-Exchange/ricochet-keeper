@@ -12,6 +12,8 @@ class RicochetStreamerCloseOperator(BaseOperator):
     Closes a streamers stream using `closeStream`
     """
     template_fields = ['streamer_address', 'exchange_address', 'nonce']
+    ui_color = "#ADF5FF"
+
 
     @apply_defaults
     def __init__(self,
@@ -45,7 +47,7 @@ class RicochetStreamerCloseOperator(BaseOperator):
         withdraw_txn = contract.functions.closeStream(self.streamer_address)\
                                          .buildTransaction(dict(
                                            nonce=int(self.nonce),
-                                           gasPrice = self.web3.eth.gasPrice * self.gas_multiplier,
+                                           gasPrice = min(30,self.web3.eth.gasPrice) * self.gas_multiplier,
                                            gas = self.gas
                                           ))
         signed_txn = self.web3.eth.account.signTransaction(withdraw_txn, self.wallet.private_key)
