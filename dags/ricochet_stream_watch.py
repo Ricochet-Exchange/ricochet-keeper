@@ -72,9 +72,7 @@ def review_streamers_and_trigger_closures(**context):
     conn = postgres.get_conn()
     cursor = conn.cursor()
     cursor.execute(sql)
-    streamers = []
-    for result in cursor.fetchall():
-        streamers.append(result[0])
+    streamers = [result[0] for result in cursor.fetchall()]
 
     print("Streamers", streamers)
 
