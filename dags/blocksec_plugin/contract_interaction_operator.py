@@ -7,14 +7,15 @@ class ContractInteractionOperator(BaseOperator):
     """
     Executes a generalized contract interaction
     """
+
     template_fields = ['contract_address', 'function', 'args', 'abi_json']
 
     @apply_defaults
     def __init__(self,
                  contract_address,
                  abi_json,
-                 function,
-                 argsForFunction,
+                 function=None,
+                 function_args=None,
                  web3_conn_id='web3_default',
                  ethereum_wallet='default_wallet',
                  gas_key="fast",
@@ -28,13 +29,16 @@ class ContractInteractionOperator(BaseOperator):
         self.ethereum_wallet = ethereum_wallet
         self.contract_address = contract_address
         self.function = function
-        self.argsForFunction = argsForFunction
-        self.abi_json = abi_json
+        self.function_args = function_args
         self.gas_key = gas_key
         self.gas_multiplier = gas_multiplier
         self.gas = gas
         self.web3 = Web3Hook(web3_conn_id=self.web3_conn_id).http_client
         self.wallet = EthereumWalletHook(ethereum_wallet=self.ethereum_wallet)
+        try: # check if this is set, otherwise set it with
+            self.abi_json
+        except AttributeError:
+            self.abi_json = abi_json
         if nonce:
             self.nonce = nonce
         else: # Look up the last nonce for this wallet
@@ -43,9 +47,8 @@ class ContractInteractionOperator(BaseOperator):
 
 
     def execute(self, context):
-        print(f"Executing {self.function} with args {self.argsForFunction} on {self.contract_address}")
-        args = self.argsForFunction
-        raw_txn = self.function(**args)\
+        print(f"Executing {self.function} with args {self.function_args} on {self.contract_address}")
+        raw_txn = self.function(**self.function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
                                gasPrice = int(self.web3.eth.gasPrice *\
