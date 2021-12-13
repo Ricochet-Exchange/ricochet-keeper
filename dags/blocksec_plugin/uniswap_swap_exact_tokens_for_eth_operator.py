@@ -9,6 +9,7 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
     * Assumes amount of tokens has been approved already
     """
     template_fields = ['amount_in', 'amount_out_min', 'path', 'to', 'deadline']
+    ui_color = "#EBBAB9"
 
     @apply_defaults
     def __init__(self,

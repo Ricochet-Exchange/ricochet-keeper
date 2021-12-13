@@ -8,6 +8,7 @@ class RicochetStreamerCloseOperator(ContractInteractionOperator):
     Closes a streamers stream using `closeStream`
     """
     template_fields = ['streamer_address', 'exchange_address']
+    ui_color = "#ADF5FF"
 
     @apply_defaults
     def __init__(self,

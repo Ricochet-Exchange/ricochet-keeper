@@ -7,6 +7,7 @@ class RicochetDistributeOperator(ContractInteractionOperator):
     Calls `distribute` on Ricochet contracts
     """
     template_fields = []
+    ui_color = "#ADF5FF"
 
     @apply_defaults
     def __init__(self,
