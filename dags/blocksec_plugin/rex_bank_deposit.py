@@ -1,5 +1,5 @@
 from airflow.utils.decorators import apply_defaults
-from blocksec_plugin.abis import VAULT_DEPOSIT_ABI
+from blocksec_plugin.abis import REX_BANK_ABI
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
 
 class RexBankDepositOperator(ContractInteractionOperator):
@@ -13,5 +13,6 @@ class RexBankDepositOperator(ContractInteractionOperator):
                  **kwargs):
         super().__init__(*args, **kwargs)
         self.amount = amount
-        self.function_args = {"amount": self.amount}
+        self.abi_json = REX_BANK_ABI
+        self.function_args = {"amount": int(self.amount)}
         self.function = self.contract.functions.vaultDeposit

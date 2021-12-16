@@ -1,5 +1,5 @@
 from airflow.utils.decorators import apply_defaults
-from blocksec_plugin.abis import DOWNGRADE_ABI
+from blocksec_plugin.abis import SUPERTOKEN_ABI
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
 
 class SuperTokenDowngradeOperator(ContractInteractionOperator):
@@ -16,6 +16,6 @@ class SuperTokenDowngradeOperator(ContractInteractionOperator):
                  **kwargs):
         super().__init__(*args, **kwargs)
         self.amount = amount
-        self.abi_json = DOWNGRADE_ABI
-        self.function_args = {"amount": self.amount}
+        self.abi_json = SUPERTOKEN_ABI
+        self.function_args = {"amount": int(self.amount)}
         self.function = self.contract.functions.downgrade

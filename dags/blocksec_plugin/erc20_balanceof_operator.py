@@ -1,7 +1,7 @@
 
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
-from blocksec_plugin.abis import ERC20_ABI_BALANCE
+from blocksec_plugin.abis import ERC20_ABI
 
 class ERC20BalanceOfOperator(ContractInteractionOperator):
     template_fields = ["account"]

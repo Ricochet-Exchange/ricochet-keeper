@@ -34,8 +34,8 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
             self.deadline = deadline
         self.abi_json = SWAP_ABI
         self.argsForFunction = {
-            "amount_in": self.amount_in,
-            "amount_out_min": self.amount_out_min,
+            "amount_in": int(self.amount_in),
+            "amount_out_min": int(self.amount_out_min),
             "path": self.path,
             "to": self.to,
             "deadline": self.deadline
