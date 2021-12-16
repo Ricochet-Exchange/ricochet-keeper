@@ -28,4 +28,4 @@ class ERC20ApprovalOperator(ContractInteractionOperator):
         # Setup args for ContractInteractionOperator's execute method
         self.function_args = {"spender": self.spender, "amount": int(self.amount)}
         self.function = self.contract.functions.approve
-        super().execute(context)
+        return super().execute(context)
