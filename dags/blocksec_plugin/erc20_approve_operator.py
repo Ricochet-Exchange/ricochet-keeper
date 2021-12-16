@@ -23,8 +23,8 @@ class ERC20ApprovalOperator(ContractInteractionOperator):
 
     def execute(self, context):
         # Check if the approve should use the max balance
-        if int(amount) < 0:
-            amount = self.contract.functions.balanceOf(self.wallet.public_address).call()
+        if int(self.amount) < 0:
+            self.amount = self.contract.functions.balanceOf(self.wallet.public_address).call()
         # Setup args for ContractInteractionOperator's execute method
         self.function_args = {"spender": self.spender, "amount": int(self.amount)}
         self.function = self.contract.functions.approve
