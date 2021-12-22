@@ -1,10 +1,7 @@
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
+from blocksec_plugin.abis import ERC20_ABI
 
-
-ERC20_ABI = '''[{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},
-{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
-'''
 
 class ERC20ApprovalOperator(ContractInteractionOperator):
 
