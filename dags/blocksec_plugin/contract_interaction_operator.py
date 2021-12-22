@@ -7,7 +7,8 @@ class ContractInteractionOperator(BaseOperator):
     """
     Executes a generalized contract interaction
     """
-    template_fields = ['contract_address', 'args', 'abi_json']
+
+    template_fields = ['contract_address', 'function', 'args', 'abi_json']
 
     @apply_defaults
     def __init__(self,
@@ -34,12 +35,10 @@ class ContractInteractionOperator(BaseOperator):
         self.gas = gas
         self.web3 = Web3Hook(web3_conn_id=self.web3_conn_id).http_client
         self.wallet = EthereumWalletHook(ethereum_wallet=self.ethereum_wallet)
-
         try: # check if this is set, otherwise set it with
             self.abi_json
         except AttributeError:
             self.abi_json = abi_json
-
         if nonce:
             self.nonce = nonce
         else: # Look up the last nonce for this wallet
