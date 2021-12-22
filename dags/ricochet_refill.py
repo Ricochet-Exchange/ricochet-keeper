@@ -23,13 +23,14 @@ from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
 
-REX_BANK_ADDRESS = "0xaD39F774A75C7673eE0c8Ca2A7b88454580D7F53"
-RIC_TOKEN_ADDRESS = "0x263026E7e53DBFDce5ae55Ade22493f828922965"
-USDCX_TOKEN_ADDRESS = "0xCAa7349CEA390F89641fe306D93591f87595dc1F"
-USDC_TOKEN_ADDRESS = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
-MATIC_TOKEN_ADDRESS = "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270"
-ROUTER_ADDRESS = "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506"
-SWAPPER_WALLET_ADDRESS = Variable.get("distributor-address")
+REX_BANK_ADDRESS = Variable.get("rex-bank-address")
+SWAPPER_WALLET_ADDRESS = Variable.get("swapper-address")
+SCHEDULE_INTERVAL = Variable.get("refill-schedule-interval", "0 * * * *")
+ROUTER_ADDRESS = Variable.get("router-address", "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506") # SushiSwap
+RIC_TOKEN_ADDRESS = Variable.get("swapper-address","0x263026E7e53DBFDce5ae55Ade22493f828922965")
+USDCX_TOKEN_ADDRESS = Variable.get("swapper-address","0xCAa7349CEA390F89641fe306D93591f87595dc1F")
+USDC_TOKEN_ADDRESS = Variable.get("swapper-address","0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174")
+MATIC_TOKEN_ADDRESS = Variable.get("swapper-address","0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270")
 
 default_args = {
     "owner": "ricochet",
