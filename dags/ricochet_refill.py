@@ -27,10 +27,10 @@ REX_BANK_ADDRESS = Variable.get("rex-bank-address")
 SWAPPER_WALLET_ADDRESS = Variable.get("swapper-address")
 SCHEDULE_INTERVAL = Variable.get("refill-schedule-interval", "0 * * * *")
 ROUTER_ADDRESS = Variable.get("router-address", "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506") # SushiSwap
-RIC_TOKEN_ADDRESS = Variable.get("swapper-address","0x263026E7e53DBFDce5ae55Ade22493f828922965")
-USDCX_TOKEN_ADDRESS = Variable.get("swapper-address","0xCAa7349CEA390F89641fe306D93591f87595dc1F")
-USDC_TOKEN_ADDRESS = Variable.get("swapper-address","0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174")
-MATIC_TOKEN_ADDRESS = Variable.get("swapper-address","0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270")
+RIC_TOKEN_ADDRESS = Variable.get("ric-token-address","0x263026E7e53DBFDce5ae55Ade22493f828922965")
+USDCX_TOKEN_ADDRESS = Variable.get("usdcx-token-address","0xCAa7349CEA390F89641fe306D93591f87595dc1F")
+USDC_TOKEN_ADDRESS = Variable.get("usdc-token-address","0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174")
+MATIC_TOKEN_ADDRESS = Variable.get("matic-token-address","0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270")
 
 default_args = {
     "owner": "ricochet",
@@ -48,7 +48,7 @@ dag = DAG("ricochet_refill",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="0 * * * *")
+          schedule_interval=SCHEDULE_INTERVAL)
 
 web3 = Web3Hook(web3_conn_id='infura').http_client
 current_nonce = web3.eth.getTransactionCount(SWAPPER_WALLET_ADDRESS)
