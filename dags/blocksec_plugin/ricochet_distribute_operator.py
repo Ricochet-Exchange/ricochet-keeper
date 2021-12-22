@@ -16,5 +16,5 @@ class RicochetDistributeOperator(ContractInteractionOperator):
         super().__init__(*args,
                         **kwargs)
         self.abi_json = DISTRIBUTE_ABI
-        self.argsForFunction = {}
+        self.function_args = {}
         self.function = self.contract.functions.distribute

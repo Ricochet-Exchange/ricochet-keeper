@@ -13,13 +13,14 @@ class RicochetStreamerCloseOperator(ContractInteractionOperator):
     @apply_defaults
     def __init__(self,
                  streamer_address,
-                 exhange_address,
                  *args,
                  **kwargs):
         super().__init__(*args,
                         **kwargs)
         self.streamer_address = streamer_address
-        self.exchange_address = exhange_address
         self.abi_json = RICOCHET_ABI
-        self.argsForFunction = {"streamer_address": self.streamer_address}
         self.function = self.contract.functions.closeStream
+
+    def execute(self, context):
+        self.function_args = {"streamer": self.streamer_address}
+        return super().execute(context)

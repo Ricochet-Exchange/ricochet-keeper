@@ -8,7 +8,7 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
     Calls `swapExactTokensForETH` on a Uniswap Router contract
     * Assumes amount of tokens has been approved already
     """
-    template_fields = ['amount_in', 'amount_out_min', 'path', 'to', 'deadline']
+    template_fields = ['amount_in', 'amount_out_min', 'path', 'to']
     ui_color = "#EBBAB9"
 
     @apply_defaults
@@ -21,7 +21,7 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
                  deadline=None,
                  *args,
                  **kwargs):
-        super().__init__(*args, 
+        super().__init__(*args,
                         **kwargs)
         self.router_address = router_address
         self.amount_in = amount_in
@@ -33,11 +33,14 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
         else:
             self.deadline = deadline
         self.abi_json = SWAP_ABI
-        self.argsForFunction = {
-            "amount_in": int(self.amount_in),
-            "amount_out_min": int(self.amount_out_min),
+        self.function = self.contract.functions.swapExactTokensForEth
+
+    def execute(self, context):
+        self.function_args = {
+            "amountIn": int(self.amount_in),
+            "amountOutMin": int(self.amount_out_min),
             "path": self.path,
             "to": self.to,
             "deadline": self.deadline
         }
-        self.function = self.contract.functions.swapExactTokensForEth
+        return super().execute(context)

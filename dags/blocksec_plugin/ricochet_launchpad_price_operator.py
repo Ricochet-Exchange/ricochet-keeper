@@ -17,3 +17,6 @@ class RicochetLaunchpadPrice(ContractInteractionOperator):
         self.abi_json = SHARE_PRICE_ABI
         self.function_args = {}
         self.function = self.contract.functions.getSharePrice
+
+    def execute(self, context):
+        return self.function(self.account).call()

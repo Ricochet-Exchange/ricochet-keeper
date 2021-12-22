@@ -16,5 +16,5 @@ class RicochetHarvestOperator(ContractInteractionOperator):
         super().__init__(*args,
                         **kwargs)
         self.abi_json = HARVEST_ABI
-        self.argsForFunction = {}
+        self.function_args = {}
         self.function = self.contract.functions.harvest

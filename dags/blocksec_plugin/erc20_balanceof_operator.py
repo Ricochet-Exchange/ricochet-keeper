@@ -14,5 +14,7 @@ class ERC20BalanceOfOperator(ContractInteractionOperator):
                  **kwargs):
         super().__init__(*args, **kwargs)
         self.account = account
-        self.function_args = {"account": self.account}
         self.function = self.contract.functions.balanceOf
+
+    def execute(self, context):
+        return self.function(self.account).call()

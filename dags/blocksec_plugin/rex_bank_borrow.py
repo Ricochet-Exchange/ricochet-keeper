@@ -1,5 +1,5 @@
 from airflow.utils.decorators import apply_defaults
-from blocksec_plugin.abis import REX_BANK_ABI
+from blocksec_plugin.abis import REX_BANK_ABI, ERC20_ABI
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
 
 class RexBankBorrowOperator(ContractInteractionOperator):
@@ -15,5 +15,18 @@ class RexBankBorrowOperator(ContractInteractionOperator):
         super().__init__(*args, **kwargs)
         self.amount = amount
         self.abi_json = REX_BANK_ABI
-        self.function_args = {"amount": int(self.amount)}
         self.function = self.contract.functions.vaultBorrow
+
+    def execute(self, context):
+        if int(self.amount) < 0:
+            # Max borrow
+            vault = contract.functions.vaults(self.wallet.public_address).call()
+            print("vault",vault)
+            price = contract.functions.getCollateralTokenPrice().call()
+            price /= 1000000
+            print("price", price)
+            self.amount = vault[0] * price * 0.6 - vault[1]
+        # Setup args for ContractInteractionOperator's execute method
+        self.function_args = {"amount": int(self.amount)}
+
+        return super().execute(context)
