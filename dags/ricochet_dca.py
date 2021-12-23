@@ -70,7 +70,7 @@ confirm_approve = EthereumTransactionConfirmationSensor(
     dag=dag
 )
 
-swap = UniswapSwapExactTokensForETHOperator(
+swap = UniswapSwapExactTokensForTokensOperator(
     task_id="swap",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
