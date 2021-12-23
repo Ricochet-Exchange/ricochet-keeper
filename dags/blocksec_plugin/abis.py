@@ -791,7 +791,7 @@ REX_ABI = """
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function",
-    },
+    }
 ]
 """
 
@@ -1292,7 +1292,7 @@ REX_BANK_ABI = """
         ],
         "stateMutability": "view",
         "type": "function",
-    },
+    }
 ]
 """
 
@@ -1632,7 +1632,7 @@ REX_LAUNCHPAD_API = """
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function",
-    },
+    }
 ]
 """
 
@@ -2119,7 +2119,7 @@ REX_CLOSESTREAM_ABI = """
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function",
-    },
+    }
 ]
 """
 
@@ -3145,7 +3145,7 @@ SUPERTOKEN_ABI = """
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function",
-    },
+    }
 ]
 """
 
