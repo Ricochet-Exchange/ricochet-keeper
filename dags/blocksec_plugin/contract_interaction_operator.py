@@ -49,7 +49,7 @@ class ContractInteractionOperator(BaseOperator):
         self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
 
     def execute(self, context):
-        print(f"Executing {self.function} with args {**self.function_args} on {self.contract_address}")
+        print(f"Executing {self.function} with args {self.function_args} on {self.contract_address}")
         raw_txn = self.function(**self.function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
