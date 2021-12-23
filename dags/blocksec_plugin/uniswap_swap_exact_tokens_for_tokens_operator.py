@@ -23,6 +23,7 @@ class UniswapSwapExactTokensForTokensOperator(ContractInteractionOperator):
                  *args,
                  **kwargs):
         super().__init__(abi_json=UNISWAP_ROUTER_ABI, *args, **kwargs)
+        self.slippage = slippage
         self.amount_in = amount_in
         self.amount_out_min = amount_out_min
         self.path = path
