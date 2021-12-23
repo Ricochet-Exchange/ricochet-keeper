@@ -1,6 +1,6 @@
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
-from blocksec_plugin.abis import UNISWAP_ROUTER_ABI
+from blocksec_plugin.abis import UNISWAP_ROUTER_ABI, ERC20
 from time import time
 
 class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
