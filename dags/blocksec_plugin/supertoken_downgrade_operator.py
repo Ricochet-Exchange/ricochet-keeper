@@ -18,7 +18,9 @@ class SuperTokenDowngradeOperator(ContractInteractionOperator):
         self.amount = amount
 
     def execute(self, context):
-
+        if int(self.amount) < 0:
+            # Max downgrade
+            self.amount = contract.functions.balanceOf(self.wallet.public_address).call()
         self.function = self.contract.functions.downgrade
         self.function_args = {"amount": int(self.amount)}
         return super().execute(context)
