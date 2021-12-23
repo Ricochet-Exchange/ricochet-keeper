@@ -17,7 +17,6 @@ class RicochetHarvestOperator(ContractInteractionOperator):
 
 
     def execute(self, context):
-
         self.function_args = {}
-        self.function = self.contract.functions.vaultDeposit
+        self.function = self.contract.functions.harvest
         return super().execute(context)

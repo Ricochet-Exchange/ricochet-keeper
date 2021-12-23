@@ -16,7 +16,6 @@ class RicochetDistributeOperator(ContractInteractionOperator):
         super().__init__(abi_json=DISTRIBUTE_ABI, *args, **kwargs)
 
     def execute(self, context):
-
         self.function_args = {}
-        self.function = self.contract.functions.vaultDeposit
+        self.function = self.contract.functions.distribute
         return super().execute(context)
