@@ -38,7 +38,7 @@ class UniswapSwapExactTokensForTokensOperator(ContractInteractionOperator):
         in_price = self.get_coingecko_price(self.path[0])
         out_price = self.get_coingecko_price(self.path[-1])
 
-        self.amount_out_min = self.amount_in * in_price / out_price * (1 - self.slippage)
+        self.amount_out_min = int(self.amount_in) * in_price / out_price * (1 - self.slippage)
 
         self.function = self.contract.functions.swapExactTokensForTokens
         self.function_args = {
