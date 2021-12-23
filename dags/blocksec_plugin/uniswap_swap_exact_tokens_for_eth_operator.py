@@ -32,7 +32,7 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
 
     def execute(self, context):
 
-        self.function = self.contract.functions.swapExactTokensForEth
+        self.function = self.contract.functions.swapExactTokensForETH
         self.function_args = {
             "amountIn": int(self.amount_in),
             "amountOutMin": int(self.amount_out_min),
