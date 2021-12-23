@@ -80,7 +80,7 @@ swap = UniswapSwapExactTokensForETHOperator(
     amount_in=SWAP_AMOUNT,
     amount_out_min=0,
     to=SWAPPER_WALLET_ADDRESS,
-    path=["0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174","0x263026e7e53dbfdce5ae55ade22493f828922965"],
+    path=["0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174","0x263026E7e53DBFDce5ae55Ade22493f828922965"],
     dag=dag
 )
 
