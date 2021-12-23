@@ -13,7 +13,7 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.erc20_approve_operator import ERC20ApprovalOperator
-from blocksec_plugin.uniswap_swap_exact_tokens_for_eth_operator import UniswapSwapExactTokensForETHOperator
+from blocksec_plugin.uniswap_swap_exact_tokens_for_tokens_operator import UniswapSwapExactTokensForTokensOperator
 
 
 SWAPPER_WALLET_ADDRESS = Variable.get("swapper-address")
