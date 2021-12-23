@@ -14,8 +14,7 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.erc20_approve_operator import ERC20ApprovalOperator
 from blocksec_plugin.uniswap_swap_exact_tokens_for_eth_operator import UniswapSwapExactTokensForETHOperator
-from json import loads
-import requests
+
 
 SWAPPER_WALLET_ADDRESS = Variable.get("distributor-address")
 SCHEDULE_INTERVAL = Variable.get("swap-schedule-interval", "0 * * * *")

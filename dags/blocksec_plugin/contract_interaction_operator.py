@@ -43,8 +43,9 @@ class ContractInteractionOperator(BaseOperator):
             self.nonce = nonce
         else: # Look up the last nonce for this wallet
             self.nonce = self.web3.eth.getTransactionCount(self.wallet.public_address)
-        self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
-
+        try:
+            self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
+        except self.web3.exceptions.InvalidAddress
 
     def execute(self, context):
         print(f"Executing {self.function} with args {self.function_args} on {self.contract_address}")

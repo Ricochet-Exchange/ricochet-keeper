@@ -19,8 +19,7 @@ from blocksec_plugin.supertoken_downgrade_operator import SuperTokenDowngradeOpe
 from blocksec_plugin.rex_bank_borrow import RexBankBorrowOperator
 from blocksec_plugin.rex_bank_deposit import RexBankDepositOperator
 from blocksec_plugin.erc20_balanceof_operator import ERC20BalanceOfOperator
-from json import loads
-import requests
+
 
 REX_BANK_ADDRESS = Variable.get("rex-bank-address")
 SWAPPER_WALLET_ADDRESS = Variable.get("swapper-address")

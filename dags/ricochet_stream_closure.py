@@ -13,8 +13,7 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.ricochet_streamer_close_operator import RicochetStreamerCloseOperator
 from blocksec_plugin.abis import REX_ABI
-from json import loads
-import requests
+
 
 CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
 SCHEDULE_INTERVAL = Variable.get("close-schedule-interval", None)
