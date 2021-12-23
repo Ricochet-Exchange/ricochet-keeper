@@ -83,16 +83,15 @@ swap = UniswapSwapExactTokensForETHOperator(
     path=["0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174","0x263026e7e53dbfdce5ae55ade22493f828922965"],
     dag=dag
 )
-#
-# confirm_swap = EthereumTransactionConfirmationSensor(
-#     task_id="confirm_swap",
-#     web3_conn_id="infura",
-#     transaction_hash="{{task_instance.xcom_pull(task_ids='swap')}}",
-#     confirmations=1,
-#     poke_interval=5,
-#     timeout=60 * 20,
-#     dag=dag
-# )
 
-# done << confirm_swap << swap << confirm_approve
-done << approve
+confirm_swap = EthereumTransactionConfirmationSensor(
+    task_id="confirm_swap",
+    web3_conn_id="infura",
+    transaction_hash="{{task_instance.xcom_pull(task_ids='swap')}}",
+    confirmations=1,
+    poke_interval=5,
+    timeout=60 * 20,
+    dag=dag
+)
+
+done << confirm_swap << swap << confirm_approve << approve
