@@ -19,7 +19,6 @@ from blocksec_plugin.supertoken_downgrade_operator import SuperTokenDowngradeOpe
 from blocksec_plugin.rex_bank_borrow import RexBankBorrowOperator
 from blocksec_plugin.rex_bank_deposit import RexBankDepositOperator
 from blocksec_plugin.erc20_balanceof_operator import ERC20BalanceOfOperator
-from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
 

@@ -14,7 +14,6 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.erc20_approve_operator import ERC20ApprovalOperator
 from blocksec_plugin.uniswap_swap_exact_tokens_for_eth_operator import UniswapSwapExactTokensForETHOperator
-from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
 
@@ -94,5 +93,5 @@ approve = ERC20ApprovalOperator(
 #     dag=dag
 # )
 
-# done << confirm_swap << swap << confirm_approve 
+# done << confirm_swap << swap << confirm_approve
 done << approve

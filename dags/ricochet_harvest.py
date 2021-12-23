@@ -13,7 +13,6 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_harvest_operator import RicochetHarvestOperator
-from blocksec_plugin.abis import TELLOR_ABI
 from json import loads
 import requests
 
