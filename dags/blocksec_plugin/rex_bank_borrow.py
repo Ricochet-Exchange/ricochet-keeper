@@ -19,9 +19,9 @@ class RexBankBorrowOperator(ContractInteractionOperator):
 
         if int(self.amount) < 0:
             # Max borrow
-            vault = contract.functions.vaults(self.wallet.public_address).call()
+            vault = self.contract.functions.vaults(self.wallet.public_address).call()
             print("vault",vault)
-            price = contract.functions.getCollateralTokenPrice().call()
+            price = self.contract.functions.getCollateralTokenPrice().call()
             price /= 1000000
             print("price", price)
             self.amount = vault[0] * price * 0.6 - vault[1]
