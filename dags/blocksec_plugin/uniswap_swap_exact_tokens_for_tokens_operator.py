@@ -1,6 +1,6 @@
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
-from blocksec_plugin.abis import UNISWAP_ROUTER_ABI
+from blocksec_plugin.abis import UNISWAP_ROUTER_ABI, ERC20_ABI
 from time import time
 import requests
 
@@ -34,12 +34,14 @@ class UniswapSwapExactTokensForTokensOperator(ContractInteractionOperator):
             self.deadline = deadline
 
     def execute(self, context):
+        if int(self.amount_in) < 0:
+            # Max swap
+            input_token = self.web3.eth.contract(self.path[0], abi=ERC20_ABI)
+            self.amount_in = input_token.functions.balanceOf(self.wallet.public_address).call()
         # Calulate min out:
         in_price = self.get_coingecko_price(self.path[0])
         out_price = self.get_coingecko_price(self.path[-1])
-
         self.amount_out_min = int(self.amount_in) * in_price / out_price * (1 - self.slippage)
-
         self.function = self.contract.functions.swapExactTokensForTokens
         self.function_args = {
             "amountIn": int(self.amount_in),
