@@ -13,7 +13,6 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
 
     @apply_defaults
     def __init__(self,
-                 router_address=None,
                  amount_in=0,
                  amount_out_min=0,
                  path=[],
@@ -22,7 +21,6 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
                  *args,
                  **kwargs):
         super().__init__(abi_json=SWAP_ABI, *args, **kwargs)
-        self.router_address = router_address
         self.amount_in = amount_in
         self.amount_out_min = amount_out_min
         self.path = path
