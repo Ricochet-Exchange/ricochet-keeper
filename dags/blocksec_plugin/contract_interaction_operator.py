@@ -50,7 +50,7 @@ class ContractInteractionOperator(BaseOperator):
 
     def execute(self, context):
         print(f"Executing {self.function} with args {self.function_args} on {self.contract_address}")
-        raw_txn = self.function(*self.function_args.values())\
+        raw_txn = self.function(**self.function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
                                gasPrice = int(max(33,self.web3.eth.gasPrice) *\

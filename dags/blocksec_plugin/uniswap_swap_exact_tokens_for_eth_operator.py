@@ -1,6 +1,6 @@
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
-from blocksec_plugin.abis import SWAP_ABI
+from blocksec_plugin.abis import UNISWAP_ROUTER_ABI
 from time import time
 
 class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
@@ -20,7 +20,7 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
                  deadline=None,
                  *args,
                  **kwargs):
-        super().__init__(abi_json=SWAP_ABI, *args, **kwargs)
+        super().__init__(abi_json=UNISWAP_ROUTER_ABI, *args, **kwargs)
         self.amount_in = amount_in
         self.amount_out_min = amount_out_min
         self.path = path
