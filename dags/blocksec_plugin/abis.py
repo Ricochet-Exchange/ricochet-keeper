@@ -244,7 +244,7 @@ HARVEST_ABI = """
 ]
 """
 
-REX_ABI = """v
+REX_ABI = """
 [
     {
         "inputs": [
