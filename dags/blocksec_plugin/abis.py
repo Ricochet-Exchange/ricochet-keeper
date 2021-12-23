@@ -233,15 +233,7 @@ ERC20_ABI = """
 """
 
 HARVEST_ABI = """
-[
-    {
-        "inputs": [],
-        "name": "harvest",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function",
-    }
-]
+[{"inputs":[],"name":"harvest","outputs":[],"stateMutability":"nonpayable","type":"function"}]
 """
 
 REX_ABI = """

@@ -66,6 +66,7 @@ balance = ERC20BalanceOfOperator(
     task_id="balance",
     web3_conn_id="infura",
     contract_address=RIC_TOKEN_ADDRESS,
+    ethereum_wallet=SWAPPER_WALLET_ADDRESS,
     account=SWAPPER_WALLET_ADDRESS,
     dag=dag
 )
@@ -99,7 +100,7 @@ deposit = RexBankDepositOperator(
     gas_multiplier=1.1,
     gas=3000000,
     contract_address=REX_BANK_ADDRESS,
-    amount="{{task_instance.xcom_pull(task_ids='balance')}}", # 1 RIC
+    amount="{{task_instance.xcom_pull(task_ids='balance')}}",
     dag=dag
 )
 
