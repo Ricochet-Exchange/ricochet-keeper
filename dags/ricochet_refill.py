@@ -22,7 +22,7 @@ from blocksec_plugin.erc20_balanceof_operator import ERC20BalanceOfOperator
 
 
 REX_BANK_ADDRESS = Variable.get("rex-bank-address")
-SWAPPER_WALLET_ADDRESS = Variable.get("swapper-address")
+SWAPPER_WALLET_ADDRESS = Variable.get("distributor-address")
 SCHEDULE_INTERVAL = Variable.get("refill-schedule-interval", "0 * * * *")
 ROUTER_ADDRESS = Variable.get("router-address", "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506") # SushiSwap
 RIC_TOKEN_ADDRESS = Variable.get("ric-token-address","0x263026E7e53DBFDce5ae55Ade22493f828922965")
