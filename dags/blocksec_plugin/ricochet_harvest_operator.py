@@ -16,3 +16,9 @@ class RicochetHarvestOperator(ContractInteractionOperator):
         super().__init__(abi_json=HARVEST_ABI, *args, **kwargs)
         self.function_args = {}
         self.function = self.contract.functions.harvest
+
+    def execute(self, context):
+        self.initContract()
+        self.function_args = {}
+        self.function = self.contract.functions.vaultDeposit
+        return super().execute(context)

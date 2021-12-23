@@ -31,9 +31,10 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
             self.deadline = time() + 300
         else:
             self.deadline = deadline
-        self.function = self.contract.functions.swapExactTokensForEth
 
     def execute(self, context):
+        self.initContract()
+        self.function = self.contract.functions.swapExactTokensForEth
         self.function_args = {
             "amountIn": int(self.amount_in),
             "amountOutMin": int(self.amount_out_min),

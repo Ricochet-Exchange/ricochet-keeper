@@ -14,8 +14,8 @@ class RicochetLaunchpadPrice(ContractInteractionOperator):
                  *args,
                  **kwargs):
         super().__init__(abi_json=REX_BANK_ABI, *args, **kwargs)
-        self.function_args = {}
-        self.function = self.contract.functions.getSharePrice
+
 
     def execute(self, context):
-        return self.function(self.account).call()
+        self.initContract()
+        return self.contract.functions.getSharePrice()

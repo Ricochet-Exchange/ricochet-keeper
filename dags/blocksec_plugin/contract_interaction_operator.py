@@ -2,6 +2,7 @@ from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
+from web3.exceptions import InvalidAddress
 
 class ContractInteractionOperator(BaseOperator):
     """
@@ -43,9 +44,9 @@ class ContractInteractionOperator(BaseOperator):
             self.nonce = nonce
         else: # Look up the last nonce for this wallet
             self.nonce = self.web3.eth.getTransactionCount(self.wallet.public_address)
-        try:
-            self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
-        except self.web3.exceptions.InvalidAddress
+
+    def initContract(self):
+        self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
 
     def execute(self, context):
         print(f"Executing {self.function} with args {self.function_args} on {self.contract_address}")

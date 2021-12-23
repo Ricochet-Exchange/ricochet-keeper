@@ -13,8 +13,9 @@ class RexBankDepositOperator(ContractInteractionOperator):
                  **kwargs):
         super().__init__(abi_json=REX_BANK_ABI, *args, **kwargs)
         self.amount = amount
-        self.function = self.contract.functions.vaultDeposit
 
     def execute(self, context):
+        self.initContract()
         self.function_args = {"amount": int(self.amount)}
+        self.function = self.contract.functions.vaultDeposit
         return super().execute(context)

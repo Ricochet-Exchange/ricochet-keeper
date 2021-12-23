@@ -14,9 +14,9 @@ class RexBankBorrowOperator(ContractInteractionOperator):
                  **kwargs):
         super().__init__(abi_json=REX_BANK_ABI, *args, **kwargs)
         self.amount = amount
-        self.function = self.contract.functions.vaultBorrow
 
     def execute(self, context):
+        self.initContract()
         if int(self.amount) < 0:
             # Max borrow
             vault = contract.functions.vaults(self.wallet.public_address).call()
@@ -25,7 +25,8 @@ class RexBankBorrowOperator(ContractInteractionOperator):
             price /= 1000000
             print("price", price)
             self.amount = vault[0] * price * 0.6 - vault[1]
-        # Setup args for ContractInteractionOperator's execute method
+
+        self.function = self.contract.functions.vaultBorrow
         self.function_args = {"amount": int(self.amount)}
 
         return super().execute(context)

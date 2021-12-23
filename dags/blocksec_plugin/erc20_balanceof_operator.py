@@ -17,4 +17,5 @@ class ERC20BalanceOfOperator(ContractInteractionOperator):
         self.function = self.contract.functions.balanceOf
 
     def execute(self, context):
+        self.initContract()
         return self.function(self.account).call()

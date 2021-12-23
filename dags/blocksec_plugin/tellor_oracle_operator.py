@@ -15,8 +15,9 @@ class TellorOracleOperator(ContractInteractionOperator):
         super().__init__(abi_json=TELLOR_ABI, *args, **kwargs)
         self.request_id = request_id
         self.price = price
-        self.function = self.contract.functions.submitValue
 
     def execute(self, context):
+        self.initContract()
+        self.function = self.contract.functions.submitValue
         self.function_args = {"requestId": self.request_id, "value": self.price}
         return super().execute(context)
