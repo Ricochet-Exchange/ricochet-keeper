@@ -18,7 +18,7 @@ class SuperTokenDowngradeOperator(ContractInteractionOperator):
         self.amount = amount
 
     def execute(self, context):
-        initContract()
+
         self.function = self.contract.functions.downgrade
         self.function_args = {"amount": int(self.amount)}
         return super().execute(context)

@@ -19,7 +19,7 @@ class RicochetStreamerCloseOperator(ContractInteractionOperator):
 
 
     def execute(self, context):
-        self.initContract()
+
         self.streamer_address = streamer_address
         self.function = self.contract.functions.closeStream
         self.function_args = {"streamer": self.streamer_address}

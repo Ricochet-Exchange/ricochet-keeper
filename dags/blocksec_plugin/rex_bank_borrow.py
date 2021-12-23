@@ -16,7 +16,7 @@ class RexBankBorrowOperator(ContractInteractionOperator):
         self.amount = amount
 
     def execute(self, context):
-        self.initContract()
+
         if int(self.amount) < 0:
             # Max borrow
             vault = contract.functions.vaults(self.wallet.public_address).call()

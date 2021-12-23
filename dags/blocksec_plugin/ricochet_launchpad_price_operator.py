@@ -17,5 +17,5 @@ class RicochetLaunchpadPrice(ContractInteractionOperator):
 
 
     def execute(self, context):
-        self.initContract()
+
         return self.contract.functions.getSharePrice()

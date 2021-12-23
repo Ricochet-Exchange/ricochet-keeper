@@ -17,7 +17,7 @@ class TellorOracleOperator(ContractInteractionOperator):
         self.price = price
 
     def execute(self, context):
-        self.initContract()
+
         self.function = self.contract.functions.submitValue
         self.function_args = {"requestId": self.request_id, "value": self.price}
         return super().execute(context)

@@ -15,7 +15,7 @@ class RexBankDepositOperator(ContractInteractionOperator):
         self.amount = amount
 
     def execute(self, context):
-        self.initContract()
+
         self.function_args = {"amount": int(self.amount)}
         self.function = self.contract.functions.vaultDeposit
         return super().execute(context)
