@@ -21,8 +21,7 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
                  deadline=None,
                  *args,
                  **kwargs):
-        super().__init__(*args,
-                        **kwargs)
+        super().__init__(abi_json=SWAP_ABI, *args, **kwargs)
         self.router_address = router_address
         self.amount_in = amount_in
         self.amount_out_min = amount_out_min
@@ -32,7 +31,6 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
             self.deadline = time() + 300
         else:
             self.deadline = deadline
-        self.abi_json = SWAP_ABI
         self.function = self.contract.functions.swapExactTokensForEth
 
     def execute(self, context):

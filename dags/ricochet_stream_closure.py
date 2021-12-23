@@ -12,7 +12,7 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.ricochet_streamer_close_operator import RicochetStreamerCloseOperator
-from blocksec_plugin.abis import RICOCHET_ABI
+from blocksec_plugin.abis import REX_ABI
 from json import loads
 import requests
 

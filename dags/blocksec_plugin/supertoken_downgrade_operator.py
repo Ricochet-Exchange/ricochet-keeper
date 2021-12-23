@@ -14,9 +14,8 @@ class SuperTokenDowngradeOperator(ContractInteractionOperator):
                  amount,
                  *args,
                  **kwargs):
-        super().__init__(*args, **kwargs)
+        super().__init__(abi_json=SUPERTOKEN_ABI, *args, **kwargs)
         self.amount = amount
-        self.abi_json = SUPERTOKEN_ABI
         self.function = self.contract.functions.downgrade
 
     def execute(self, context):

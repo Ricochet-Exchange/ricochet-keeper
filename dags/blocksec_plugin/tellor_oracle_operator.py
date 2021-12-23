@@ -7,9 +7,6 @@ from time import sleep
 
 
 class TellorOracleOperator(ContractInteractionOperator):
-    """
-    Calls `withdrawRewards` on TPS contracts
-    """
     template_fields = ['request_id', 'price']
 
     @apply_defaults
@@ -18,11 +15,9 @@ class TellorOracleOperator(ContractInteractionOperator):
                  price,
                  *args,
                  **kwargs):
-        super().__init__(*args,
-                        **kwargs)
+        super().__init__(abi_json=SUBMIT_VALUE_ABI, *args, **kwargs)
         self.request_id = request_id
         self.price = price
-        self.abi_json = SUBMIT_VALUE_ABI
         self.function = self.contract.functions.submitValue
 
     def execute(self, context):

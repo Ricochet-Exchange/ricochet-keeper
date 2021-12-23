@@ -13,8 +13,7 @@ class RicochetLaunchpadPrice(ContractInteractionOperator):
     def __init__(self,
                  *args,
                  **kwargs):
-        super().__init__(*args, **kwargs)
-        self.abi_json = SHARE_PRICE_ABI
+        super().__init__(abi_json=SHARE_PRICE_ABI, *args, **kwargs)
         self.function_args = {}
         self.function = self.contract.functions.getSharePrice
 
