@@ -3,7 +3,7 @@ from blocksec_plugin.contract_interaction_operator import ContractInteractionOpe
 from blocksec_plugin.abis import UNISWAP_ROUTER_ABI
 import requests
 
-class UniswapSwapExactTokensForTokens(ContractInteractionOperator):
+class UniswapSwapExactTokensForTokensOperator(ContractInteractionOperator):
     """
     Calls `swapExactTokensForTokens` on a Uniswap Router contract
     * Assumes amount of tokens has been approved already
