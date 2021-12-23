@@ -50,7 +50,7 @@ class ContractInteractionOperator(BaseOperator):
             self.contract = None
 
     def execute(self, context):
-        if not contract:
+        if not self.contract:
             self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
 
         print(f"Executing {self.function} with args {self.function_args} on {self.contract_address}")
