@@ -52,4 +52,4 @@ class UniswapSwapExactTokensForTokens(ContractInteractionOperator):
         url = f"https://api.coingecko.com/api/v3/simple/token_price/polygon-pos?contract_addresses={address}&vs_currencies=usd"
         response = requests.get(url)
         result = response.json()
-        return = result[lower(address)]["usd"]
+        return result[lower(address)]["usd"]
