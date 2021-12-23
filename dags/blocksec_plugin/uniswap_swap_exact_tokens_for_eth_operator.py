@@ -31,6 +31,10 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
             self.deadline = deadline
 
     def execute(self, context):
+        if int(self.amount_in) < 0:
+            # Max swap
+            input_token = self.web3.eth.contract(self.path[0], abi=ERC20_ABI)
+            self.amount_in = input_token.functions.balanceOf(self.wallet.public_address).call()
 
         self.function = self.contract.functions.swapExactTokensForETH
         self.function_args = {
