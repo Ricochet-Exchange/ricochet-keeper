@@ -38,6 +38,6 @@ class UniswapSwapExactTokensForETHOperator(ContractInteractionOperator):
             "amountOutMin": int(self.amount_out_min),
             "path": self.path,
             "to": self.to,
-            "deadline": self.deadline
+            "deadline": int(self.deadline)
         }
         return super().execute(context)
