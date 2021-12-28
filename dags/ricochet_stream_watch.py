@@ -11,11 +11,9 @@ from airflow.api.client.local_client import Client
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.ricochet_streamer_list_operator import RicochetStreamerListOperator
-from blocksec_plugin.abis import RICOCHET_ABI, ERC20_ABI
+from blocksec_plugin.abis import REX_ABI, ERC20_ABI
 from datetime import datetime, timedelta
-from web3 import Web3
-from json import loads
-import requests
+
 
 CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
@@ -83,7 +81,7 @@ def review_streamers_and_trigger_closures(**context):
     for streamer in streamers:
 
         # Check if the streamers balance is less that 8 hours of streamer
-        ricochet = web3.eth.contract(address=exchange_address, abi=RICOCHET_ABI)
+        ricochet = web3.eth.contract(address=exchange_address, abi=REX_ABI)
         input_token = ricochet.functions.getInputToken().call()
         input_token = web3.eth.contract(address=input_token, abi=ERC20_ABI)
         balance = input_token.functions.balanceOf(streamer).call()

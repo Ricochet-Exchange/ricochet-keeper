@@ -15,8 +15,7 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.coingecko_price_operator import CoinGeckoPriceOperator
 from blocksec_plugin.abis import TELLOR_ABI
-from json import loads
-import requests
+
 
 REPORTER_WALLET_ADDRESS = Variable.get("reporter-address")
 TELLOR_CONTRACT_ADDRESS = Variable.get("tellor-address", "0xACC2d27400029904919ea54fFc0b18Bf07C57875")
