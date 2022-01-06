@@ -19,17 +19,16 @@ from blocksec_plugin.supertoken_downgrade_operator import SuperTokenDowngradeOpe
 from blocksec_plugin.rex_bank_borrow import RexBankBorrowOperator
 from blocksec_plugin.rex_bank_deposit import RexBankDepositOperator
 from blocksec_plugin.erc20_balanceof_operator import ERC20BalanceOfOperator
-from blocksec_plugin.abis import TELLOR_ABI
-from json import loads
-import requests
 
-REX_BANK_ADDRESS = "0xaD39F774A75C7673eE0c8Ca2A7b88454580D7F53"
-RIC_TOKEN_ADDRESS = "0x263026E7e53DBFDce5ae55Ade22493f828922965"
-USDCX_TOKEN_ADDRESS = "0xCAa7349CEA390F89641fe306D93591f87595dc1F"
-USDC_TOKEN_ADDRESS = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
-MATIC_TOKEN_ADDRESS = "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270"
-ROUTER_ADDRESS = "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506"
+
+REX_BANK_ADDRESS = Variable.get("rex-bank-address")
 SWAPPER_WALLET_ADDRESS = Variable.get("distributor-address")
+SCHEDULE_INTERVAL = Variable.get("refill-schedule-interval", "0 * * * *")
+ROUTER_ADDRESS = Variable.get("router-address", "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506") # SushiSwap
+RIC_TOKEN_ADDRESS = Variable.get("ric-token-address","0x263026E7e53DBFDce5ae55Ade22493f828922965")
+USDCX_TOKEN_ADDRESS = Variable.get("usdcx-token-address","0xCAa7349CEA390F89641fe306D93591f87595dc1F")
+USDC_TOKEN_ADDRESS = Variable.get("usdc-token-address","0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174")
+MATIC_TOKEN_ADDRESS = Variable.get("matic-token-address","0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270")
 
 default_args = {
     "owner": "ricochet",
@@ -47,7 +46,7 @@ dag = DAG("ricochet_refill",
           max_active_runs=1,
           catchup=False,
           default_args=default_args,
-          schedule_interval="0 * * * *")
+          schedule_interval=SCHEDULE_INTERVAL)
 
 web3 = Web3Hook(web3_conn_id='infura').http_client
 current_nonce = web3.eth.getTransactionCount(SWAPPER_WALLET_ADDRESS)
@@ -65,6 +64,7 @@ balance = ERC20BalanceOfOperator(
     task_id="balance",
     web3_conn_id="infura",
     contract_address=RIC_TOKEN_ADDRESS,
+    ethereum_wallet=SWAPPER_WALLET_ADDRESS,
     account=SWAPPER_WALLET_ADDRESS,
     dag=dag
 )
@@ -98,7 +98,7 @@ deposit = RexBankDepositOperator(
     gas_multiplier=1.1,
     gas=3000000,
     contract_address=REX_BANK_ADDRESS,
-    amount="{{task_instance.xcom_pull(task_ids='balance')}}", # 1 RIC
+    amount="{{task_instance.xcom_pull(task_ids='balance')}}",
     dag=dag
 )
 
@@ -184,7 +184,7 @@ swap = UniswapSwapExactTokensForETHOperator(
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
     gas_multiplier=1.2,
     gas=3000000,
-    router_address=ROUTER_ADDRESS,
+    contract_address=ROUTER_ADDRESS,
     amount_in=-1,
     amount_out_min=0,
     to=SWAPPER_WALLET_ADDRESS,

@@ -12,9 +12,8 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.ricochet_streamer_close_operator import RicochetStreamerCloseOperator
-from blocksec_plugin.abis import RICOCHET_ABI
-from json import loads
-import requests
+from blocksec_plugin.abis import REX_ABI
+
 
 CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
 SCHEDULE_INTERVAL = Variable.get("close-schedule-interval", None)
@@ -49,7 +48,7 @@ close_stream = RicochetStreamerCloseOperator(
     web3_conn_id="infura",    # Set in Aiflow Connections UI
     ethereum_wallet=CLOSER_WALLET_ADDRESS, # Set in Airflow Connections UI
     streamer_address='{{ dag_run.conf["streamer_address"] }}',
-    exchange_address='{{ dag_run.conf["exchange_address"] }}',
+    contract_address='{{ dag_run.conf["exchange_address"] }}',
     nonce='{{ dag_run.conf["nonce"] }}',
     gas_multiplier=10,
     dag=dag,
