@@ -17,6 +17,8 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_distribute_operator import RicochetDistributeOperator
+from blocksec_plugin.ricochet_update_price_operator import RicochetUpdatePriceOperator
+
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-address")
 V2_EXCHANGE_ADDRESSES = Variable.get("rexmarket-v2-addresses", deserialize_json=True)
