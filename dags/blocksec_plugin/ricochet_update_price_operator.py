@@ -15,8 +15,9 @@ class RicochetUpdatePriceOperator(ContractInteractionOperator):
                  *args,
                  **kwargs):
         super().__init__(abi_json=UPDATE_TOKEN_PRICE_ABI, *args, **kwargs)
+        self.token_address = token_address
 
     def execute(self, context):
-        self.function_args = {"_token": token_address}
+        self.function_args = {"_token": self.token_address}
         self.function = self.contract.functions.updateTokenPrice
         return super().execute(context)
