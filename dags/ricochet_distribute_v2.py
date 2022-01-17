@@ -58,7 +58,7 @@ for exchange_address in V2_EXCHANGE_ADDRESSES:
 
     # Update input price
     update_input = RicochetUpdatePriceOperator(
-        task_id="distribute_" + exchange_address,
+        task_id="update_input_" + exchange_address,
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
@@ -71,8 +71,8 @@ for exchange_address in V2_EXCHANGE_ADDRESSES:
     current_nonce += 1
 
     # Update output price
-    update_input = RicochetUpdatePriceOperator(
-        task_id="distribute_" + exchange_address,
+    update_output = RicochetUpdatePriceOperator(
+        task_id="update_output_" + exchange_address,
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
@@ -108,4 +108,4 @@ for exchange_address in V2_EXCHANGE_ADDRESSES:
         dag=dag
     )
 
-    done << confirm_distribute << distribute
+    done << confirm_distribute << distribute << update_output << update_input
