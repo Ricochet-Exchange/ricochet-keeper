@@ -98,14 +98,4 @@ for exchange_address in V2_EXCHANGE_ADDRESSES:
     current_nonce += 1
 
 
-    confirm_distribute = EthereumTransactionConfirmationSensor(
-        task_id="confirm_distribute_" + exchange_address,
-        web3_conn_id="infura",
-        transaction_hash="{{task_instance.xcom_pull(task_ids='distribute_" + exchange_address + "')}}",
-        confirmations=1,
-        poke_interval=5,
-        timeout=60 * 20,
-        dag=dag
-    )
-
-    done << confirm_distribute << distribute << update_output << update_input
+    done << distribute << update_output << update_input
