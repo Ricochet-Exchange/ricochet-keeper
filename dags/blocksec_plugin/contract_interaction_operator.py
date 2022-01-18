@@ -44,10 +44,15 @@ class ContractInteractionOperator(BaseOperator):
             self.nonce = nonce
         else: # Look up the last nonce for this wallet
             self.nonce = self.web3.eth.getTransactionCount(self.wallet.public_address)
+            
+        self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
+
+    def confirm_success(self, txn):
         try:
-            self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
-        except InvalidAddress:
-            self.contract = None
+            self.function(**self.function_args).estimateGas(transaction=txn)
+            return True
+        except ValueError:
+            return False
 
     def execute(self, context):
         if not self.contract:
@@ -61,6 +66,8 @@ class ContractInteractionOperator(BaseOperator):
                                           self.gas_multiplier),
                                gas = self.gas
                               ))
+        if not self.confirm_success:
+            raise ValueError("Transaction failed to confirm")
         signed_txn = self.web3.eth.account.signTransaction(raw_txn, self.wallet.private_key)
         transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
         print(f"Txn hash: {transaction_hash.hex()}")
