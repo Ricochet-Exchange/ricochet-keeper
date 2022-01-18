@@ -2,6 +2,7 @@ from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
+from web3.exceptions import InvalidAddress
 
 class ContractInteractionOperator(BaseOperator):
     """
@@ -43,18 +44,30 @@ class ContractInteractionOperator(BaseOperator):
             self.nonce = nonce
         else: # Look up the last nonce for this wallet
             self.nonce = self.web3.eth.getTransactionCount(self.wallet.public_address)
+            
         self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
 
+    def confirm_success(self, txn):
+        try:
+            self.function(**self.function_args).estimateGas(transaction=txn)
+            return True
+        except ValueError:
+            return False
 
     def execute(self, context):
+        if not self.contract:
+            self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
+
         print(f"Executing {self.function} with args {self.function_args} on {self.contract_address}")
         raw_txn = self.function(**self.function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
-                               gasPrice = int(self.web3.eth.gasPrice *\
+                               gasPrice = int(max(33,self.web3.eth.gasPrice) *\
                                           self.gas_multiplier),
                                gas = self.gas
                               ))
+        if not self.confirm_success:
+            raise ValueError("Transaction failed to confirm")
         signed_txn = self.web3.eth.account.signTransaction(raw_txn, self.wallet.private_key)
         transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
         print(f"Txn hash: {transaction_hash.hex()}")

@@ -13,9 +13,6 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_distribute_operator import RicochetDistributeOperator
-from blocksec_plugin.abis import TELLOR_ABI
-from json import loads
-import requests
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)

@@ -35,7 +35,7 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_block_to_postgres_operator import EthereumBlocktoPostgresOperator
 from blocksec_plugin.ethereum_events_to_postgres_operator import EthereumEventstoPostgresOperator
-from blocksec_plugin.abis import RICOCHET_ABI
+from blocksec_plugin.abis import REX_ABI
 from datetime import datetime, timedelta
 from json import loads
 
@@ -109,7 +109,7 @@ for exchange_address in EXCHANGE_ADDRESSES:
         task_id="record_events_"+exchange_address,
         postgres_conn_id='data_warehouse',
         postgres_table='ethereum_events',
-        abi_json=loads(RICOCHET_ABI),
+        abi_json=loads(REX_ABI),
         contract_address=exchange_address,
         from_block="{{task_instance.xcom_pull(task_ids='get_from_block_height')}}",
         to_block="{{task_instance.xcom_pull(task_ids='get_to_block_height')}}",
