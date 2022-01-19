@@ -23,7 +23,7 @@ from blocksec_plugin.ricochet_update_price_operator import RicochetUpdatePriceOp
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-v2-address")
 V2_EXCHANGE_ADDRESSES = Variable.get("rexmarket-v2-addresses", deserialize_json=True)
 SCHEDULE_INTERVAL = Variable.get("distribution-v2-schedule-interval", "0 * * * *")
-GAS_MULTIPLIER = int(Variable.get("distribution-v2-gas-multiplier", 1.1))
+GAS_MULTIPLIER = float(Variable.get("distribution-v2-gas-multiplier", 1.1))
 USDCX_ADDRESS = "0xCAa7349CEA390F89641fe306D93591f87595dc1F"
 RIC_ADDRESS = "0x263026E7e53DBFDce5ae55Ade22493f828922965"
 
