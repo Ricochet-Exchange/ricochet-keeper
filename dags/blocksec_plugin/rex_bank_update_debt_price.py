@@ -3,6 +3,7 @@ from blocksec_plugin.abis import REX_BANK_ABI
 from blocksec_plugin.contract_interaction_operator import ContractInteractionOperator
 
 class RexBankUpdateDebtPriceOperator(ContractInteractionOperator):
+    template_fields = []
     ui_color = "#ADF5FF"
 
     @apply_defaults
