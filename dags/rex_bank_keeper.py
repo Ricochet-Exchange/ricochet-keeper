@@ -17,7 +17,7 @@ from blocksec_plugin.rex_bank_update_collateral_price import RexBankUpdateCollat
 from blocksec_plugin.rex_bank_update_debt_price import RexBankUpdateDebtPriceOperator
 
 
-REX_BANK_ADDRESSES = Variable.get("rex-bank-addresses")
+REX_BANK_ADDRESSES = Variable.get("rex-bank-addresses", deserialize_json=True)
 SCHEDULE_INTERVAL = Variable.get("rex-bank-keeper-schedule-interval", "0 0 * * *")
 REX_BANK_KEEPER_ADDRESS = Variable.get("rex-bank-keeper-address")
 
