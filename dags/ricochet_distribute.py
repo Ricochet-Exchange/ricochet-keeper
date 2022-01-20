@@ -13,11 +13,13 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_distribute_operator import RicochetDistributeOperator
+from constants.constants import PriceConstants
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
 SCHEDULE_INTERVAL = Variable.get("distribution-schedule-interval", "0 * * * *")
 GAS_MULTIPLIER = Variable.get("distribution-gas-multiplier", 1.4)
+MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
 default_args = {
     "owner": "ricochet",
@@ -53,6 +55,7 @@ for nonce_offset, exchange_address in enumerate(EXCHANGE_ADDRESSES):
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
         gas=3000000,
+        max_gas_price=MAX_GAS_PRICE,
         contract_address=exchange_address,
         nonce=current_nonce + nonce_offset,
         dag=dag

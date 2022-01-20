@@ -61,6 +61,7 @@ After starting up Airflow, navigate to `Admin > Connections` and setup the follo
   * `swap-schedule-interval` - Swap RIC stream to matic (Default - `0 * * * *`)
   * `block-poll-schedule-interval` - Block poll (Default - `*/15 * * * *`)
   * `close-schedule-interval` - Close streams (Default - `None`)
+  * `max-gas-price` - To set the max gas price (Default - `33`)
 
 # Run
 Run the keeper using Docker Compose
