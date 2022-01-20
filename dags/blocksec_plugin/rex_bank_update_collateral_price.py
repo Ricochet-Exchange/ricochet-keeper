@@ -12,6 +12,6 @@ class RexBankUpdateCollateralPriceOperator(ContractInteractionOperator):
         super().__init__(abi_json=REX_BANK_ABI, *args, **kwargs)
 
     def execute(self, context):
-        self.args = {}
+        self.function_args = {}
         self.function = self.contract.functions.updateCollateralPrice
         return super().execute(context)
