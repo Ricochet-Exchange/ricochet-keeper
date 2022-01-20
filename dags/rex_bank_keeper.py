@@ -50,7 +50,7 @@ done = BashOperator(
 for bank_address in REX_BANK_ADDRESSES:
 
     update_collateral_price = RexBankUpdateCollateralPriceOperator(
-        task_id="update_collateral_price",
+        task_id="update_collateral_price_"+bank_address,
         web3_conn_id="infura",
         ethereum_wallet=REX_BANK_KEEPER_ADDRESS,
         gas_multiplier=1.1,
@@ -60,7 +60,7 @@ for bank_address in REX_BANK_ADDRESSES:
     )
 
     update_debt_price = RexBankUpdateDebtPriceOperator(
-        task_id="update_debt_price",
+        task_id="update_debt_price_"+bank_address,
         web3_conn_id="infura",
         ethereum_wallet=REX_BANK_KEEPER_ADDRESS,
         gas_multiplier=1.1,
