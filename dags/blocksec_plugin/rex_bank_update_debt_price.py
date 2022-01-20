@@ -12,5 +12,6 @@ class RexBankUpdateDebtPriceOperator(ContractInteractionOperator):
         super().__init__(abi_json=REX_BANK_ABI, *args, **kwargs)
 
     def execute(self, context):
+        self.args = {}
         self.function = self.contract.functions.updateDebtPrice
         return super().execute(context)
