@@ -47,7 +47,7 @@ done = BashOperator(
     dag=dag,
 )
 
-for bank_address in BANK_ADDRESSES:
+for bank_address in REX_BANK_ADDRESSES:
 
     update_collateral_price = RexBankUpdateCollateralPriceOperator(
         task_id="update_collateral_price",
