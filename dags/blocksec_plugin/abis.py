@@ -6,6 +6,10 @@ DISTRIBUTE_ABI = """[{
       "type": "function"
     }]"""
 
+UPDATE_TOKEN_PRICE_ABI = """
+[{"inputs":[{"internalType":"contract ISuperToken","name":"_token","type":"address"}],"name":"updateTokenPrice","outputs":[],"stateMutability":"nonpayable","type":"function"}]
+"""
+
 
 ERC20_ABI = """
 [
