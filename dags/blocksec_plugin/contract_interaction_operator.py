@@ -65,7 +65,7 @@ class ContractInteractionOperator(BaseOperator):
         raw_txn = self.function(**self.function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
-                               gasPrice = int(max(self.max_gas_price, self.web3.eth.gasPrice) *\
+                               gasPrice = int(min(self.max_gas_price, self.web3.eth.gasPrice) *\
                                           self.gas_multiplier),
                                gas = self.gas
                               ))
