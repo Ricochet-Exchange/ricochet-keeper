@@ -3,6 +3,7 @@ from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
 from web3.exceptions import InvalidAddress
+from constants.constants import PriceConstants
 
 class ContractInteractionOperator(BaseOperator):
     """
@@ -22,6 +23,7 @@ class ContractInteractionOperator(BaseOperator):
                  gas_key="fast",
                  gas_multiplier=1,
                  gas=1200000,
+                 max_gas_price=PriceConstants.MAX_GAS_PRICE_DEFAULT,
                  nonce=None,
                  *args,
                  **kwargs):
@@ -34,6 +36,7 @@ class ContractInteractionOperator(BaseOperator):
         self.gas_key = gas_key
         self.gas_multiplier = gas_multiplier
         self.gas = gas
+        self.max_gas_price = max_gas_price
         self.web3 = Web3Hook(web3_conn_id=self.web3_conn_id).http_client
         self.wallet = EthereumWalletHook(ethereum_wallet=self.ethereum_wallet)
         try: # check if this is set, otherwise set it with
@@ -62,7 +65,7 @@ class ContractInteractionOperator(BaseOperator):
         raw_txn = self.function(**self.function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
-                               gasPrice = int(max(33,self.web3.eth.gasPrice) *\
+                               gasPrice = int(min(self.max_gas_price, self.web3.eth.gasPrice) *\
                                           self.gas_multiplier),
                                gas = self.gas
                               ))

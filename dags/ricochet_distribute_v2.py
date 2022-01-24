@@ -18,7 +18,7 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_distributeV2_operator import RicochetDistributeOperator
 from blocksec_plugin.ricochet_update_price_operator import RicochetUpdatePriceOperator
-
+from constants.constants import PriceConstants
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-v2-address")
 V2_EXCHANGE_ADDRESSES = Variable.get("rexmarket-v2-addresses", deserialize_json=True)
@@ -26,6 +26,7 @@ SCHEDULE_INTERVAL = Variable.get("distribution-v2-schedule-interval", "0 * * * *
 GAS_MULTIPLIER = float(Variable.get("distribution-v2-gas-multiplier", 1.1))
 USDCX_ADDRESS = "0xCAa7349CEA390F89641fe306D93591f87595dc1F"
 RIC_ADDRESS = "0x263026E7e53DBFDce5ae55Ade22493f828922965"
+MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
 default_args = {
     "owner": "ricochet",
@@ -63,6 +64,7 @@ for exchange_address in V2_EXCHANGE_ADDRESSES:
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
         gas=3000000,
+        max_gas_price=MAX_GAS_PRICE,
         contract_address=exchange_address,
         token_address=USDCX_ADDRESS,
         nonce=current_nonce,
@@ -77,6 +79,7 @@ for exchange_address in V2_EXCHANGE_ADDRESSES:
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
         gas=3000000,
+        max_gas_price=MAX_GAS_PRICE,
         contract_address=exchange_address,
         token_address=RIC_ADDRESS,
         nonce=current_nonce,
@@ -91,6 +94,7 @@ for exchange_address in V2_EXCHANGE_ADDRESSES:
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
         gas=3000000,
+        max_gas_price=MAX_GAS_PRICE,
         contract_address=exchange_address,
         nonce=current_nonce,
         dag=dag
