@@ -377,6 +377,7 @@ ARG RUNTIME_APT_DEPS="\
        libldap-2.4-2 \
        libsasl2-2 \
        libsasl2-modules \
+       build-essential \
        libssl1.1 \
        locales  \
        lsb-release \
