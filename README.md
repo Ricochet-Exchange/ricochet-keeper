@@ -74,5 +74,6 @@ Airflow runs on port 80 so navigate to http://localhost to access the UI. Once t
 Use:
 ```
 echo -e "AIRFLOW_UID=$(id -u)" > .env
+
 docker-compose up -d
 ```
