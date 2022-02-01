@@ -66,6 +66,8 @@ After starting up Airflow, navigate to `Admin > Connections` and setup the follo
 # Run
 Run the keeper using Docker Compose
 ```
+echo -e "AIRFLOW_UID=$(id -u)" > .env
+
 docker-compose up
 ```
 Airflow runs on port 80 so navigate to http://localhost to access the UI. Once things have booted up, log in with username `airflow` and password  `airflow`.
