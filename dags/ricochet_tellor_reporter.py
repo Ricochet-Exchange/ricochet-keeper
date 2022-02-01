@@ -15,24 +15,15 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.coingecko_price_operator import CoinGeckoPriceOperator
 from blocksec_plugin.abis import TELLOR_ABI
-from constants.constants import PriceConstants
+from constants.constants import AddressConstants, PriceConstants, ScheduleConstants, Utils
 
 REPORTER_WALLET_ADDRESS = Variable.get("reporter-address")
-TELLOR_CONTRACT_ADDRESS = Variable.get("tellor-address", "0xACC2d27400029904919ea54fFc0b18Bf07C57875")
+TELLOR_CONTRACT_ADDRESS = Variable.get("tellor-address", AddressConstants.TELLOR_CONTRACT)
 ASSETS = Variable.get("tellor-assets", {"ethereum": 1, "wrapped-btc": 60}, deserialize_json=True)
-SCHEDULE_INTERVAL = Variable.get("tellor-schedule-interval", "*/5 * * * *")
+SCHEDULE_INTERVAL = Variable.get("tellor-schedule-interval", ScheduleConstants.RICOCHET_TELLOR_REPORTER)
 MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
-default_args = {
-    "owner": "ricochet",
-    "depends_on_past": False,
-    "start_date": datetime(2020, 3, 29),
-    "email": ["mike@mikeghen.com"],
-    "email_on_failure": True,
-    "email_on_retry": False,
-    "retries": 0,
-    "retry_delay": timedelta(minutes=1)
-}
+default_args = Utils.get_DAG_args()
 
 
 dag = DAG("ricochet_tellor_reporter",
@@ -68,7 +59,7 @@ for asset_id, request_id in ASSETS.items():
         price="{{task_instance.xcom_pull(task_ids='price_check_"+asset_id+"', key='return_value')}}",
         request_id=request_id,
         nonce=current_nonce + nonce_offset,
-        gas_multiplier=1.1,
+        gas_multiplier=PriceConstants.GAS_MULTIPLIER_DEFAULT,
         gas=250000,
         max_gas_price=MAX_GAS_PRICE,
         dag=dag,

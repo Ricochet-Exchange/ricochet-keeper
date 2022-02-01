@@ -3,6 +3,7 @@ from blocksec_plugin.contract_interaction_operator import ContractInteractionOpe
 from blocksec_plugin.abis import UNISWAP_ROUTER_ABI, ERC20_ABI
 from time import time
 import requests
+from constants.constants import PriceConstants
 
 class UniswapSwapExactTokensForTokensOperator(ContractInteractionOperator):
     """
@@ -19,7 +20,7 @@ class UniswapSwapExactTokensForTokensOperator(ContractInteractionOperator):
                  path=[],
                  to=None,
                  deadline=None,
-                 slippage=0.005,
+                 slippage=PriceConstants.SWAP_SLIPPAGE,
                  *args,
                  **kwargs):
         super().__init__(abi_json=UNISWAP_ROUTER_ABI, *args, **kwargs)

@@ -13,22 +13,13 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.ricochet_streamer_close_operator import RicochetStreamerCloseOperator
 from blocksec_plugin.abis import REX_ABI
-from constants.constants import PriceConstants
+from constants.constants import PriceConstants, ScheduleConstants, Utils
 
 CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
-SCHEDULE_INTERVAL = Variable.get("close-schedule-interval", None)
+SCHEDULE_INTERVAL = Variable.get("close-schedule-interval", ScheduleConstants.RICOCHET_STREAM_CLOSURE)
 MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
-default_args = {
-    "owner": "ricochet",
-    "depends_on_past": False,
-    "start_date": datetime(2020, 3, 29),
-    "email": ["mike@mikeghen.com"],
-    "email_on_failure": True,
-    "email_on_retry": False,
-    "retries": 3,
-    "retry_delay": timedelta(minutes=5)
-}
+default_args = Utils.get_DAG_args(retries=3, retry_delay=timedelta(minutes=5))
 
 
 dag = DAG("ricochet_stream_closure",
@@ -51,7 +42,7 @@ close_stream = RicochetStreamerCloseOperator(
     streamer_address='{{ dag_run.conf["streamer_address"] }}',
     contract_address='{{ dag_run.conf["exchange_address"] }}',
     nonce='{{ dag_run.conf["nonce"] }}',
-    gas_multiplier=10,
+    gas_multiplier=PriceConstants.GAS_MULTIPLIER_STREAM_CLOSURE,
     max_gas_price=MAX_GAS_PRICE,
     dag=dag,
 )

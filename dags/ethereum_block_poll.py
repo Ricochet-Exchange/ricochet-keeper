@@ -38,20 +38,11 @@ from blocksec_plugin.ethereum_events_to_postgres_operator import EthereumEventst
 from blocksec_plugin.abis import REX_ABI
 from datetime import datetime, timedelta
 from json import loads
+from constants.constants import ScheduleConstants, Utils
 
-SCHEDULE_INTERVAL = Variable.get("block-poll-schedule-interval", "*/15 * * * *")
+SCHEDULE_INTERVAL = Variable.get("block-poll-schedule-interval", ScheduleConstants.ETHEREUM_BLOCK_POLL)
 
-default_args = {
-    "owner": "ricochet",
-    "depends_on_past": False,
-    "start_date": datetime(2021, 8, 1, 23, 0),
-    "email": ["mike@mikeghen.com"],
-    "email_on_failure": True,
-    "email_on_retry": False,
-    "retries": 0,
-    "retry_delay": timedelta(minutes=1)
-}
-
+default_args = Utils.get_DAG_args(start_date=datetime(2021, 8, 1, 23, 0))
 
 dag = DAG("ethereum_block_poll", catchup=False, default_args=default_args, schedule_interval=SCHEDULE_INTERVAL)
 

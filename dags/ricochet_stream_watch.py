@@ -13,22 +13,14 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.ricochet_streamer_list_operator import RicochetStreamerListOperator
 from blocksec_plugin.abis import REX_ABI, ERC20_ABI
 from datetime import datetime, timedelta
+from constants.constants import ScheduleConstants, Utils
 
 
 CLOSER_WALLET_ADDRESS = Variable.get("closer-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-exchange-addresses", deserialize_json=True)
-SCHEDULE_INTERVAL = Variable.get("watch-schedule-interval", "50 * * * *")
+SCHEDULE_INTERVAL = Variable.get("watch-schedule-interval", ScheduleConstants.RICOCHET_STREAM_WATCH)
 
-default_args = {
-    "owner": "ricochet",
-    "depends_on_past": False,
-    "start_date": datetime(2020, 3, 29),
-    "email": ["mike@mikeghen.com"],
-    "email_on_failure": True,
-    "email_on_retry": False,
-    "retries": 0,
-    "retry_delay": timedelta(minutes=1)
-}
+default_args = Utils.get_DAG_args()
 
 
 dag = DAG("ricochet_stream_watch",
