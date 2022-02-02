@@ -17,7 +17,7 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_distributeV2_operator import RicochetDistributeOperator
-from blocksec_plugin.ricochet_update_price_operator import RicochetUpdatePriceOperator
+from blocksec_plugin.ricochet_update_prices_operator import RicochetUpdatePricesOperator
 
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-v2-address")
@@ -57,33 +57,17 @@ done = BashOperator(
 for exchange_address in V2_EXCHANGE_ADDRESSES:
 
     # Update input price
-    update_input = RicochetUpdatePriceOperator(
+    update_input = RicochetUpdatePricesOperator(
         task_id="update_input_" + exchange_address,
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
         gas=3000000,
         contract_address=exchange_address,
-        token_address=USDCX_ADDRESS,
         nonce=current_nonce,
         dag=dag
     )
     current_nonce += 1
-
-    # Update output price
-    update_output = RicochetUpdatePriceOperator(
-        task_id="update_output_" + exchange_address,
-        web3_conn_id="infura",
-        ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
-        gas_multiplier=GAS_MULTIPLIER,
-        gas=3000000,
-        contract_address=exchange_address,
-        token_address=RIC_ADDRESS,
-        nonce=current_nonce,
-        dag=dag
-    )
-    current_nonce += 1
-
 
     distribute = RicochetDistributeOperator(
         task_id="distribute_" + exchange_address,
