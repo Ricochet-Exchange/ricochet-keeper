@@ -14,12 +14,12 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.erc20_approve_operator import ERC20ApprovalOperator
 from blocksec_plugin.uniswap_swap_exact_tokens_for_tokens_operator import UniswapSwapExactTokensForTokensOperator
-
+from constants.constants import PriceConstants
 
 SWAPPER_WALLET_ADDRESS = Variable.get("swapper-address")
 SCHEDULE_INTERVAL = Variable.get("swap-schedule-interval", "0 * * * *")
 SWAP_AMOUNT = Variable.get("ric-dca-swap-amount", 100000000) # 100 USDC
-
+MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
 default_args = {
     "owner": "ricochet",
@@ -54,6 +54,7 @@ approve = ERC20ApprovalOperator(
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
     gas_multiplier=1.2,
     gas=3000000,
+    max_gas_price=MAX_GAS_PRICE,
     contract_address="0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
     spender="0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
     amount=SWAP_AMOUNT,
@@ -76,6 +77,7 @@ swap = UniswapSwapExactTokensForTokensOperator(
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
     gas_multiplier=1.2,
     gas=3000000,
+    max_gas_price=MAX_GAS_PRICE,
     contract_address="0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
     amount_in=SWAP_AMOUNT,
     amount_out_min=0,

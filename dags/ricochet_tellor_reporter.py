@@ -15,12 +15,13 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.coingecko_price_operator import CoinGeckoPriceOperator
 from blocksec_plugin.abis import TELLOR_ABI
-
+from constants.constants import PriceConstants
 
 REPORTER_WALLET_ADDRESS = Variable.get("reporter-address")
 TELLOR_CONTRACT_ADDRESS = Variable.get("tellor-address", "0xACC2d27400029904919ea54fFc0b18Bf07C57875")
 ASSETS = Variable.get("tellor-assets", {"ethereum": 1, "wrapped-btc": 60}, deserialize_json=True)
 SCHEDULE_INTERVAL = Variable.get("tellor-schedule-interval", "*/5 * * * *")
+MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
 default_args = {
     "owner": "ricochet",
@@ -69,6 +70,7 @@ for asset_id, request_id in ASSETS.items():
         nonce=current_nonce + nonce_offset,
         gas_multiplier=1.1,
         gas=250000,
+        max_gas_price=MAX_GAS_PRICE,
         dag=dag,
     )
 
