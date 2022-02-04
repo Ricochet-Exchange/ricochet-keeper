@@ -23,7 +23,7 @@ class ContractInteractionOperator(BaseOperator):
                  gas_key="fast",
                  gas_multiplier=1,
                  gas=1200000,
-                 max_gas_price=PriceConstants.MAX_GAS_PRICE_DEFAULT,
+                 max_gas_price=PriceConstants.MAX_GAS_PRICE_DEFAULT, # not implemented
                  nonce=None,
                  *args,
                  **kwargs):
@@ -47,7 +47,7 @@ class ContractInteractionOperator(BaseOperator):
             self.nonce = nonce
         else: # Look up the last nonce for this wallet
             self.nonce = self.web3.eth.getTransactionCount(self.wallet.public_address)
-            
+
         self.contract = self.web3.eth.contract(self.contract_address, abi=self.abi_json)
 
     def confirm_success(self, txn):
@@ -65,8 +65,8 @@ class ContractInteractionOperator(BaseOperator):
         raw_txn = self.function(**self.function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
-                               gasPrice = int(min(self.max_gas_price, self.web3.eth.gasPrice) *\
-                                          self.gas_multiplier),
+                               maxFeePerGas=int(self.web3.eth.gas_price * self.gas_multiplier) + self.web3.eth.max_priority_fee,
+                               maxPriorityFeePerGas=self.web3.eth.max_priority_fee,
                                gas = self.gas
                               ))
         if not self.confirm_success:
