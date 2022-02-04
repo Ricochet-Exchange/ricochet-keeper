@@ -65,12 +65,12 @@ class ContractInteractionOperator(BaseOperator):
         raw_txn = self.function(**self.function_args)\
                              .buildTransaction(dict(
                                nonce=int(self.nonce),
-                               maxFeePerGas=int(self.web3.eth.gas_price * self.gas_multiplier) + self.web3.eth.max_priority_fee,
+                               maxFeePerGas=int(self.web3.eth.gas_price * self.gas_multiplier + self.web3.eth.max_priority_fee),
                                maxPriorityFeePerGas=self.web3.eth.max_priority_fee,
                                gas = self.gas
                               ))
-        if not self.confirm_success:
-            raise ValueError("Transaction failed to confirm")
+        # if not self.confirm_success(raw_txn):
+        #     raise ValueError("Transaction failed to confirm")
         signed_txn = self.web3.eth.account.signTransaction(raw_txn, self.wallet.private_key)
         transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
         print(f"Txn hash: {transaction_hash.hex()}")
