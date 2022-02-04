@@ -69,7 +69,7 @@ class ContractInteractionOperator(BaseOperator):
                                maxPriorityFeePerGas=self.web3.eth.max_priority_fee,
                                gas = self.gas
                               ))
-        if not self.confirm_success:
+        if not self.confirm_success(raw_txn):
             raise ValueError("Transaction failed to confirm")
         signed_txn = self.web3.eth.account.signTransaction(raw_txn, self.wallet.private_key)
         transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
