@@ -21,6 +21,15 @@ from blocksec_plugin.ricochet_update_prices_operator import RicochetUpdatePrices
 
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-v2-address")
+"""
+V2_EXCHANGE_ADDRESSES example:
+
+{
+    exchange_address: [tokenA_address, tokenB_address],
+    "0x58Db2937B08713214014d2a579C3088db826Fad1": ["0xCAa7349CEA390F89641fe306D93591f87595dc1F","0x263026E7e53DBFDce5ae55Ade22493f828922965"],
+    "0xF6a03FCf12Cdc8066aFaf12255105CA301E15ba6": ["0xCAa7349CEA390F89641fe306D93591f87595dc1F","0x27e1e4E6BC79D93032abef01025811B7E4727e85"]
+}
+"""
 V2_EXCHANGE_ADDRESSES = Variable.get("rexmarket-v2-addresses", deserialize_json=True)
 SCHEDULE_INTERVAL = Variable.get("distribution-v2-schedule-interval", "0 * * * *")
 GAS_MULTIPLIER = float(Variable.get("distribution-v2-gas-multiplier", 1.1))
@@ -54,16 +63,30 @@ done = BashOperator(
     dag=dag,
 )
 
-for exchange_address in V2_EXCHANGE_ADDRESSES:
+for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
 
     # Update input price
-    update_prices = RicochetUpdatePricesOperator(
-        task_id="update_prices_" + exchange_address,
+    update_a = RicochetUpdatePriceOperator(
+        task_id="update_a_" + exchange_address,
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
         gas=3000000,
         contract_address=exchange_address,
+        token_address=tokens[0],
+        nonce=current_nonce,
+        dag=dag
+    )
+    current_nonce += 1
+
+    update_b = RicochetUpdatePriceOperator(
+        task_id="update_b_" + exchange_address,
+        web3_conn_id="infura",
+        ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
+        gas_multiplier=GAS_MULTIPLIER,
+        gas=3000000,
+        contract_address=exchange_address,
+        token_address=tokens[1],
         nonce=current_nonce,
         dag=dag
     )
@@ -82,4 +105,4 @@ for exchange_address in V2_EXCHANGE_ADDRESSES:
     current_nonce += 1
 
 
-    done << distribute << update_prices
+    done << distribute << update_a << update_b
