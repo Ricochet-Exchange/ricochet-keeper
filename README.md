@@ -43,7 +43,7 @@ After starting up Airflow, navigate to `Admin > Connections` and setup the follo
     "maker": 5,
     "matic-network": 6,
     "idle": 79,
-    "richochet": 77
+    "ricochet": 77
   }
   ```
   :warning: `richochet` is not a typo, that's the Coingecko ID for RIC token price
