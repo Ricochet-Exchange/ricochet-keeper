@@ -1,0 +1,26 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: localhost/loki/api/v1/push
+
+
+scrape_configs:
+- job_name: dag_processor_manager
+  static_config:
+  - targets:
+      - 10.2.1.55
+    labels:
+      job: sag_processor_manager
+      __path__: /var/log/dag_processor_manager.log
+- job_name: scheduler
+  static_config:
+  - target:
+      - 10.2.1.55
+    labels:
+      job: scheduler
+      __path__: /var/log/scheduler/*/*.log
