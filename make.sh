@@ -50,13 +50,9 @@ check-docker() {
 
 
 deploy-keeper() {
-    # setup all required environment variables
-    yarn audit 
-    echo "tests here"
-
-    [[ -f "$dir/.env" ]] && { log skip .env file already exists; return; }
-    info create .env file
-
+    # install keeper with all required variables
+    docker-compose up
+    
 
 # if `$1` is a function, execute it. Otherwise, print usage
 # compgen -A 'function' list all declared functions
