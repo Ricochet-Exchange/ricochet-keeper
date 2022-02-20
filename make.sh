@@ -37,17 +37,24 @@ check() {
 setup() {
     # install keeper with all required variables
     source .vars
-    envsubst < docker-compose.tmpl.yml > docker-compose.yml
     envsubst < variables.tmpl.json > variables.json
     envsubst < connections.tmpl.json > connections.json
+    mkdir -p ./logs ./plugins
     echo -e "AIRFLOW_UID=$(id -u)" > .env
+    docker-compose up airflow-init
 }
 
 deploy() {
-    # run the docker-compose
+    # run the keeper via docker-compose
     docker-compose up -d
+
 }    
 
+debug() {
+    # this is to see a more verbose output
+    docker-compose up
+
+}
 # if `$1` is a function, execute it. Otherwise, print usage
 # compgen -A 'function' list all declared functions
 # https://stackoverflow.com/a/2627461

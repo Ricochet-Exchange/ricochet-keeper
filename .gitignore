@@ -2,3 +2,5 @@
 logs
 plugins
 */.env
+variables.json
+connections.json

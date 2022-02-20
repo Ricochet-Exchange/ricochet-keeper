@@ -54,7 +54,7 @@ x-airflow-common:
   build: .
   environment:
     &airflow-common-env
-    AIRFLOW__METRICS__STATSD_HOST: statsd_exporter
+    AIRFLOW__METRICS__STATSD_HOST: localhost
     AIRFLOW__METRICS__STATSD_ON: True
     AIRFLOW__METRICS__STATSD_PORT: 9125
     AIRFLOW__METRICS__STATSD_PREFIX: airflow
@@ -63,7 +63,7 @@ x-airflow-common:
     AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-    AIRFLOW__CORE__FERNET_KEY: '$FERNET_KEY'
+    AIRFLOW__CORE__FERNET_KEY: 'your-super-strong-pwd-here'
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
@@ -86,12 +86,12 @@ x-airflow-common:
 
 services:
   postgres:
-    image: postgres:13
+    image: postgres:14.2-alpine
     ports:
       - "5432:5432"
     environment:
       POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: $YOUR_AIRFLOW_PASSWORD
+      POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
