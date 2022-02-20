@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Airflow variables
-export AIRFLOW__CORE__FERNET_KEY=your_super_secret_key
-
 # the directory containing the script file
 dir="$(cd "$(dirname "$0")"; pwd)"
 cd "$dir"
@@ -27,32 +24,29 @@ usage() {
 
 
 # check if docker-compose is intalled 
-check-docker-compose() {
-    if [[ -z $(which docker-compose) ]]
+check() {
+    if [[ -z $(which docker-compose && which docker) ]]
     then
         log checking docker-compose
-	echo "please install docker-compose"
+	echo "please make sure that docker and docker-compose are installed"
     else
-        log skip docker-compose is installed
+        log skip docker-compose and docker are installed
     fi
 }
 
-# check if  if missing (no update)
-check-docker() {
-    if [[ -z $(which docker) ]]
-    then
-        log check docker
-	echo "please install docker https://docs.docker.com/engine/install/"
-    else
-        log skip docker is installed
-    fi
-}
-
-
-deploy-keeper() {
+setup() {
     # install keeper with all required variables
-    docker-compose up
-    
+    source .vars
+    envsubst < docker-compose.tmpl.yml > docker-compose.yml
+    envsubst < variables.tmpl.json > variables.json
+    envsubst < connections.tmpl.json > connections.json
+    echo -e "AIRFLOW_UID=$(id -u)" > .env
+}
+
+deploy() {
+    # run the docker-compose
+    docker-compose up -d
+}    
 
 # if `$1` is a function, execute it. Otherwise, print usage
 # compgen -A 'function' list all declared functions

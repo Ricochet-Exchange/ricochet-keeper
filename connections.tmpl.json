@@ -1,0 +1,92 @@
+{
+  "$CLOSER_ADDRESS": {
+    "conn_type": "http",
+    "description": "",
+    "host": "",
+    "login": "$CLOSER_ADDRESS",
+    "password": "$CLOSER_ADDRESS_KEY",
+    "schema": "",
+    "port": null,
+    "extra": ""
+  },
+  "$DISTRIBUTOR_ADDRESS": {
+    "conn_type": "http",
+    "description": "",
+    "host": "",
+    "login": "$DISTRIBUTOR_ADDRESS",
+    "password": "$DISTRIBUTOR_ADDRESS_KEY",
+    "schema": "",
+    "port": null,
+    "extra": ""
+  },
+  "$DISTRIBUTOR_V2_ADDRESS": {
+    "conn_type": "http",
+    "description": "$DISTRIBUTOR_V2_ADDRESS",
+    "host": "",
+    "login": "$DISTRIBUTOR_V2_ADDRESS",
+    "password": "$DISTRIBUTOR_V2_ADDRESS",
+    "schema": "",
+    "port": null,
+    "extra": ""
+  },
+  "$HARVESTER_ADDRESS": {
+    "conn_type": "http",
+    "description": "",
+    "host": "",
+    "login": "$HARVESTER_ADDRESS",
+    "password": "$HARVESTER_ADDRESS_KEY",
+    "schema": "",
+    "port": null,
+    "extra": ""
+  },
+  "$REPORTER_ADDRESS": {
+    "conn_type": "http",
+    "description": "",
+    "host": "",
+    "login": "$REPORTER_ADDRESS",
+    "password": "$REPORTER_ADDRESS_KEY",
+    "schema": "",
+    "port": null,
+    "extra": ""
+  },
+  "$REX_BANK_KEEPER_ADDRESS": {
+    "conn_type": "http",
+    "description": "",
+    "host": "",
+    "login": "$REX_BANK_KEEPER_ADDRESS",
+    "password": "$REX_BANK_KEEPER_ADDRESS_KEY",
+    "schema": "",
+    "port": null,
+    "extra": ""
+  },
+  "$SWAPPER_ADDRESS": {
+    "conn_type": "http",
+    "description": "",
+    "host": "",
+    "login": "$SWAPPER_ADDRESS",
+    "password": "$SWAPPER_ADDRESS_KEY",
+    "schema": "",
+    "port": null,
+    "extra": ""
+  },
+  "data_warehouse": {
+    "conn_type": "postgres",
+    "description": "",
+    "host": "postgres",
+    "login": "airflow",
+    "password": "$PG_PWD",
+    "schema": "",
+    "port": null,
+    "extra": ""
+  },
+  "infura": {
+    "conn_type": "http",
+    "description": "",
+    "host": "",
+    "login": "",
+    "password": null,
+    "schema": "",
+    "port": null,
+    "extra": "{\"http_endpoint_uri\": \"$YOUR_INFURA_HTTP_URI\", \"wss_endpoint_uri\": \"$YOUR_INFURA_WSS_URI\"}"
+  }
+}

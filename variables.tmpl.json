@@ -1,0 +1,60 @@
+{
+    "closer-address": "$CLOSER_ADDRESS",
+    "distribution-schedule-interval": "0 * * * *",
+    "harvester-schedule-interval": "0 * * * *",
+    "watch-schedule-interval":  "50 * * * *",
+    "tellor-schedule-interval": "*/5 * * * *",
+    "swap-schedule-interval": "0 * * * *",
+    "block-poll-schedule-interval": "*/15 * * * *",
+    "close-schedule-interval": "None",
+    "max-gas-price": "33",
+    "distributor-address": "$DISTRIBUTOR_ADDRESS",
+    "distributor-v2-address": "$DISTRIBUTOR_V2_ADDRESS",
+    "harvester-address": "$HARVESTER_ADDRESS",
+    "reporter-address": "$REPORTER_ADDRESS",
+    "rex-bank-address": "0xe78dC447d404695541b540F2FbB7682fd24d778B",
+    "rex-bank-addresses": "[0x263026e7e53dbfdce5ae55ade22493f828922965]",
+    "rex-bank-keeper-address": "$REX_BANK_KEEPER_ADDRESS",
+    "rexmarket-v2-addresses": {
+        "0x1F001AfC25dC911fba6C86B9A81ad71Bb6DdAfD6": [
+            "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
+            "0x4086eBf75233e8492F1BCDa41C7f2A8288c2fB92"
+        ],
+        "0xBdA1c295B5FB13304ee8D6aaaBCF6ce92311dEfA": [
+            "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
+            "0x27e1e4E6BC79D93032abef01025811B7E4727e85"
+        ]
+    },
+    "ricochet-exchange-addresses": [
+        "0xBe79a6fd39a8E8b0ff7E1af1Ea6E264699680584",
+        "0xeb367F6a0DDd531666D778BC096d212a235a6f78",
+        "0x5786D3754443C0D3D1DdEA5bB550ccc476FdF11D",
+        "0xe0A0ec8dee2f73943A6b731a2e11484916f45D44",
+        "0x8082Ab2f4E220dAd92689F3682F3e7a42b206B42",
+        "0x3941e2E89f7047E0AC7B9CcE18fBe90927a32100",
+        "0x71f649EB05AA48cF8d92328D1C486B7d9fDbfF6b",
+        "0x47de4Fd666373Ca4A793e2E0e7F995Ea7D3c9A29",
+        "0x94e5b18309066dd1E5aE97628afC9d4d7EB58161",
+        "0xdc19ed26aD3a544e729B72B50b518a231cBAD9Ab",
+        "0xC89583Fa7B84d81FE54c1339ce3fEb10De8B4C96",
+        "0x9BEf427fa1fF5269b824eeD9415F7622b81244f5",
+        "0x0A70Fbb45bc8c70fb94d8678b92686Bb69dEA3c3",
+        "0x93D2d0812C9856141B080e9Ef6E97c7A7b342d7F",
+        "0xE093D8A4269CE5C91cD9389A0646bAdAB2c8D9A3",
+        "0xA152715dF800dB5926598917A6eF3702308bcB7e",
+        "0x250efbB94De68dD165bD6c98e804E08153Eb91c6",
+        "0x98d463A3F29F259E67176482eB15107F364c7E18"
+    ],
+    "ricochet-lp-addresses": [
+        "0x0cb9cd99dbC614d9a0B31c9014185DfbBe392eb5"
+    ],
+    "swapper-address": "$SWAPPER_ADDRESS",
+    "tellor-assets": {
+        "ethereum": 1,
+        "idle": 79,
+        "maker": 5,
+        "matic-network": 6,
+        "richochet": 77,
+        "wrapped-bitcoin": 60
+    }
+}
