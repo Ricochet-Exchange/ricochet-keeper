@@ -4,3 +4,4 @@ plugins
 */.env
 variables.json
 connections.json
+secrets.sh

@@ -18,8 +18,7 @@ under() {
 }
 
 usage() {
-    under usage 'call the Makefile directly: make up
-      or invoke this file directly: ./make.sh up'
+    under usage ' invoke this file directly: ./make.sh setup'
 }
 
 
@@ -39,6 +38,8 @@ setup() {
     source .vars
     envsubst < variables.tmpl.json > variables.json
     envsubst < connections.tmpl.json > connections.json
+    envsubst < secrets.tmpl > secrets.sh
+    chmod +x secrets.sh && ./secrets.sh
     mkdir -p ./logs ./plugins
     echo -e "AIRFLOW_UID=$(id -u)" > .env
     docker-compose up airflow-init
@@ -53,6 +54,12 @@ deploy() {
 debug() {
     # this is to see a more verbose output
     docker-compose up
+
+}
+
+clean() {
+    # run the keeper via docker-compose
+    docker-compose down --volumes --rmi all
 
 }
 # if `$1` is a function, execute it. Otherwise, print usage
