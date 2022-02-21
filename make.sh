@@ -39,27 +39,28 @@ setup() {
     envsubst < variables.tmpl.json > variables.json
     envsubst < connections.tmpl.json > connections.json
     envsubst < secrets.tmpl > secrets.sh
+    cp docker-compose.tmpl.yml docker-compose.yml
     chmod +x secrets.sh && ./secrets.sh
     mkdir -p ./logs ./plugins
     echo -e "AIRFLOW_UID=$(id -u)" > .env
-    docker-compose up airflow-init
+    docker-compose -f docker-compose.yml up airflow-init
 }
 
 deploy() {
     # run the keeper via docker-compose
-    docker-compose up -d
+    docker-compose -f docker-compose.yml  up -d
 
 }    
 
 debug() {
     # this is to see a more verbose output
-    docker-compose up
+    docker-compose -f docker-compose.yml up
 
 }
 
 clean() {
     # run the keeper via docker-compose
-    docker-compose down --volumes --rmi all
+    docker-compose -f docker-compose.yml down --volumes --rmi all
     git restore docker-compose.yml
 }
 # if `$1` is a function, execute it. Otherwise, print usage

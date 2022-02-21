@@ -5,3 +5,5 @@ plugins
 variables.json
 connections.json
 secrets.sh
+.env
+docker-compose.yml
