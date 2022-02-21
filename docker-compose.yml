@@ -18,10 +18,10 @@ x-airflow-common:
     AIRFLOW__METRICS__STATSD_PREFIX: airflow
     AIRFLOW__METRICS__STATSD_ALLOW_LIST: scheduler,executor,dagrun,dag_processing,dag,pool,ti
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
-    AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:postgres_password2@postgres/airflow
-    AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:postgres_password2@postgres/airflow
+    AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:postgres_password@postgres/airflow
+    AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:postgres_password@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-    AIRFLOW__CORE__FERNET_KEY: 'fernet_password2'
+    AIRFLOW__CORE__FERNET_KEY: 'fernet_password'
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
@@ -49,7 +49,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: postgres_password2
+      POSTGRES_PASSWORD: postgres_password
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
@@ -208,7 +208,7 @@ services:
       _AIRFLOW_DB_UPGRADE: 'true'
       _AIRFLOW_WWW_USER_CREATE: 'true'
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
-      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow_password2}
+      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow_password}
     user: "0:0"
     volumes:
       - .:/sources
