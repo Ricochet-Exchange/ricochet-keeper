@@ -60,7 +60,7 @@ debug() {
 clean() {
     # run the keeper via docker-compose
     docker-compose down --volumes --rmi all
-
+    git restore docker-compose.yml
 }
 # if `$1` is a function, execute it. Otherwise, print usage
 # compgen -A 'function' list all declared functions
