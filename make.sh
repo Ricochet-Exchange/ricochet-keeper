@@ -48,7 +48,9 @@ setup() {
 
 deploy() {
     # run the keeper via docker-compose
-    docker-compose -f docker-compose.yml  up -d
+    docker-compose -f docker-compose.yml  up -d && \
+    docker exec airflow airflow variables import variable.json && \
+    docker exec airflow airflow connections import connections.json
 
 }    
 
