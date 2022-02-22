@@ -6,3 +6,7 @@ variables
 secrets.sh
 .env
 docker-compose.yml
+terraform/.terraform.lock.hcl
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
