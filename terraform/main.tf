@@ -72,24 +72,24 @@ resource "aws_security_group" "sg_keeper" {
 }
 
 resource "aws_security_group_rule" "sg_rules_keeper_in" {
-    count = length(var.ingress_rules)
+  count = length(var.ingress_rules)
 
-    type              = "ingress"
-    from_port         = var.ingress_rules[count.index].from_port
-    to_port           = var.ingress_rules[count.index].to_port
-    protocol          = var.ingress_rules[count.index].protocol
-    cidr_blocks       = [var.ingress_rules[count.index].cidr_block]
-    description       = var.ingress_rules[count.index].description
-    security_group_id = aws_security_group.sg_keeper.id
+  type              = "ingress"
+  from_port         = var.ingress_rules[count.index].from_port
+  to_port           = var.ingress_rules[count.index].to_port
+  protocol          = var.ingress_rules[count.index].protocol
+  cidr_blocks       = [var.ingress_rules[count.index].cidr_block]
+  description       = var.ingress_rules[count.index].description
+  security_group_id = aws_security_group.sg_keeper.id
 }
 
 resource "aws_security_group_rule" "sg_rules_keeper_out" {
-    type              = "egress"
-    to_port           = 0
-    protocol          = "-1"
-    from_port         = 0
-    cidr_blocks       = [aws_vpc.vpc_keeper.cidr_block]
-    security_group_id = aws_security_group.sg_keeper.id
+  type              = "egress"
+  to_port           = 0
+  protocol          = "-1"
+  from_port         = 0
+  cidr_blocks       = [aws_vpc.vpc_keeper.cidr_block]
+  security_group_id = aws_security_group.sg_keeper.id
 }
 
 resource "aws_network_interface" "iface_keeper" {
