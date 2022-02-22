@@ -88,7 +88,7 @@ resource "aws_security_group_rule" "sg_rules_keeper_out" {
   to_port           = 0
   protocol          = "-1"
   from_port         = 0
-  cidr_blocks       = [aws_vpc.vpc_keeper.cidr_block]
+  cidr_blocks       = ["0.0.0.0/0"]
   security_group_id = aws_security_group.sg_keeper.id
 }
 
