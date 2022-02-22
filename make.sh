@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -ex
 # the directory containing the script file
 dir="$(cd "$(dirname "$0")"; pwd)"
 cd "$dir"
@@ -36,12 +36,12 @@ check() {
 setup() {
     # install keeper with all required variables
     source .vars
-    envsubst < variables.tmpl.json > variables.json
-    envsubst < connections.tmpl.json > connections.json
-    envsubst < secrets.tmpl > secrets.sh
+    mkdir variables
+    envsubst < variables.tmpl.json > variables/variables.json
+    envsubst < connections.tmpl.json > variables/connections.json
+    envsubst < secrets.tmpl.sh > secrets.sh
     cp docker-compose.tmpl.yml docker-compose.yml
     chmod +x secrets.sh && ./secrets.sh
-    mkdir -p ./logs ./plugins
     echo -e "AIRFLOW_UID=$(id -u)" > .env
     docker-compose -f docker-compose.yml up airflow-init
 }
@@ -49,9 +49,8 @@ setup() {
 deploy() {
     # run the keeper via docker-compose
     docker-compose -f docker-compose.yml  up -d && \
-    docker exec airflow airflow variables import variable.json && \
-    docker exec airflow airflow connections import connections.json
-
+    docker exec `docker ps |grep "ricochet-keeper_airflow-webserver" | awk '{ print $1}' ` airflow connections import /opt/variables/connections.json && \
+    docker exec `docker ps |grep "ricochet-keeper_airflow-webserver" | awk '{ print $1}' ` airflow variables import /opt/variables/variables.json 
 }    
 
 debug() {
@@ -63,7 +62,8 @@ debug() {
 clean() {
     # run the keeper via docker-compose
     docker-compose -f docker-compose.yml down --volumes --rmi all
-    git restore docker-compose.yml
+    rm docker-compose.yml
+    rm secrets.sh
 }
 # if `$1` is a function, execute it. Otherwise, print usage
 # compgen -A 'function' list all declared functions

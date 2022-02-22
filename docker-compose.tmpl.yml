@@ -10,7 +10,6 @@ volumes:
 x-airflow-common:
   &airflow-common
   build: .
-  container_name: airflow
   environment:
     &airflow-common-env
     AIRFLOW__METRICS__STATSD_HOST: localhost
@@ -35,8 +34,7 @@ x-airflow-common:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    - ./variables.json:/variables.json
-    - ./connections.json:/connections.json
+    - ./variables:/opt/variables
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
@@ -251,7 +249,6 @@ services:
     image: prom/statsd-exporter:v0.18.0
     container_name: statsd_exporter
     restart: always
-    container_name: statsd_exporter
     volumes:
       - ./statsd/statsd_mapping.yml:/tmp/statsd_mapping.yml
     ports:
@@ -263,7 +260,6 @@ services:
 
   promtail:
     image: grafana/promtail:latest
-    container_name: promtail
     container_name: promtail
     ports:
       - "9080:9080"
