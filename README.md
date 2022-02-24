@@ -45,7 +45,7 @@ run the keeper using docker compose
 # Deploy with terraform
 Rename terraform template file to terraform.tfvars
 ```
-cp terraform/terraform.tfvars{.template,}
+cp terraform/terraform.tmpl.tf terraform/terraform.tf
 ```
 
 Fill variables contained in that file
