@@ -14,7 +14,26 @@ chmod +x /usr/local/bin/docker-compose
 
 # Get and configure repository 
 sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} /home/ubuntu/ricochet-keeper
-sed -i -e 's/key/${key}/g' -e 's/address/${address}/g' -e 's/gateway-URI/${gateway-URI}/g' -e 's/gateway-WSS/${gateway-WSS}/g' -e 's/a-strong-password-here/${a-strong-password-here}/g' /home/ubuntu/ricochet-keeper/.vars
+sed -i -e 's/key/${key1}/g' \ 
+       -e 's/address/${address1}/g' \
+       -e 's/key/${key2}/g' \ 
+       -e 's/address/${address2}/g' \
+       -e 's/key/${key3}/g' \ 
+       -e 's/address/${address3}/g' \
+       -e 's/key/${key4}/g' \ 
+       -e 's/address/${address4}/g' \
+       -e 's/key/${key5}/g' \ 
+       -e 's/address/${address5}/g' \
+       -e 's/key/${key5}/g' \ 
+       -e 's/address/${address5}/g' \
+       -e 's/key/${key6}/g' \ 
+       -e 's/address/${address6}/g' \
+       -e 's/key/${key7}/g' \ 
+       -e 's/address/${address7}/g' \
+       -e 's/gateway-URI/${gateway-URI}/g' \
+       -e 's/gateway-WSS/${gateway-WSS}/g' \
+       -e 's/a-strong-password-here/${a-strong-password-here}/g' \
+       /home/ubuntu/ricochet-keeper/.vars
 
 # Run keeper
 su -l ubuntu -c "cd /home/ubuntu/ricochet-keeper; ./make.sh setup"
