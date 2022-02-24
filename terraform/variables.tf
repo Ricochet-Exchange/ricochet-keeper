@@ -22,16 +22,6 @@ variable "keeper_repository_branch" {
   default   = "master"
 }
 
-variable "keeper_wallet_address" {
-  type		= string
-  sensitive = true
-}
-
-variable "keeper_wallet_key" {
-  type		= string
-  sensitive = true
-}
-
 variable "keeper_wallet_address1" {
   type		= string
   sensitive = true
