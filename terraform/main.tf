@@ -8,7 +8,9 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-west-1"
+  access_key  = var.aws_access_key
+  secret_key  = var.aws_secret_key
+  region      = var.aws_region
 }
 
 # Define connect key
@@ -96,10 +98,6 @@ resource "aws_security_group_rule" "sg_rules_keeper_out" {
   security_group_id = aws_security_group.sg_keeper.id
 }
 
-#resource "aws_network_interface" "iface_keeper" {
-#  subnet_id   = aws_subnet.subnet_keeper.id
-#}
-
 resource "aws_instance" "keeper" {
   ami           		 = "ami-08ca3fed11864d6bb"
   instance_type 		 = "t2.medium"
@@ -117,5 +115,7 @@ resource "aws_instance" "keeper" {
     gateway-URI 			  = var.keeper_gateway_uri
     gateway-WSS 			  = var.keeper_gateway_wss
     a-strong-password-here 	  = var.keeper_password
+    keeper_repository         = var.keeper_repository
+    keeper_repository_branch  = var.keeper_repository_branch
   }))
 }

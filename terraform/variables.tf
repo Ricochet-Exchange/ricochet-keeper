@@ -1,9 +1,35 @@
+variable "aws_access_key" {
+  type      = string
+  sensitive = true
+}
+
+variable "aws_secret_key" {
+  type      = string
+  sensitive = true
+}
+
+variable "aws_region" {
+  type      = string
+}
+
+variable "keeper_repository" {
+  type      = string
+  default   = "master"
+}
+
+variable "keeper_repository_branch" {
+  type      = string
+  default   = "master"
+}
+
 variable "keeper_wallet_address" {
   type		= string
+  sensitive = true
 }
 
 variable "keeper_wallet_key" {
   type		= string
+  sensitive = true
 }
 
 variable "keeper_gateway_uri" {
@@ -16,10 +42,12 @@ variable "keeper_gateway_wss" {
 
 variable "keeper_password" {
   type		= string
+  sensitive = true
 }
 
 variable "aws_public_key" {
   type		= string
+  sensitive = true
 }
   
 variable "ingress_rules" {
