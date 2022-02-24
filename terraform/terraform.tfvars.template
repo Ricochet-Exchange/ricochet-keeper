@@ -1,0 +1,6 @@
+keeper_wallet_address = ""
+keeper_wallet_key  = ""
+keeper_gateway_uri = ""
+keeper_gateway_wss = ""
+keeper_password = ""
+aws_public_key = ""

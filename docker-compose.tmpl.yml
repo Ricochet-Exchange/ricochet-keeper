@@ -13,7 +13,7 @@ x-airflow-common:
   environment:
     &airflow-common-env
     AIRFLOW__METRICS__STATSD_HOST: localhost
-    AIRFLOW__METRICS__STATSD_ON: True
+    AIRFLOW__METRICS__STATSD_ON: 'true'
     AIRFLOW__METRICS__STATSD_PORT: 9125
     AIRFLOW__METRICS__STATSD_PREFIX: airflow
     AIRFLOW__METRICS__STATSD_ALLOW_LIST: scheduler,executor,dagrun,dag_processing,dag,pool,ti

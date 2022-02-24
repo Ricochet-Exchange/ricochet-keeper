@@ -11,9 +11,10 @@ provider "aws" {
   region = "eu-west-1"
 }
 
+# Define connect key
 resource "aws_key_pair" "keeper" {
-  key_name   = "keeper"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDL8mnoz4nH2YPrbOUr+Fw34nAcwEwJX8mEvOQthd9wn7B+HjCuHgnaA4seFQ0B5VRQPozl9dJcaTkq985mbwY3WKvSap8cMOjwOo1qayLo6Vdn889C2N5F5MbCXr2H2MuRDsYemAWhavslJ+jEJgpjFCieSrDh55mVbvMWno7o3MBv/Po5STmfpo1oZfCMDoWcXMiHLQv5Y5LkdoO6BtJDnCVjooWHCI74B0As1crdN+8bn34j+C29tZtWYARuVWgW+1vRUIy6W+7ZxdOL8FncB7AJ2JyfkyEh05Gnq63NMzvoEgJQcr7g10j/AaH1qdk/ju6k/vt4QNfGc/zlYpOFMdvQTnUz+c09vhJMIn46pZhgJuaY+vhvhnbpuJNfOV/uKZM5PtjBbKNHV8X4rbE+bSC1XwPP21puUtFizJceCWFKZ+B1vs7GsZJTWdjygDXFInyCxfj7boZIPdoceAziaalL3SX1Y8B/eE0O41yyTTo2+aqluw9H+D/KKiowOLM="
+  key_name   	= "keeper"
+  public_key	= var.aws_public_key
 }
 
 # Create vpc
@@ -43,6 +44,7 @@ resource "aws_internet_gateway" "gw_keeper" {
   }
 }
 
+# Create default route
 resource "aws_route_table" "rtb_keeper" {
   vpc_id = aws_vpc.vpc_keeper.id
 
@@ -61,6 +63,7 @@ resource "aws_route_table_association" "a" {
   route_table_id = aws_route_table.rtb_keeper.id
 }
 
+# Create security group
 resource "aws_security_group" "sg_keeper" {
   name        = "sg_keeper"
   description = "Keeper security group"
@@ -71,6 +74,7 @@ resource "aws_security_group" "sg_keeper" {
   }
 }
 
+# Firewall rules
 resource "aws_security_group_rule" "sg_rules_keeper_in" {
   count = length(var.ingress_rules)
 
@@ -92,22 +96,26 @@ resource "aws_security_group_rule" "sg_rules_keeper_out" {
   security_group_id = aws_security_group.sg_keeper.id
 }
 
-resource "aws_network_interface" "iface_keeper" {
-  subnet_id   = aws_subnet.subnet_keeper.id
-}
+#resource "aws_network_interface" "iface_keeper" {
+#  subnet_id   = aws_subnet.subnet_keeper.id
+#}
 
 resource "aws_instance" "keeper" {
-  ami           = "ami-08ca3fed11864d6bb"
-  instance_type = "t2.medium"
-  count         = 1
+  ami           		 = "ami-08ca3fed11864d6bb"
+  instance_type 		 = "t2.medium"
+  count         		 = 1
   vpc_security_group_ids = [
     aws_security_group.sg_keeper.id
   ]
 
-  subnet_id     = aws_subnet.subnet_keeper.id
+  subnet_id     			  = aws_subnet.subnet_keeper.id
   associate_public_ip_address = true
-  key_name = aws_key_pair.keeper.key_name
-  user_data = <<EOF
-#!/bin/bash
-EOF
+  key_name 					  = aws_key_pair.keeper.key_name
+  user_data_base64 			  = base64encode(templatefile("./initscript.sh", {
+    address					  = var.keeper_wallet_address
+    key						  = var.keeper_wallet_key
+    gateway-URI 			  = var.keeper_gateway_uri
+    gateway-WSS 			  = var.keeper_gateway_wss
+    a-strong-password-here 	  = var.keeper_password
+  }))
 }

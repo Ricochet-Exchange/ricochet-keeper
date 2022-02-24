@@ -1,3 +1,27 @@
+variable "keeper_wallet_address" {
+  type		= string
+}
+
+variable "keeper_wallet_key" {
+  type		= string
+}
+
+variable "keeper_gateway_uri" {
+  type		= string
+}
+
+variable "keeper_gateway_wss" {
+  type		= string
+}
+
+variable "keeper_password" {
+  type		= string
+}
+
+variable "aws_public_key" {
+  type		= string
+}
+  
 variable "ingress_rules" {
   type = list(object({
     from_port   = number
