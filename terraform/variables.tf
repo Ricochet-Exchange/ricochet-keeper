@@ -32,6 +32,76 @@ variable "keeper_wallet_key" {
   sensitive = true
 }
 
+variable "keeper_wallet_address1" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_key1" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_address2" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_key2" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_address3" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_key3" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_address4" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_key4" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_address5" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_key5" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_address6" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_key6" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_address7" {
+  type		= string
+  sensitive = true
+}
+
+variable "keeper_wallet_key7" {
+  type		= string
+  sensitive = true
+}
+
 variable "keeper_gateway_uri" {
   type		= string
 }
