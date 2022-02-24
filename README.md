@@ -69,7 +69,9 @@ cd terraform
 ```
 
 Initialize terraform
-```terraform init```
+```
+terraform init
+```
 
 Deploy keeper
 ```
