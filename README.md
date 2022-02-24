@@ -41,3 +41,37 @@ run the keeper using docker compose
 ## Optional
 * If needed you can change variables or connections values from GUI
 * Navigate to `Admin > Variables`  or `ADMIN > Connctions ` and change your values
+
+# Deploy with terraform
+Rename terraform template file to terraform.tfvars
+```
+cp terraform/terraform.tfvars{.template,}
+```
+
+Fill variables contained in that file
+```
+keeper_repository = ""        # repository used for deployement
+keeper_repository_branch = "" # branch to deploy
+keeper_wallet_address = ""    # wallet public address
+keeper_wallet_key  = ""       # wallet seed
+keeper_gateway_uri = ""       # Ethereum gateway config
+keeper_gateway_wss = ""       # Ethereum gateway config
+keeper_password = ""          # TODO:
+aws_public_key = ""           # public key used to connect to EC2 instance
+aws_access_key= ""            # aws credentials
+aws_secret_key= ""            # aws credentials
+aws_region= ""                # aws region
+```
+
+Move to terraform directory
+```
+cd terraform
+```
+
+Initialize terraform
+```terraform init```
+
+Deploy keeper
+```
+terraform apply
+```
