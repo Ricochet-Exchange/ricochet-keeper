@@ -124,8 +124,8 @@ resource "aws_instance" "keeper" {
     key6                       = var.key6
     address7                   = var.address7
     key7                       = var.key7
-    gateway-uri                = var.gateway_uri
-    gateway-wss                = var.gateway_wss
+    gateway_uri                = var.gateway_uri
+    gateway_wss                = var.gateway_wss
     airflow_password           = var.airflow_password
     postgres_password          = var.postgres_password
     keeper_repository          = var.keeper_repository
