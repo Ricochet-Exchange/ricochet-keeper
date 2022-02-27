@@ -128,22 +128,8 @@ variable "ingress_rules" {
       from_port   = 22
       to_port     = 22
       protocol    = "tcp"
-      cidr_block  = "82.64.36.189/32"
-      description = "SSH" 
-    },
-    { 
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
       cidr_block  = "0.0.0.0/0"
       description = "SSH" 
-    },
-    { 
-      from_port   = 80
-      to_port     = 80
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Web" 
     },
     { 
       from_port   = 80
@@ -158,20 +144,6 @@ variable "ingress_rules" {
       protocol    = "tcp"
       cidr_block  = "0.0.0.0/0"
       description = "Keeper" 
-    },
-    { 
-      from_port   = 5959
-      to_port     = 5959
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Keeper" 
-    },
-    { 
-      from_port   = 3100
-      to_port     = 3100
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
     },
     { 
       from_port   = 3100
@@ -188,20 +160,6 @@ variable "ingress_rules" {
       description = "Monitoring" 
     },
     { 
-      from_port   = 9080
-      to_port     = 9080
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-    { 
-      from_port   = 9093
-      to_port     = 9093
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-    { 
       from_port   = 9093
       to_port     = 9093
       protocol    = "tcp"
@@ -211,20 +169,6 @@ variable "ingress_rules" {
     { 
       from_port   = 5555
       to_port     = 5555
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-    { 
-      from_port   = 5555
-      to_port     = 5555
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-    { 
-      from_port   = 9102
-      to_port     = 9102
       protocol    = "tcp"
       cidr_block  = "0.0.0.0/0"
       description = "Monitoring" 

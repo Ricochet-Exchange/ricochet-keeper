@@ -16,7 +16,7 @@ ln -s /home/ubuntu/.docker/cli-plugins/docker-compose /usr/bin/docker-compose
 echo "clone project and deploy variables"
 sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} /home/ubuntu/ricochet-keeper
 cd /home/ubuntu/ricochet-keeper
-sed -i -e 's/key1/$i{key1}/g'; \  
+sed -e 's/key1/$i{key1}/g'; \  
           's/address1/${address1}/g'; \
           's/key2/${key2}/g'; \  
           's/address2/${address2}/g'; \
