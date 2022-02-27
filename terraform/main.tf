@@ -106,28 +106,33 @@ resource "aws_instance" "keeper" {
     aws_security_group.sg_keeper.id
   ]
 
-  subnet_id     	      = aws_subnet.subnet_keeper.id
-  associate_public_ip_address = true
-  key_name                    = aws_key_pair.keeper.key_name
-  user_data_base64            = base64encode(templatefile("./initscript.sh", {
-    address1                   = var.keeper_wallet_address1
-    key1                       = var.keeper_wallet_key1
-    address2                   = var.keeper_wallet_address2
-    key2                       = var.keeper_wallet_key2
-    address3                   = var.keeper_wallet_address3
-    key3                       = var.keeper_wallet_key3
-    address4                   = var.keeper_wallet_address4
-    key4                       = var.keeper_wallet_key4
-    address5                   = var.keeper_wallet_address5
-    key5                       = var.keeper_wallet_key5
-    address6                   = var.keeper_wallet_address6
-    key6                       = var.keeper_wallet_key6
-    address7                   = var.keeper_wallet_address7
-    key7                       = var.keeper_wallet_key7
-    gateway-URI               = var.keeper_gateway_uri
-    gateway-WSS               = var.keeper_gateway_wss
-    a-strong-password-here    = var.keeper_password
-    keeper_repository         = var.keeper_repository
-    keeper_repository_branch  = var.keeper_repository_branch
+  subnet_id     	       = aws_subnet.subnet_keeper.id
+  associate_public_ip_address  = true
+  key_name                     = aws_key_pair.keeper.key_name
+  user_data_base64             = base64encode(templatefile("./initscript.sh", {
+    address1                   = var.address1
+    key1                       = var.key1
+    address2                   = var.address2
+    key2                       = var.key2
+    address3                   = var.address3
+    key3                       = var.key3
+    address4                   = var.address4
+    key4                       = var.key4
+    address5                   = var.address5
+    key5                       = var.key5
+    address6                   = var.address6
+    key6                       = var.key6
+    address7                   = var.address7
+    key7                       = var.key7
+    gateway-uri                = var.gateway_uri
+    gateway-wss                = var.gateway_wss
+    airflow_password           = var.airflow_password
+    postgres_password          = var.postgres_password
+    keeper_repository          = var.keeper_repository
+    keeper_repository_branch   = var.keeper_repository_branch
   }))
+}
+
+output "ec2_global_ips" {
+  value = ["${aws_instance.keeper.*.public_ip}"]
 }
