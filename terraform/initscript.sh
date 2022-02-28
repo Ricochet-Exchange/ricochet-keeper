@@ -40,7 +40,7 @@ export postgres_password=${postgres_password}
 export gateway_uri=${gateway_uri}
 export gateway_wss=${gateway_wss}
 tmp=$(mktemp)
-envsubst < .vars > "tmp" && mv "$tmp" .vars && chown ubuntu:ubuntu .vars
+envsubst < .vars > "$tmp" && mv "$tmp" .vars && chown ubuntu:ubuntu .vars
 
 echo "Prepare database and run keeper"
 su -l ubuntu -c "cd /home/ubuntu/ricochet-keeper; ./make.sh setup && ./make.sh deploy"
