@@ -11,9 +11,8 @@ from blocksec_plugin.web3_hook import Web3Hook
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
-from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
-from blocksec_plugin.erc20_approve_operator import ERC20ApprovalOperator
 from blocksec_plugin.uniswap_swap_exact_tokens_for_tokens_operator import UniswapSwapExactTokensForTokensOperator
+from blocksec_plugin.random_sleep_operator import RandomSleepOperator
 from constants.constants import PriceConstants
 
 SWAPPER_WALLET_ADDRESS = Variable.get("swapper-address")
@@ -48,26 +47,10 @@ done = BashOperator(
     dag=dag,
 )
 
-approve = ERC20ApprovalOperator(
-    task_id="approve",
-    web3_conn_id="infura",
-    ethereum_wallet=SWAPPER_WALLET_ADDRESS,
-    gas_multiplier=1.2,
-    gas=3000000,
-    max_gas_price=MAX_GAS_PRICE,
-    contract_address="0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
-    spender="0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
-    amount=SWAP_AMOUNT,
-    dag=dag
-)
-
-confirm_approve = EthereumTransactionConfirmationSensor(
-    task_id="confirm_approve",
-    web3_conn_id="infura",
-    transaction_hash="{{task_instance.xcom_pull(task_ids='approve')}}",
-    confirmations=1,
-    poke_interval=5,
-    timeout=60 * 20,
+stall = RandomSleepOperator(
+    taks_id="stall",
+    min=60*3,
+    max=60*15,
     dag=dag
 )
 
@@ -96,4 +79,4 @@ confirm_swap = EthereumTransactionConfirmationSensor(
     dag=dag
 )
 
-done << confirm_swap << swap << confirm_approve << approve
+done << confirm_swap << swap << stall
