@@ -6,7 +6,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io
 usermod -a -G docker ubuntu
-sudo -u ubuntu DOCKER_CONFIG=/home/ubuntu/.docker
+DOCKER_CONFIG=/home/ubuntu/.docker
 sudo -u ubuntu mkdir -p $DOCKER_CONFIG/cli-plugins
 sudo -u curl -SL https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 chmod +x /home/ubuntu/.docker/cli-plugins/docker-compose
