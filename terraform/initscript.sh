@@ -19,7 +19,7 @@ echo -e '/[sshd]/afilter = sshd\nlogpath = /var/log/auth.log\nmaxretry = 3\nbant
 echo "clone project and variables substitution"
 sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} /home/ubuntu/ricochet-keeper
 cd /home/ubuntu/ricochet-keeper
-sed -i -e "s#key1#${key1}#g;\
+sed -e "s#key1#${key1}#g;\
 s#address1#${address1}#g;\
 s#key2#${key2}#g;\
 s#address2#${address2}#g;\
