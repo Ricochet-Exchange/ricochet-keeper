@@ -40,6 +40,7 @@ setup() {
     envsubst < variables.tmpl.json > variables/variables.json
     envsubst < connections.tmpl.json > variables/connections.json
     envsubst < secrets.tmpl.sh > secrets.sh
+    git update-index --assume-unchanged .vars 
     cp docker-compose.tmpl.yml docker-compose.yml
     chmod +x secrets.sh && ./secrets.sh
     echo -e "AIRFLOW_UID=$(id -u)" > .env
