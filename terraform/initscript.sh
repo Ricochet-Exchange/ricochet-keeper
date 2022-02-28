@@ -12,11 +12,6 @@ sudo -u ubuntu curl -SL https://github.com/docker/compose/releases/download/v2.2
 chmod +x /home/ubuntu/.docker/cli-plugins/docker-compose
 ln -s /home/ubuntu/.docker/cli-plugins/docker-compose /usr/bin/docker-compose
 
-
-echo "Fail2ban deployment"
-apt-get install -y fail2ban
-echo -e '/[sshd]/afilter = sshd\nlogpath = /var/log/auth.log\nmaxretry = 3\nbantime = 1h' /etc/fail2ban/jail.d/defaults-debian.conf
-
 echo "clone project and variables substitution"
 sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} /home/ubuntu/ricochet-keeper
 cd /home/ubuntu/ricochet-keeper
