@@ -36,7 +36,7 @@ s#address7#${address7}#g;\
 s#gateway-URI#${gateway_uri}#g;\
 s#gateway-WSS#${gateway_wss}#g;\
 s#airflow_password#${airflow_password}#g;\
-s#postgres_password#${postgres_password}#g";\
+s#postgres_password#${postgres_password}#g"\
 .vars
 
 
