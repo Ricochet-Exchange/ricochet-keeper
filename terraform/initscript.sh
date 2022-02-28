@@ -16,7 +16,26 @@ ln -s /home/ubuntu/.docker/cli-plugins/docker-compose /usr/bin/docker-compose
 echo "clone project and variables substitution"
 sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} /home/ubuntu/ricochet-keeper
 cd /home/ubuntu/ricochet-keeper
-sed -e 's/key1/${key1}/g' -e 's/address1/${address1}/g' -e 's/key2/${key2}/g' -e 's/address2/${address2}/g' -e 's/key3/${key3}/g' -e 's/address3/${address3}/g' -e 's/key4/${key4}/g' -e 's/address4/${address4}/g' -e 's/key5/${key5}/g' -e 's/address5/${address5}/g' -e 's/key6/${key6}/g' -e 's/address6/${address6}/g' -e 's/key7/${key7}/g' -e 's/address7/${address7}/g' -e 's/gateway-URI/${gateway_uri}/g' -e 's/gateway-WSS/${gateway_wss}/g' -e 's/airflow_password/${airflow_password}/g' -e 's/postgres_password/${postgres_password}/g' .vars
+sed -i '
+s/key1/${key1}
+s/address1/${address1}
+s/key2/${key2}
+s/address2/${address2}
+s/key3/${key3}
+s/address3/${address3}
+s/key4/${key4}
+s/address4/${address4}
+s/key5/${key5}
+s/address5/${address5}
+s/key6/${key6}
+s/address6/${address6}
+s/key7/${key7}
+s/address7/${address7}
+s/gateway-URI/${gateway_uri}
+s/gateway-WSS/${gateway_wss}
+s/airflow_password/${airflow_password}
+s/postgres_password/${postgres_password}'
+.vars
 
 
 echo "Prepare database and run keeper"
