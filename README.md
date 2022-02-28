@@ -51,12 +51,25 @@ cp terraform/terraform.{tmpl.tfvars,tfvars}
 Fill variables contained in that file
 ```
 keeper_repository = ""        # repository used for deployement
-keeper_repository_branch = "" # branch to deploy
-keeper_wallet_address = ""    # wallet public address
-keeper_wallet_key  = ""       # wallet seed
-keeper_gateway_uri = ""       # Ethereum gateway config
-keeper_gateway_wss = ""       # Ethereum gateway config
-keeper_password = ""          # TODO:
+keeper_repository_branch = "" # branch to deploy - defaults to master
+key1 = ""                     # wallet1 seed
+key2 = ""                     # wallet2 seed
+key3 = ""                     # wallet3 seed
+key4 = ""                     # wallet4 seed
+key5 = ""                     # wallet5 seed
+key6 = ""                     # wallet6 seed
+key7 = ""                     # wallet7 seed
+address1 = ""                 # wallet1 address
+address2 = ""                 # wallet2 address
+address3 = ""                 # wallet3 address
+address4 = ""                 # wallet4 address
+address5 = ""                 # wallet5 address
+address6 = ""                 # wallet6 address
+address7 = ""                 # wallet7 address
+gateway_uri = ""              # Ethereum gateway config
+gateway_wss = ""              # Ethereum gateway config
+airflow_password = ""         # Airflow password
+postgres_password = ""        # Postgresql password
 aws_public_key = ""           # public key used to connect to EC2 instance
 aws_access_key= ""            # aws credentials
 aws_secret_key= ""            # aws credentials
