@@ -9,7 +9,6 @@ from airflow.models import Variable
 from datetime import datetime, timedelta
 from blocksec_plugin.web3_hook import Web3Hook
 from airflow.operators.bash_operator import BashOperator
-from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.uniswap_swap_exact_tokens_for_tokens_operator import UniswapSwapExactTokensForTokensOperator
 from blocksec_plugin.random_sleep_operator import RandomSleepOperator
@@ -48,7 +47,7 @@ done = BashOperator(
 )
 
 stall = RandomSleepOperator(
-    taks_id="stall",
+    task_id="stall",
     min=60*3,
     max=60*15,
     dag=dag
