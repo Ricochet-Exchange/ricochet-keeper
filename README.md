@@ -5,14 +5,15 @@ This repository contains [Apache Airflow DAGs](https://airflow.apache.org/docs/a
 Edit te .vars file with your adresses and private keys, you can use a BIP39 tool generator to generate some adresses
 ```
 You will need to change all of the variables in the .vars file
+cp .vars.tmpl .vars
 
 ```
 :information_source: This will take a while the first time you do it
-:warning: In order to secure your install you must change those default values !
+:warning: In order to secure your install you must change those default values 
 
 # Setup
 After setting up all the variables in .vars 
-you can simply run the command down below, this will prepare all needed files and initialize the database
+run the command down below, this will prepare all needed files and initialize the database
 ```
 ./make.sh setup
 ```

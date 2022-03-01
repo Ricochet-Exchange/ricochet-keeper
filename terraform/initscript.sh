@@ -21,8 +21,8 @@ echo -e "[sshd]\nenabled = true\nfilter = sshd\nlogpath = /var/log/auth.log\nmax
 systemctl enable fail2ban && systemctl restart fail2ban
 
 echo "clone project and variables substitution"
-sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} /home/ubuntu/ricochet-keeper
-cd /home/ubuntu/ricochet-keeper
+sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} $DIRECTORY
+cd $DIRECTORY
 cp .vars.tmpl .vars
 export key1=${key1}
 export address1=${address1}

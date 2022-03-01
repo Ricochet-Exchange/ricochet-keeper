@@ -35,7 +35,6 @@ check() {
 
 setup() {
     # install keeper with all required variables
-    cp .vars.tmpl .vars
     source .vars
     mkdir variables
     envsubst < variables.tmpl.json > variables/variables.json
