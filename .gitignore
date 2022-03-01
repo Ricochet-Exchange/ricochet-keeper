@@ -2,7 +2,9 @@
 logs
 plugins
 */.env
-variables
+variables.json
+connections.json
+.vars
 secrets.sh
 .env
 docker-compose.yml
