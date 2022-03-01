@@ -57,14 +57,3 @@
         "richochet": 77,
         "wrapped-bitcoin": 60
     }
-    
-    "distribution-schedule-interval": '0 * * * *'
-    "harvester-schedule-interval": '0 * * * *'
-    "watch-schedule-interval:" '50 * * * *'
-    "tellor-schedule-interval:" '*/5 * * * *'
-    "swap-schedule-interval:" '0 * * * *'
-    "block-poll-schedule-interval:" '*/15 * * * *'
-    "close-schedule-interval:" 'None'
-    "max-gas-price:" '33'
-
-}
