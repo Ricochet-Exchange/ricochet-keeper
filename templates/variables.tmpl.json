@@ -7,7 +7,7 @@
     "swap-schedule-interval": "$SWAP_SCHEDULE_INTERVAL",
     "block-poll-schedule-interval": "$BLOCK_POLL_SCHEDULE_INTERVAL",
     "close-schedule-interval": "$CLOSE_SCHEDULE_INTERVAL",
-    "max-gas-price": "$MAX_GAS_PRICE",
+    "max-gas-price": "33",
     "distributor-address": "$DISTRIBUTOR_ADDRESS",
     "distributor-v2-address": "$DISTRIBUTOR_V2_ADDRESS",
     "harvester-address": "$HARVESTER_ADDRESS",
