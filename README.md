@@ -1,11 +1,11 @@
 # Ricochet Keeper
 This repository contains [Apache Airflow DAGs](https://airflow.apache.org/docs/apache-airflow/stable/concepts/dags.html) for executing keeper operations for Ricochet Exchange.
 
-# Before you start your keeper
-Edit te .vars file with your adresses and private keys, you can use a BIP39 tool generator to generate some adresses
+# Prepare your keeper install
+Generate the .vars using the command down below and customize it with your adresses and private keys.
+You can use a BIP39 tool generator to generate some adresses.
+Adjust schedule variables according to other keepers values.
 ```
-You will need to change all of the variables in the .vars file
-running the command down below will create the file and check some prerequisites
 ./make.sh init
 
 ```
@@ -17,6 +17,7 @@ After setting up all the variables in .vars
 executing the command down below will prepare all needed files and initialize the database
 ```
 ./make.sh setup
+
 ```
 # Execute keeper
 once setup step is finished run the keeper using docker compose
@@ -44,51 +45,49 @@ run the keeper using docker compose
 * If needed you can change variables or connections values from GUI
 * Navigate to `Admin > Variables`  or `ADMIN > Connctions ` and change your values
 
-# Deploy with terraform
+# If you have a aws account, you can deploy your keeper using terraform (this is the recomended way, all firewall rules are already set up)
+
 Rename terraform template file to terraform.tfvars
 ```
 cp terraform/terraform.{tmpl.tfvars,tfvars}
 ```
 
-Fill variables contained in that file
+Fill  all variables contained in terraform.tfvars
+you can customize schedule values by editing .vars.tmpl file 
 ```
 keeper_repository = ""        # repository used for deployement
 keeper_repository_branch = "" # branch to deploy - defaults to master
-key1 = ""                     # wallet1 seed
-key2 = ""                     # wallet2 seed
-key3 = ""                     # wallet3 seed
-key4 = ""                     # wallet4 seed
-key5 = ""                     # wallet5 seed
-key6 = ""                     # wallet6 seed
-key7 = ""                     # wallet7 seed
-address1 = ""                 # wallet1 address
-address2 = ""                 # wallet2 address
-address3 = ""                 # wallet3 address
-address4 = ""                 # wallet4 address
-address5 = ""                 # wallet5 address
-address6 = ""                 # wallet6 address
-address7 = ""                 # wallet7 address
-gateway_uri = ""              # Ethereum gateway config
-gateway_wss = ""              # Ethereum gateway config
+key1 = ""                     # address1 key
+key2 = ""                     # address2 key
+key3 = ""                     # address3 key
+key4 = ""                     # address4 key
+key5 = ""                     # address5 key
+key6 = ""                     # address6 key
+key7 = ""                     # address7 key
+address1 = ""                 # address1
+address2 = ""                 # address2
+address3 = ""                 # address3
+address4 = ""                 # address4
+address5 = ""                 # address5
+address6 = ""                 # address6
+address7 = ""                 # address7
+gateway_uri = ""              # infura or quicknode gateway uri
+gateway_wss = ""              # infura or quicknode gateway wss
 airflow_password = ""         # Airflow password
 postgres_password = ""        # Postgresql password
-aws_public_key = ""           # public key used to connect to EC2 instance
+aws_public_key = ""           # ssh public key to connect to EC2 instance
 aws_access_key= ""            # aws credentials
 aws_secret_key= ""            # aws credentials
 aws_region= ""                # aws region
 ```
 
-Move to terraform directory
+Move to terraform directory and initialize terraform
 ```
-cd terraform
-```
-
-Initialize terraform
-```
-terraform init
+cd terraform && terraform init
 ```
 
-Deploy keeper
+Deploy keeper using terraform. 
+Once the deployment finished you can connect to the outputted ip address
 ```
 terraform apply
 ```
