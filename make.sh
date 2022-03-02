@@ -23,11 +23,12 @@ usage() {
 
 
 # check if docker-compose is intalled 
-check() {
-    if [[ -z $(which docker-compose && which docker) ]]
+init() {
+    cp templates/vars.tmpl .vars
+    if [[ -z $(which docker-compose && which docker) ]] && [[ ${docker-compose -v} != *2.2.3* ]]
     then
-        log checking docker-compose
-	echo "please make sure that docker and docker-compose are installed"
+        log check docker and docker-compose
+	echo "please make sure that docker and docker-compose version 2.2.3 are installed"
     else
         log skip docker-compose and docker are installed
     fi
@@ -37,10 +38,10 @@ setup() {
     # install keeper with all required variables
     source .vars
     mkdir variables
-    envsubst < variables.tmpl.json > variables/variables.json
-    envsubst < connections.tmpl.json > variables/connections.json
-    envsubst < secrets.tmpl.sh > secrets.sh
-    cp docker-compose.tmpl.yml docker-compose.yml
+    envsubst < templates/variables.tmpl.json > variables/variables.json
+    envsubst < templates/connections.tmpl.json > variables/connections.json
+    envsubst < templates/secrets.tmpl.sh > secrets.sh
+    cp templates/docker-compose.tmpl.yml docker-compose.yml
     chmod +x secrets.sh && ./secrets.sh
     echo -e "AIRFLOW_UID=$(id -u)" > .env
     docker-compose -f docker-compose.yml up airflow-init

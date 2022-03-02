@@ -23,7 +23,7 @@ systemctl enable fail2ban && systemctl restart fail2ban
 echo "clone project and variables substitution"
 sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} $DIRECTORY
 cd $DIRECTORY
-cp .vars.tmpl .vars
+cp templates/.vars.tmpl .vars
 export key1=${key1}
 export address1=${address1}
 export key2=${key2}
@@ -42,7 +42,7 @@ export airflow_password=${airflow_password}
 export postgres_password=${postgres_password}
 export gateway_uri=${gateway_uri}
 export gateway_wss=${gateway_wss}
-envsubst < .vars.tmpl > .vars && chown ubuntu:ubuntu .vars
+envsubst < templates/.vars.tmpl > .vars && chown ubuntu:ubuntu .vars
 
 echo "Prepare database and run keeper"
 su -l ubuntu -c "cd /home/ubuntu/ricochet-keeper; ./make.sh setup; ./make.sh deploy"

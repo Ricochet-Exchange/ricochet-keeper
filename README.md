@@ -5,20 +5,21 @@ This repository contains [Apache Airflow DAGs](https://airflow.apache.org/docs/a
 Edit te .vars file with your adresses and private keys, you can use a BIP39 tool generator to generate some adresses
 ```
 You will need to change all of the variables in the .vars file
-cp .vars.tmpl .vars
+running the command down below will create the file and check some prerequisites
+./make.sh init
 
 ```
 :information_source: This will take a while the first time you do it
-:warning: In order to secure your install you must change those default values 
+:warning: To secure your install you must use different values for each variable in .vars (fernet key is automatically generated) 
 
 # Setup
 After setting up all the variables in .vars 
-run the command down below, this will prepare all needed files and initialize the database
+executing the command down below will prepare all needed files and initialize the database
 ```
 ./make.sh setup
 ```
 # Execute keeper
-Now simply run the keeper using docker compose
+once setup step is finished run the keeper using docker compose
 ```
 ./make.sh deploy
 
