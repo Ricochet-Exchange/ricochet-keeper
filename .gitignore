@@ -2,15 +2,13 @@
 logs
 plugins
 */.env
-variables.json
-connections.json
 .vars
 secrets.sh
 .env
 variables
 docker-compose.yml
 terraform/.terraform.lock.hcl
-terraform/.terraform/
+terraform/.terraform
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
 terraform/terraform.tfvars
