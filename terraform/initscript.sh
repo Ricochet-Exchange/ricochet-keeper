@@ -1,5 +1,5 @@
 #!/bin/bash
-set -xe
+set -e
 DIRECTORY=/home/ubuntu/ricochet-keeper
 DOCKER_CONFIG=/home/ubuntu/.docker
 
