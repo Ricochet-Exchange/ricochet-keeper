@@ -16,13 +16,21 @@
     "rex-bank-addresses": "[0x263026e7e53dbfdce5ae55ade22493f828922965]",
     "rex-bank-keeper-address": "$REX_BANK_KEEPER_ADDRESS",
     "rexmarket-v2-addresses": {
-        "0x1F001AfC25dC911fba6C86B9A81ad71Bb6DdAfD6": [
+        "0x1e2B09375178d58F5f7D0fB12C595BD7A62716F6": [
             "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
             "0x4086eBf75233e8492F1BCDa41C7f2A8288c2fB92"
         ],
-        "0xBdA1c295B5FB13304ee8D6aaaBCF6ce92311dEfA": [
+        "0x47F99Bf24C7f91Bc93bF3b7f0b3D65eef1583dF6": [
+            "0x1305F6B6Df9Dc47159D12Eb7aC2804d4A33173c2",
+            "0x27e1e4E6BC79D93032abef01025811B7E4727e85"
+        ],
+        "0x65D0186ac944714a56822B855E7F803eC709a105": [
             "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
             "0x27e1e4E6BC79D93032abef01025811B7E4727e85"
+        ],
+        "0xFBF91D299db56624f46F544dc1DCD0d0da2e3327": [
+            "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
+            "0x263026E7e53DBFDce5ae55Ade22493f828922965"
         ]
     },
     "ricochet-exchange-addresses": [
