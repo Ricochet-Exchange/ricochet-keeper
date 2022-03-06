@@ -24,7 +24,7 @@ usage() {
 
 # check if docker-compose is intalled 
 init() {
-    cp templates/vars.tmpl .vars
+    cp templates/.vars.tmpl .vars
     if [[ -z $(which docker-compose && which docker) ]] && [[ ${docker-compose -v} != *2.2.3* ]]
     then
         log check docker and docker-compose
