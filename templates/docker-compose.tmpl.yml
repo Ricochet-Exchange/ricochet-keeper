@@ -248,11 +248,17 @@ services:
 
   airflow-nginx:
     build: ./nginx
-    image: nginx:airflow
     ports:
       - "80:80"
       - "443:443"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     restart: always
+    depends_on:
+      - airflow-webserver
 
 ### Monitoring ###
   statsd_exporter:
