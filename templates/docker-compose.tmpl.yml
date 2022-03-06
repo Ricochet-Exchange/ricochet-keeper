@@ -75,9 +75,10 @@ services:
 
   airflow-webserver:
     <<: *airflow-common
+    container_name: airflow-webserver
     command: webserver
     ports:
-      - "80:8080"
+      - "8080:8080"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 10s
@@ -244,6 +245,15 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+
+  airflow-nginx:
+    build: ./nginx
+    image: nginx:airflow
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+
 ### Monitoring ###
   statsd_exporter:
     image: prom/statsd-exporter:v0.18.0
