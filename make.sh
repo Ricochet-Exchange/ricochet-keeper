@@ -50,8 +50,8 @@ setup() {
 deploy() {
     # run the keeper via docker-compose
     docker-compose -f docker-compose.yml  up -d && \
-    docker exec `docker ps |grep "ricochet-keeper_airflow-webserver" | awk '{ print $1}' ` airflow connections import /opt/variables/connections.json && \
-    docker exec `docker ps |grep "ricochet-keeper_airflow-webserver" | awk '{ print $1}' ` airflow variables import /opt/variables/variables.json 
+    docker exec `docker ps |grep "airflow-webserver" | awk '{ print $1}' ` airflow connections import /opt/variables/connections.json && \
+    docker exec `docker ps |grep "airflow-webserver" | awk '{ print $1}' ` airflow variables import /opt/variables/variables.json
 }    
 
 debug() {
