@@ -14,12 +14,11 @@ variable "aws_region" {
 
 variable "keeper_repository" {
   type      = string
-  default   = "master"
 }
 
 variable "keeper_repository_branch" {
   type      = string
-  default   = "master"
+  default   = "main"
 }
 
 variable "address1" {
