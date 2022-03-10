@@ -2,6 +2,7 @@ from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
+from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from web3.exceptions import InvalidAddress
 from constants.constants import PriceConstants
 
@@ -10,7 +11,7 @@ class ContractInteractionOperator(BaseOperator):
     Executes a generalized contract interaction
     """
 
-    template_fields = ['contract_address', 'function', 'args', 'abi_json']
+    template_fields = ['contract_address', 'function', 'args', 'abi_json', 'transaction_hash']
 
     @apply_defaults
     def __init__(self,
@@ -69,9 +70,36 @@ class ContractInteractionOperator(BaseOperator):
                                maxPriorityFeePerGas=self.web3.eth.max_priority_fee,
                                gas = self.gas
                               ))
-        # if not self.confirm_success(raw_txn):
-        #     raise ValueError("Transaction failed to confirm")
+
         signed_txn = self.web3.eth.account.signTransaction(raw_txn, self.wallet.private_key)
         transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
-        print(f"Txn hash: {transaction_hash.hex()}")
-        return str(transaction_hash.hex())
+
+        #>>>>>>>>>>>>>>>TEST THIS AS WELL<<<<<<<<<<<<<<<<<
+        # return EthereumTransactionConfirmationSensor(transaction_hash).poke(context)
+        #>>>>>>>>>>>>>>>IBPLACE OF BELOW<<<<<<<<<<<<<<<<<<<
+
+        try:
+            receipt = self.web3.eth.get_transaction_receipt(transaction_hash)
+            confirmations = self.web3.eth.blockNumber - receipt.blockNumber
+        except TypeError: # Transaction has no block number
+            confirmations = 0
+        except TransactionNotFound:
+            confirmations = 0
+        print("Transaction {0} has {1} confirmations".format(transaction_hash, confirmations))
+        if confirmations >= self.confirmations:
+            receipt = self.web3.eth.get_transaction_receipt(transaction_hash)
+            print("{0} has status {1}".format(transaction_hash,nreceipt['status']))
+            if receipt['status'] == 1:
+                return True
+            else:
+                # Fail if the transaction failed
+                raise Exception('Transaction Failed')
+        else:
+            return False
+
+        
+
+        # if not self.confirm_success(raw_txn):
+        #     raise ValueError("Transaction failed to confirm")
+        # print(f"Txn hash: {transaction_hash.hex()}")
+        # return str(transaction_hash.hex())
