@@ -17,6 +17,7 @@ class ContractInteractionOperator(BaseOperator):
     def __init__(self,
                  contract_address,
                  abi_json,
+                 confirmations=3,
                  function=None,
                  function_args=None,
                  web3_conn_id='web3_default',
@@ -32,6 +33,7 @@ class ContractInteractionOperator(BaseOperator):
         self.web3_conn_id = web3_conn_id
         self.ethereum_wallet = ethereum_wallet
         self.contract_address = contract_address
+        self.confirmations = confirmations
         self.function = function
         self.function_args = function_args
         self.gas_key = gas_key
@@ -88,7 +90,7 @@ class ContractInteractionOperator(BaseOperator):
         print("Transaction {0} has {1} confirmations".format(transaction_hash, confirmations))
         if confirmations >= self.confirmations:
             receipt = self.web3.eth.get_transaction_receipt(transaction_hash)
-            print("{0} has status {1}".format(transaction_hash,nreceipt['status']))
+            print("{0} has status {1}".format(transaction_hash.receipt['status']))
             if receipt['status'] == 1:
                 return True
             else:
