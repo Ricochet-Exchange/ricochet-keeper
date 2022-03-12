@@ -76,4 +76,4 @@ class ContractInteractionOperator(BaseOperator):
         signed_txn = self.web3.eth.account.signTransaction(raw_txn, self.wallet.private_key)
         transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
 
-        return EthereumTransactionConfirmationSensor(transaction_hash).poke(context)
+        return EthereumTransactionConfirmationSensor(transaction_hash=transaction_hash).poke(context)
