@@ -3,7 +3,6 @@ from airflow.utils.decorators import apply_defaults
 from blocksec_plugin.web3_hook import Web3Hook
 from blocksec_plugin.ethereum_wallet_hook import EthereumWalletHook
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
-from web3.exceptions import InvalidAddress, TransactionNotFound
 from constants.constants import PriceConstants
 
 class ContractInteractionOperator(BaseOperator):
@@ -76,4 +75,4 @@ class ContractInteractionOperator(BaseOperator):
         signed_txn = self.web3.eth.account.signTransaction(raw_txn, self.wallet.private_key)
         transaction_hash = self.web3.eth.sendRawTransaction(signed_txn.rawTransaction)
 
-        return EthereumTransactionConfirmationSensor(transaction_hash=transaction_hash).poke(context)
+        return EthereumTransactionConfirmationSensor(transaction_hash=transaction_hash, confirmations=self.confirmations).poke(context)
