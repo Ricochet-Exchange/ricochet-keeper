@@ -22,95 +22,95 @@ variable "keeper_repository_branch" {
 }
 
 variable "address1" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "key1" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "address2" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "key2" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "address3" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "key3" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "address4" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "key4" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "address5" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "key5" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "address6" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "key6" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "address7" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "key7" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "gateway_uri" {
-  type		= string
+  type      = string
 }
 
 variable "gateway_wss" {
-  type		= string
+  type      = string
 }
 
 variable "airflow_password" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "aws_public_key" {
-  type		= string
+  type      = string
   sensitive = true
 }
 
 variable "postgres_password" {
-  type		= string
+  type      = string
   sensitive = true
 }
   
