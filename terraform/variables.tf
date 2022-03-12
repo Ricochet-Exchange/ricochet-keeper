@@ -113,71 +113,28 @@ variable "postgres_password" {
   type      = string
   sensitive = true
 }
-  
-variable "ingress_rules" {
-  type = list(object({
-    from_port   = number
-    to_port     = number
-    protocol    = string
-    cidr_block  = string
-    description = string
-  }))
-  default = [
-    { 
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "SSH" 
-    },
-    { 
-      from_port   = 80
-      to_port     = 80
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Web" 
-    },
-    { 
-      from_port   = 5959
-      to_port     = 5959
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Keeper" 
-    },
-    { 
-      from_port   = 3100
-      to_port     = 3100
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-    { 
-      from_port   = 9080
-      to_port     = 9080
-      protocol    = "tcp"
-       cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-    { 
-      from_port   = 9093
-      to_port     = 9093
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-    { 
-      from_port   = 5555
-      to_port     = 5555
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-    { 
-      from_port   = 9102
-      to_port     = 9102
-      protocol    = "tcp"
-      cidr_block  = "0.0.0.0/0"
-      description = "Monitoring" 
-    },
-  ]
+
+variable "egress_cidr_blocks" {
+  type = list
+  default = ["0.0.0.0/0"]
+}
+
+variable "ingress_cidr_blocks_ssh" {
+  type = list
+  default = ["0.0.0.0/0"]
+}
+
+variable "ingress_cidr_blocks_web" {
+  type = list
+  default = ["0.0.0.0/0"]
+}
+
+variable "ingress_cidr_blocks_keeper" {
+  type = list
+  default = ["0.0.0.0/0"]
+}
+
+variable "ingress_cidr_blocks_monitoring" {
+  type = list
+  default = ["0.0.0.0/0"]
 }

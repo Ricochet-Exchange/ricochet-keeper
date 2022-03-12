@@ -77,24 +77,102 @@ resource "aws_security_group" "sg_keeper" {
 }
 
 # Firewall rules
-resource "aws_security_group_rule" "sg_rules_keeper_in" {
-  count = length(var.ingress_rules)
-
+resource "aws_security_group_rule" "sg_rules_in_ssh" {
   type              = "ingress"
-  from_port         = var.ingress_rules[count.index].from_port
-  to_port           = var.ingress_rules[count.index].to_port
-  protocol          = var.ingress_rules[count.index].protocol
-  cidr_blocks       = [var.ingress_rules[count.index].cidr_block]
-  description       = var.ingress_rules[count.index].description
+  from_port         = 22
+  to_port           = 22
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_ssh
+  description       = "SSH" 
   security_group_id = aws_security_group.sg_keeper.id
 }
 
-resource "aws_security_group_rule" "sg_rules_keeper_out" {
+resource "aws_security_group_rule" "sg_rules_in_http" {
+  type              = "ingress"
+  from_port         = 80
+  to_port           = 80
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_web
+  description       = "WEB" 
+  security_group_id = aws_security_group.sg_keeper.id
+}
+
+resource "aws_security_group_rule" "sg_rules_in_https" {
+  type              = "ingress"
+  from_port         = 443
+  to_port           = 443
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_web
+  description       = "WEB" 
+  security_group_id = aws_security_group.sg_keeper.id
+}
+
+resource "aws_security_group_rule" "sg_rules_in_keeper" {
+  type              = "ingress"
+  from_port         = 5959
+  to_port           = 5959
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_keeper
+  description       = "Keeper" 
+  security_group_id = aws_security_group.sg_keeper.id
+}
+
+resource "aws_security_group_rule" "sg_rules_in_monitoring_1" {
+  type              = "ingress"
+  from_port         = 3100
+  to_port           = 3100
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_monitoring
+  description       = "Monitoring" 
+  security_group_id = aws_security_group.sg_keeper.id
+}
+
+resource "aws_security_group_rule" "sg_rules_in_monitoring_2" {
+  type              = "ingress"
+  from_port         = 9080
+  to_port           = 9080
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_monitoring
+  description       = "Monitoring" 
+  security_group_id = aws_security_group.sg_keeper.id
+}
+
+resource "aws_security_group_rule" "sg_rules_in_monitoring_3" {
+  type              = "ingress"
+  from_port         = 9093
+  to_port           = 9093
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_monitoring
+  description       = "Monitoring" 
+  security_group_id = aws_security_group.sg_keeper.id
+}
+
+resource "aws_security_group_rule" "sg_rules_in_monitoring_4" {
+  type              = "ingress"
+  from_port         = 5555
+  to_port           = 5555
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_monitoring
+  description       = "Monitoring" 
+  security_group_id = aws_security_group.sg_keeper.id
+}
+
+resource "aws_security_group_rule" "sg_rules_in_monitoring_5" {
+  type              = "ingress"
+  from_port         = 9102
+  to_port           = 9102
+  protocol          = "tcp"
+  cidr_blocks       = var.ingress_cidr_blocks_monitoring
+  description       = "Monitoring" 
+  security_group_id = aws_security_group.sg_keeper.id
+}
+
+resource "aws_security_group_rule" "sg_rules_out" {
   type              = "egress"
   to_port           = 0
   protocol          = "-1"
   from_port         = 0
-  cidr_blocks       = ["0.0.0.0/0"]
+  cidr_blocks       = var.egress_cidr_blocks
   security_group_id = aws_security_group.sg_keeper.id
 }
 

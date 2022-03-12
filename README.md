@@ -55,30 +55,35 @@ cp terraform/terraform.{tmpl.tfvars,tfvars}
 Fill  all variables contained in terraform.tfvars
 you can customize schedule values by editing .vars.tmpl file 
 ```
-keeper_repository = ""        # repository used for deployement
-keeper_repository_branch = "" # branch to deploy - defaults to master
-key1 = ""                     # address1 key
-key2 = ""                     # address2 key
-key3 = ""                     # address3 key
-key4 = ""                     # address4 key
-key5 = ""                     # address5 key
-key6 = ""                     # address6 key
-key7 = ""                     # address7 key
-address1 = ""                 # address1
-address2 = ""                 # address2
-address3 = ""                 # address3
-address4 = ""                 # address4
-address5 = ""                 # address5
-address6 = ""                 # address6
-address7 = ""                 # address7
-gateway_uri = ""              # infura or quicknode gateway uri
-gateway_wss = ""              # infura or quicknode gateway wss
-airflow_password = ""         # Airflow password
-postgres_password = ""        # Postgresql password
-aws_public_key = ""           # ssh public key to connect to EC2 instance
-aws_access_key= ""            # aws credentials
-aws_secret_key= ""            # aws credentials
-aws_region= ""                # aws region
+keeper_repository = ""                  # repository used for deployement
+keeper_repository_branch = ""           # branch to deploy - defaults to master
+key1 = ""                               # address1 key
+key2 = ""                               # address2 key
+key3 = ""                               # address3 key
+key4 = ""                               # address4 key
+key5 = ""                               # address5 key
+key6 = ""                               # address6 key
+key7 = ""                               # address7 key
+address1 = ""                           # address1
+address2 = ""                           # address2
+address3 = ""                           # address3
+address4 = ""                           # address4
+address5 = ""                           # address5
+address6 = ""                           # address6
+address7 = ""                           # address7
+gateway_uri = ""                        # infura or quicknode gateway uri
+gateway_wss = ""                        # infura or quicknode gateway wss
+airflow_password = ""                   # Airflow password
+postgres_password = ""                  # Postgresql password
+aws_public_key = ""                     # ssh public key to connect to EC2 instance
+aws_access_key= ""                      # aws credentials
+aws_secret_key= ""                      # aws credentials
+aws_region= ""                          # aws region
+egress_cidr_blocks = ""                 # egress cidr_block list - defaults to ["0.0.0.0/0"]
+ingress_cidr_blocks_ssh = ""            # ssh ingress cidr_block list - defaults to ["0.0.0.0/0"] 
+ingress_cidr_blocks_web = ""            # web ingress cidr_block list - defaults to ["0.0.0.0/0"] 
+ingress_cidr_blocks_keeper = ""         # keeper ingress cidr_block list - defaults to ["0.0.0.0/0"] 
+ingress_cidr_blocks_monitoring = ""     # monitoring ingress cidr_block list - defaults to ["0.0.0.0/0"] 
 ```
 
 Move to terraform directory and initialize terraform
