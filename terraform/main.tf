@@ -178,7 +178,7 @@ resource "aws_security_group_rule" "sg_rules_out" {
 
 resource "aws_instance" "keeper" {
   ami           		 = "ami-08ca3fed11864d6bb"
-  instance_type 		 = "t2.medium"
+  instance_type 		 = "t2.large"
   count         		 = 1
   vpc_security_group_ids = [
     aws_security_group.sg_keeper.id
