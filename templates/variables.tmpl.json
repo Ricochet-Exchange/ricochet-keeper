@@ -16,22 +16,35 @@
     "rex-bank-addresses": "[0x263026e7e53dbfdce5ae55ade22493f828922965]",
     "rex-bank-keeper-address": "$REX_BANK_KEEPER_ADDRESS",
     "rexmarket-v2-addresses": {
-        "0x1e2B09375178d58F5f7D0fB12C595BD7A62716F6": [
-            "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
+
+       "0xF415CD95999c94ad9dFCB29B71908329D635E5Fe": [
+           "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
+           "0x27e1e4E6BC79D93032abef01025811B7E4727e85"
+        ],
+       "0xef2C9e8777648d7Dea03b319c64EA53f38EC1398": [
+           "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
+           "0x4086eBf75233e8492F1BCDa41C7f2A8288c2fB92"
+        ],
+       "0x0D0E1381d6F6f71E6F0D8f4970BF5bD53c23d7e5": [
+           "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
+           "0x263026E7e53DBFDce5ae55Ade22493f828922965
+       "],
+       "0x87588653F2F840Bf0589d5715679Db77d8fC021d": [
+           "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
+           "0x3aD736904E9e65189c3000c7DD2c8AC8bB7cD4e3
+       "],
+       "0x5970Acd9e2Cb09089FE61f4D0fEc1ae0E959bbDe": [
+           "0x1305F6B6Df9Dc47159D12Eb7aC2804d4A33173c2",
+           "0x27e1e4E6BC79D93032abef01025811B7E4727e85
+       "],
+       "0xE0073786618b886aA1aa44Df103850a227ADe9ae": [
+            "0x1305F6B6Df9Dc47159D12Eb7aC2804d4A33173c2",
             "0x4086eBf75233e8492F1BCDa41C7f2A8288c2fB92"
         ],
-        "0x47F99Bf24C7f91Bc93bF3b7f0b3D65eef1583dF6": [
+        "0xcaB28480ab5c1E133e9B7FC67E030B8DCC2A1d24": [
             "0x1305F6B6Df9Dc47159D12Eb7aC2804d4A33173c2",
-            "0x27e1e4E6BC79D93032abef01025811B7E4727e85"
+            "0x3aD736904E9e65189c3000c7DD2c8AC8bB7cD4e3"
         ],
-        "0x65D0186ac944714a56822B855E7F803eC709a105": [
-            "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
-            "0x27e1e4E6BC79D93032abef01025811B7E4727e85"
-        ],
-        "0xFBF91D299db56624f46F544dc1DCD0d0da2e3327": [
-            "0xCAa7349CEA390F89641fe306D93591f87595dc1F",
-            "0x263026E7e53DBFDce5ae55Ade22493f828922965"
-        ]
     },
     "ricochet-exchange-addresses": [
         "0xBe79a6fd39a8E8b0ff7E1af1Ea6E264699680584",
@@ -63,6 +76,7 @@
         "maker": 5,
         "matic-network": 6,
         "richochet": 77,
-        "wrapped-bitcoin": 60
+        "wrapped-bitcoin": 60,
+        "usd-coin": 78
     }
 }
