@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -x
 # the directory containing the script file
 dir="$(cd "$(dirname "$0")"; pwd)"
 cd "$dir"

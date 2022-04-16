@@ -57,20 +57,20 @@ you can customize schedule values by editing .vars.tmpl file
 ```
 keeper_repository = ""                  # repository used for deployement
 keeper_repository_branch = ""           # branch to deploy - defaults to master
-key1 = ""                               # address1 key
-key2 = ""                               # address2 key
-key3 = ""                               # address3 key
-key4 = ""                               # address4 key
-key5 = ""                               # address5 key
-key6 = ""                               # address6 key
-key7 = ""                               # address7 key
-address1 = ""                           # address1
-address2 = ""                           # address2
-address3 = ""                           # address3
-address4 = ""                           # address4
-address5 = ""                           # address5
-address6 = ""                           # address6
-address7 = ""                           # address7
+SWAPPER_ADDRESS_KEY = ""                # SWAPPER_ADDRESS key
+CLOSER_ADDRESS_KEY = ""                 # CLOSER_ADDRESS key
+DISTRIBUTOR_ADDRESS_KEY = ""            # DISTRIBUTOR_ADDRESS key
+DISTRIBUTOR_V2_ADDRESS_KEY = ""         # DISTRIBUTOR_V2_ADDRESS key
+REPORTER_ADDRESS_KEY = ""               # HARVESTER_ADDRESS key
+REPORTER_ADDRESS_KEY = ""               # REPORTER_ADDRESS key
+REX_BANK_KEEPER_ADDRESS_KEY = ""        # REX_BANK_KEEPER_ADDRESS key
+SWAPPER_ADDRESS = ""                    # SWAPPER_ADDRESS
+CLOSER_ADDRESS = ""                     # CLOSER_ADDRESS
+DISTRIBUTOR_ADDRESS = ""                # DISTRIBUTOR_ADDRESS
+DISTRIBUTOR_V2_ADDRESS = ""             # DISTRIBUTOR_V2_ADDRESS
+HARVESTER_ADDRESS = ""                  # HARVESTER_ADDRESS
+REPORTER_ADDRESS = ""                   # REPORTER_ADDRESS
+REX_BANK_KEEPER_ADDRESS = ""            # REX_BANK_KEEPER_ADDRESS
 gateway_uri = ""                        # infura or quicknode gateway uri
 gateway_wss = ""                        # infura or quicknode gateway wss
 airflow_password = ""                   # Airflow password
@@ -83,7 +83,6 @@ egress_cidr_blocks = ""                 # egress cidr_block list - defaults to [
 ingress_cidr_blocks_ssh = ""            # ssh ingress cidr_block list - defaults to ["0.0.0.0/0"] 
 ingress_cidr_blocks_web = ""            # web ingress cidr_block list - defaults to ["0.0.0.0/0"] 
 ingress_cidr_blocks_keeper = ""         # keeper ingress cidr_block list - defaults to ["0.0.0.0/0"] 
-ingress_cidr_blocks_monitoring = ""     # monitoring ingress cidr_block list - defaults to ["0.0.0.0/0"] 
 ```
 
 Move to terraform directory and initialize terraform
@@ -91,7 +90,7 @@ Move to terraform directory and initialize terraform
 cd terraform && terraform init
 ```
 
-Deploy keeper using terraform. 
+Deploy keeper using the command down below. 
 Once the deployment finished you can connect to the outputted ip address
 ```
 terraform apply

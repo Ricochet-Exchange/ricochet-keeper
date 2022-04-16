@@ -1,9 +1,6 @@
 ---
 version: '3'
 
-networks:
-  monitoring:
-
 volumes:
   postgres-db-volume:
 
@@ -259,29 +256,3 @@ services:
     restart: always
     depends_on:
       - airflow-webserver
-
-### Monitoring ###
-  statsd_exporter:
-    image: prom/statsd-exporter:v0.18.0
-    container_name: statsd_exporter
-    restart: always
-    volumes:
-      - ./statsd/statsd_mapping.yml:/tmp/statsd_mapping.yml
-    ports:
-      - "9102:9102"
-      - "9125:9125/udp"
-    command: --statsd.mapping-config=/tmp/statsd_mapping.yml
-    networks:
-      - monitoring
-
-  promtail:
-    image: grafana/promtail:latest
-    container_name: promtail
-    ports:
-      - "9080:9080"
-    volumes:
-      - ./logs/:/var/log
-      - ./promtail:/etc/promtail-config/
-    command: -config.file=/etc/promtail-config/promtail.yml
-    networks:
-      - monitoring

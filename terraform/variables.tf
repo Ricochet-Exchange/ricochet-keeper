@@ -21,72 +21,72 @@ variable "keeper_repository_branch" {
   default   = "main"
 }
 
-variable "address1" {
+variable "SWAPPER_ADDRESS" {
   type      = string
   sensitive = true
 }
 
-variable "key1" {
+variable "SWAPPER_ADDRESS_KEY" {
   type      = string
   sensitive = true
 }
 
-variable "address2" {
+variable "CLOSER_ADDRESS" {
   type      = string
   sensitive = true
 }
 
-variable "key2" {
+variable "CLOSER_ADDRESS_KEY" {
   type      = string
   sensitive = true
 }
 
-variable "address3" {
+variable "DISTRIBUTOR_ADDRESS" {
   type      = string
   sensitive = true
 }
 
-variable "key3" {
+variable "DISTRIBUTOR_ADDRESS_KEY" {
   type      = string
   sensitive = true
 }
 
-variable "address4" {
+variable "DISTRIBUTOR_V2_ADDRESS" {
   type      = string
   sensitive = true
 }
 
-variable "key4" {
+variable "DISTRIBUTOR_V2_ADDRESS_KEY" {
   type      = string
   sensitive = true
 }
 
-variable "address5" {
+variable "HARVESTER_ADDRESS" {
   type      = string
   sensitive = true
 }
 
-variable "key5" {
+variable "HARVESTER_ADDRESS_KEY" {
   type      = string
   sensitive = true
 }
 
-variable "address6" {
+variable "REPORTER_ADDRESS" {
   type      = string
   sensitive = true
 }
 
-variable "key6" {
+variable "REPORTER_ADDRESS_KEY" {
   type      = string
   sensitive = true
 }
 
-variable "address7" {
+variable "REX_BANK_KEEPER_ADDRESS" {
   type      = string
   sensitive = true
 }
 
-variable "key7" {
+variable "REX_BANK_KEEPER_ADDRESS_KEY" {
   type      = string
   sensitive = true
 }
@@ -130,11 +130,6 @@ variable "ingress_cidr_blocks_web" {
 }
 
 variable "ingress_cidr_blocks_keeper" {
-  type = list
-  default = ["0.0.0.0/0"]
-}
-
-variable "ingress_cidr_blocks_monitoring" {
   type = list
   default = ["0.0.0.0/0"]
 }

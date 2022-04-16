@@ -24,20 +24,20 @@ echo "clone project and variables substitution"
 sudo -u ubuntu git clone --branch ${keeper_repository_branch} ${keeper_repository} $DIRECTORY
 cd $DIRECTORY
 cp templates/.vars.tmpl .vars
-export key1=${key1}
-export address1=${address1}
-export key2=${key2}
-export address2=${address2}
-export key3=${key3}
-export address3=${address3}
-export key4=${key4}
-export address4=${address4}
-export key5=${key5}
-export address5=${address5}
-export key6=${key6}
-export address6=${address6}
-export key7=${key7}
-export address7=${address7}
+export SWAPPER_ADDRESS_KEY=${SWAPPER_ADDRESS_KEY}
+export SWAPPER_ADDRESS=${SWAPPER_ADDRESS}
+export CLOSER_ADDRESS_KEY=${CLOSER_ADDRESS_KEY}
+export CLOSER_ADDRESS=${CLOSER_ADDRESS}
+export DISTRIBUTOR_ADDRESS_KEY=${DISTRIBUTOR_ADDRESS_KEY}
+export DISTRIBUTOR_ADDRESS=${DISTRIBUTOR_ADDRESS}
+export DISTRIBUTOR_V2_ADDRESS_KEY=${DISTRIBUTOR_V2_ADDRESS_KEY}
+export DISTRIBUTOR_V2_ADDRESS=${DISTRIBUTOR_V2_ADDRESS}
+export HARVESTER_ADDRESS_KEY=${HARVESTER_ADDRESS_KEY}
+export HARVESTER_ADDRESS=${HARVESTER_ADDRESS}
+export REPORTER_ADDRESS_KEY=${REPORTER_ADDRESS_KEY}
+export REPORTER_ADDRESS=${REPORTER_ADDRESS}
+export REX_BANK_KEEPER_ADDRESS_KEY=${REX_BANK_KEEPER_ADDRESS_KEY}
+export REX_BANK_KEEPER_ADDRESS=${REX_BANK_KEEPER_ADDRESS}
 export airflow_password=${airflow_password}
 export postgres_password=${postgres_password}
 export gateway_uri=${gateway_uri}

@@ -36,7 +36,7 @@
 # Use the same builder frontend version for everyone
 # syntax=docker/dockerfile:1.3
 ARG AIRFLOW_VERSION="2.2.3"
-ARG AIRFLOW_EXTRAS="async,celery,cncf.kubernetes,dask,docker,grpc,hashicorp,http,mysql,odbc,postgres,redis,sendgrid,sftp,ssh,statsd,virtualenv"
+ARG AIRFLOW_EXTRAS="async,celery,dask,docker,grpc,http,mysql,odbc,postgres,redis,sendgrid,sftp,ssh,statsd,virtualenv"
 ARG ADDITIONAL_AIRFLOW_EXTRAS=""
 ARG ADDITIONAL_PYTHON_DEPS=""
 
