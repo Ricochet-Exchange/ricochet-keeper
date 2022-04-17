@@ -5,6 +5,7 @@
     "watch-schedule-interval":  "$WATCH_SCHEDULE_INTERVAL",
     "tellor-schedule-interval": "$TELLOR_SCHEDULE_INTERVAL",
     "swap-schedule-interval": "$SWAP_SCHEDULE_INTERVAL",
+    "distributor-v2-schedule-interval": "$DISTRIBUTOR_V2_SCHEDULE_INTERVAL",
     "block-poll-schedule-interval": "$BLOCK_POLL_SCHEDULE_INTERVAL",
     "close-schedule-interval": "$CLOSE_SCHEDULE_INTERVAL",
     "max-gas-price": "33",
