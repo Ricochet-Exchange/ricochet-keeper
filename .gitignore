@@ -9,6 +9,7 @@ variables
 docker-compose.yml
 terraform/.terraform.lock.hcl
 terraform/.terraform
+templates/.vars.tmpl
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
 terraform/terraform.tfvars

@@ -24,7 +24,7 @@
     "description": "$DISTRIBUTOR_V2_ADDRESS",
     "host": "",
     "login": "$DISTRIBUTOR_V2_ADDRESS",
-    "password": "$DISTRIBUTOR_V2_ADDRESS",
+    "password": "$DISTRIBUTOR_V2_ADDRESS_KEY",
     "schema": "",
     "port": null,
     "extra": ""
