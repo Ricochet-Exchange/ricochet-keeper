@@ -15,7 +15,7 @@ from blocksec_plugin.ricochet_keeper_funds_operator import KeeperFundsReporterOp
 
 # eg - {"@shreyaspapi": "0x6e509201e340cd24c35f235802ee1de044b0f16f"}
 KEEPER_ADDRESSES = Variable.get("keeper-addresses", deserialize_json=True)
-SCHEDULE_INTERVAL = Variable.get("keeper-funds-dag-interval", "15 * * * *")
+SCHEDULE_INTERVAL = Variable.get("keeper-funds-dag-interval", "0 0 * * *")
 DISCORD_WEBHOOK = Variable.get("discord-webhook-keeper-funds")
 
 default_args = {
