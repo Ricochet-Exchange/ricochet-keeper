@@ -1,7 +1,7 @@
 from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
 import requests, json
-import web3
+from blocksec_plugin.web3_hook import Web3Hook
 
 class KeeperFundsReporterOperator(BaseOperator):
     """
@@ -28,10 +28,11 @@ class KeeperFundsReporterOperator(BaseOperator):
         Check the matic of the each keeper and report to discord
         """
         low_balance_keepers = []
+        web3 = Web3Hook(web3_conn_id='infura').http_client
         for username, address in self.keepers.items():
             balance = web3.eth.get_balance(address)
             if balance < self.threshold:
-                low_balance_keepers.append("@" + username)
+                low_balance_keepers.append(f"@{username}: {address}")
         
         if len(low_balance_keepers) > 0:
             message = f"The following keepers have balance lower then {self.threshold}: " + ", ".join(low_balance_keepers)
