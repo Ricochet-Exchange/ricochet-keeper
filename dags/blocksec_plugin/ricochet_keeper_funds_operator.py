@@ -29,6 +29,9 @@ class KeeperFundsReporterOperator(BaseOperator):
         """
         low_balance_keepers = []
         web3 = Web3Hook(web3_conn_id='infura').http_client
+
+        print(f"Checking for keepers - {self.keepers.values()}")
+
         for username, address in self.keepers.items():
             balance = web3.eth.get_balance(address)
             if balance < self.threshold:
