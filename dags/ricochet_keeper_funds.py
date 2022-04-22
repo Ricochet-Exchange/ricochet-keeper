@@ -17,6 +17,7 @@ from blocksec_plugin.ricochet_keeper_funds_operator import KeeperFundsReporterOp
 KEEPER_ADDRESSES = Variable.get("keeper-addresses", deserialize_json=True)
 SCHEDULE_INTERVAL = Variable.get("keeper-funds-dag-interval", "0 0 * * *")
 DISCORD_WEBHOOK = Variable.get("discord-webhook-keeper-funds")
+KEEPER_FUNDS_THRESHOLD = Variable.get("keeper-funds-threshold", PriceConstants.KEEPER_FUNDS_THRESHOLD)
 
 default_args = {
     "owner": "ricochet",
@@ -47,7 +48,7 @@ keeper_reporter = KeeperFundsReporterOperator(
     task_id='keeper_reporter',
     discord_webhook=DISCORD_WEBHOOK,
     keepers=KEEPER_ADDRESSES,
-    threshold=PriceConstants.KEEPER_FUNDS_THRESHOLD,
+    threshold=KEEPER_FUNDS_THRESHOLD,
     dag=dag
 )
 

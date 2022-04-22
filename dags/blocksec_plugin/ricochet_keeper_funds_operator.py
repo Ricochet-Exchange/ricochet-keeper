@@ -19,7 +19,7 @@ class KeeperFundsReporterOperator(BaseOperator):
                  **kwargs):
         super().__init__(*args, **kwargs)
         self.discord_webhook = discord_webhook
-        self.threshold = threshold
+        self.threshold = Int(threshold)
         self.keepers = keepers
 
 
