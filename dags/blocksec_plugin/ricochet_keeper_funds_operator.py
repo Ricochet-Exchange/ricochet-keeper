@@ -36,6 +36,7 @@ class KeeperFundsReporterOperator(BaseOperator):
         
         if len(low_balance_keepers) > 0:
             message = f"The following keepers have balance lower then {self.threshold}: " + ", ".join(low_balance_keepers)
-            requests.post(self.discord_webhook, data=json.dumps({'content': message}))
+            request = requests.post(self.discord_webhook, json={"content": message})
+            print(request.status_code, request.text)
 
         return
