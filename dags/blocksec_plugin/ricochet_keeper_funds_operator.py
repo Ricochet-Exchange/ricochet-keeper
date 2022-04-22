@@ -20,6 +20,7 @@ class KeeperFundsReporterOperator(BaseOperator):
         super().__init__(*args, **kwargs)
         self.discord_webhook = discord_webhook
         self.threshold = threshold
+        self.keepers = keepers
 
 
     def execute(self, context):
@@ -27,7 +28,7 @@ class KeeperFundsReporterOperator(BaseOperator):
         Check the matic of the each keeper and report to discord
         """
         low_balance_keepers = []
-        for username, address in keepers.items():
+        for username, address in self.keepers.items():
             balance = web3.eth.get_balance(address)
             if balance < self.threshold:
                 low_balance_keepers.append("@" + username)
