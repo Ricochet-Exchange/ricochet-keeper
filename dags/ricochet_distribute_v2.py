@@ -66,7 +66,6 @@ done = BashOperator(
 for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
 
     # Update input price
-    current_nonce += 1
     update_a = RicochetUpdatePriceOperator(
         task_id="update_a_" + exchange_address,
         web3_conn_id="infura",
