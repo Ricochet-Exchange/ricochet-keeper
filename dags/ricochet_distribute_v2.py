@@ -77,7 +77,6 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
         nonce=current_nonce,
         dag=dag
     )
-    current_nonce += 1
 
     update_b = RicochetUpdatePriceOperator(
         task_id="update_b_" + exchange_address,
@@ -87,10 +86,9 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
         gas=3000000,
         contract_address=exchange_address,
         token_address=tokens[1],
-        nonce=current_nonce,
+        nonce=current_nonce + len(V2_EXCHANGE_ADDRESSES),
         dag=dag
     )
-    current_nonce += 1
 
     distribute = RicochetDistributeOperator(
         task_id="distribute_" + exchange_address,
@@ -99,7 +97,7 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
         gas_multiplier=GAS_MULTIPLIER,
         gas=3000000,
         contract_address=exchange_address,
-        nonce=current_nonce,
+        nonce=current_nonce + 2 * len(V2_EXCHANGE_ADDRESSES),
         dag=dag
     )
     current_nonce += 1
