@@ -7,7 +7,7 @@ class RicochetStreamerCloseOperator(ContractInteractionOperator):
     """
     Closes a streamers stream using `closeStream`
     """
-    template_fields = ['streamer_address', 'exchange_address', 'nonce']
+    template_fields = ['streamer_address', 'contract_address']
     ui_color = "#ADF5FF"
 
     @apply_defaults
@@ -22,7 +22,7 @@ class RicochetStreamerCloseOperator(ContractInteractionOperator):
     def execute(self, context):
 
         self.streamer_address = streamer_address
-        self.exchange_address = exhange_address
+        self.exchange_address = contract_address
         self.function = self.contract.functions.closeStream
         self.function_args = {"streamer": self.streamer_address}
         return super().execute(context)
