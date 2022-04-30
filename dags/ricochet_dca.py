@@ -2,7 +2,7 @@
 
 Example Swap Operation
 - Swap RIC for MATIC
-
+- Note - Make sure to give unlimited approval to 0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506.
 """
 from airflow import DAG
 from airflow.models import Variable
