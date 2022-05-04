@@ -104,4 +104,3 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
 
 
     done << distribute << update_a << update_b
-
