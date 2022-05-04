@@ -1,79 +1,97 @@
 # Ricochet Keeper
 This repository contains [Apache Airflow DAGs](https://airflow.apache.org/docs/apache-airflow/stable/concepts/dags.html) for executing keeper operations for Ricochet Exchange.
 
-# Usage
-You will need to run this using Docker and Docker Compose.
+# Prepare your keeper install
+Generate the .vars using the command down below and customize it with your adresses and private keys.
+You can use a BIP39 tool generator to generate some adresses.
+Adjust schedule variables according to other keepers values.
 ```
-docker-compose up
+./make.sh init
+
 ```
 :information_source: This will take a while the first time you do it
-:warning: You may need to increase your Docker memory to > 4GB, default is 2GB
+:warning: To secure your install you must use different values for each variable in .vars (fernet key is automatically generated) 
 
 # Setup
-After starting up Airflow, navigate to `Admin > Connections` and setup the following:
-* A `HTTP` connection called `infura` with the connection's `Extra` as:
+After setting up all the variables in .vars 
+executing the command down below will prepare all needed files and initialize the database
 ```
-{
-"http_endpoint_uri": "YOUR_INFURA_HTTP_URI",
-"wss_endpoint_uri": "YOUR_INFURA_WSS_URI"
-}
+./make.sh setup
+
 ```
-
-* Navigate to `Admin > Variables` and add the following:
-  * `distributor-address` - the address used for executing `distribute` transactions
-  * `harvester-address` - the address used for executing `harvest` transactions
-  * `reporter-address` - the address used for reporting to Tellor
-  * `closer-address` - the address used for closing streams
-  * `ricochet-exchange-addresses` - add these addresses to value field:
-  ```
-
-
-  [ "0xBe79a6fd39a8E8b0ff7E1af1Ea6E264699680584", "0xeb367F6a0DDd531666D778BC096d212a235a6f78", "0x5786D3754443C0D3D1DdEA5bB550ccc476FdF11D", "0xe0A0ec8dee2f73943A6b731a2e11484916f45D44", "0x8082Ab2f4E220dAd92689F3682F3e7a42b206B42", "0x3941e2E89f7047E0AC7B9CcE18fBe90927a32100", "0x71f649EB05AA48cF8d92328D1C486B7d9fDbfF6b", "0x47de4Fd666373Ca4A793e2E0e7F995Ea7D3c9A29", "0x94e5b18309066dd1E5aE97628afC9d4d7EB58161", "0xdc19ed26aD3a544e729B72B50b518a231cBAD9Ab", "0xC89583Fa7B84d81FE54c1339ce3fEb10De8B4C96", "0x9BEf427fa1fF5269b824eeD9415F7622b81244f5", "0x0A70Fbb45bc8c70fb94d8678b92686Bb69dEA3c3", "0x93D2d0812C9856141B080e9Ef6E97c7A7b342d7F", "0xE093D8A4269CE5C91cD9389A0646bAdAB2c8D9A3", "0xA152715dF800dB5926598917A6eF3702308bcB7e", "0x250efbB94De68dD165bD6c98e804E08153Eb91c6", "0x98d463A3F29F259E67176482eB15107F364c7E18" ]
-
-  ```
-  * `ricochet-lp-addresses` - the addresses of markets with `harvest` methods
-  ```
-  [ "0x0cb9cd99dbC614d9a0B31c9014185DfbBe392eb5"]
-  ```
-  * `tellor-assets` - the mapping of Coingecko token names and their Tellor request ID
-  ```
-  {
-    "ethereum": 1,
-    "wrapped-bitcoin": 60,
-    "maker": 5,
-    "matic-network": 6,
-    "idle": 79,
-    "richochet": 77
-  }
-  ```
-  :warning: `richochet` is not a typo, that's the Coingecko ID for RIC token price
-* Create an `HTTP` **for each** of the public addresses you used in the previous step:
-  * Set the name this connection as the public address
-  * Set the `Login` to the public address
-  * Set the `Password` to the private key for the public address
-
-## Optional
-* Navigate to `Admin > Variables` and add the following to change dag schedule:
-  * `distribution-schedule-interval` - Dag `distribute` (Default - `0 * * * *`)
-  * `harvester-schedule-interval` - Dag `harvester` (Default - `0 * * * *`)
-  * `watch-schedule-interval` - Watch stream dag (Default - `50 * * * *`)
-  * `tellor-schedule-interval` - Reporting to Tellor (Default - `*/5 * * * *`)
-  * `swap-schedule-interval` - Swap RIC stream to matic (Default - `0 * * * *`)
-  * `block-poll-schedule-interval` - Block poll (Default - `*/15 * * * *`)
-  * `close-schedule-interval` - Close streams (Default - `None`)
-  * `max-gas-price` - To set the max gas price (Default - `33`)
-
-# Run
-Run the keeper using Docker Compose
+# Execute keeper
+once setup step is finished run the keeper using docker compose
 ```
-echo -e "AIRFLOW_UID=$(id -u)" > .env
-docker-compose up
-```
-Airflow runs on port 80 so navigate to http://localhost to access the UI. Once things have booted up, log in with username `airflow` and password  `airflow`.
+./make.sh deploy
 
-## Run as daemon
+```
+Airflow runs on port 80 so navigate to http://localhost to access the UI. Once things have booted up, log in with username `airflow` and password  `your-airflow-password`.
+
+## Run in debug mode, usefull if the previous command exit with an error
 Use:
 ```
-echo -e "AIRFLOW_UID=$(id -u)" > .env
-docker-compose up -d
+./make.sh check
+```
+# Clean up you keeper install
+run the keeper using docker compose
+:warning: this will stop your keeper and delete everything
+
+```
+./make.sh clean
+
+```
+
+## Optional
+* If needed you can change variables or connections values from GUI
+* Navigate to `Admin > Variables`  or `ADMIN > Connctions ` and change your values
+
+# If you have a aws account, you can deploy your keeper using terraform (this is the recomended way, all firewall rules are already set up)
+
+Rename terraform template file to terraform.tfvars
+```
+cp terraform/terraform.{tmpl.tfvars,tfvars}
+```
+
+Fill  all variables contained in terraform.tfvars
+you can customize schedule values by editing .vars.tmpl file 
+```
+keeper_repository = ""                  # repository used for deployement
+keeper_repository_branch = ""           # branch to deploy - defaults to master
+SWAPPER_ADDRESS_KEY = ""                # SWAPPER_ADDRESS key
+CLOSER_ADDRESS_KEY = ""                 # CLOSER_ADDRESS key
+DISTRIBUTOR_ADDRESS_KEY = ""            # DISTRIBUTOR_ADDRESS key
+DISTRIBUTOR_V2_ADDRESS_KEY = ""         # DISTRIBUTOR_V2_ADDRESS key
+REPORTER_ADDRESS_KEY = ""               # HARVESTER_ADDRESS key
+REPORTER_ADDRESS_KEY = ""               # REPORTER_ADDRESS key
+REX_BANK_KEEPER_ADDRESS_KEY = ""        # REX_BANK_KEEPER_ADDRESS key
+SWAPPER_ADDRESS = ""                    # SWAPPER_ADDRESS
+CLOSER_ADDRESS = ""                     # CLOSER_ADDRESS
+DISTRIBUTOR_ADDRESS = ""                # DISTRIBUTOR_ADDRESS
+DISTRIBUTOR_V2_ADDRESS = ""             # DISTRIBUTOR_V2_ADDRESS
+HARVESTER_ADDRESS = ""                  # HARVESTER_ADDRESS
+REPORTER_ADDRESS = ""                   # REPORTER_ADDRESS
+REX_BANK_KEEPER_ADDRESS = ""            # REX_BANK_KEEPER_ADDRESS
+gateway_uri = ""                        # infura or quicknode gateway uri
+gateway_wss = ""                        # infura or quicknode gateway wss
+airflow_password = ""                   # Airflow password
+postgres_password = ""                  # Postgresql password
+aws_public_key = ""                     # ssh public key to connect to EC2 instance
+aws_access_key= ""                      # aws credentials
+aws_secret_key= ""                      # aws credentials
+aws_region= ""                          # aws region
+egress_cidr_blocks = ""                 # egress cidr_block list - defaults to ["0.0.0.0/0"]
+ingress_cidr_blocks_ssh = ""            # ssh ingress cidr_block list - defaults to ["0.0.0.0/0"] 
+ingress_cidr_blocks_web = ""            # web ingress cidr_block list - defaults to ["0.0.0.0/0"] 
+ingress_cidr_blocks_keeper = ""         # keeper ingress cidr_block list - defaults to ["0.0.0.0/0"] 
+```
+
+Move to terraform directory and initialize terraform
+```
+cd terraform && terraform init
+```
+
+Deploy keeper using the command down below. 
+Once the deployment finished you can connect to the outputted ip address
+```
+terraform apply
 ```

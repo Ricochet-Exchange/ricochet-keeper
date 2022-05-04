@@ -93,7 +93,7 @@ def review_streamers_and_trigger_closures(**context):
             try:
                 conf = {
                     "streamer_address": Web3.toChecksumAddress(streamer),
-                    "exchange_address": exchange_address,
+                    "exchange_address": Web3.toChecksumAddress(exchange_address),
                     "nonce": current_nonce + index
                 }
             except ValueError:

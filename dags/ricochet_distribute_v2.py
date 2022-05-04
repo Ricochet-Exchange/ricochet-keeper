@@ -1,12 +1,9 @@
 """
 Ricochet Distributor V2 Workflow
-
 - Every 1 hour, for each exchange trigger:
     - Update oracle prices
     - Distribute
-
 * Hard coded for just the USDC>>RIC v2 market right now
-
 """
 from airflow import DAG
 from airflow.models import Variable
@@ -23,7 +20,6 @@ from blocksec_plugin.ricochet_update_price_operator import RicochetUpdatePriceOp
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-v2-address")
 """
 V2_EXCHANGE_ADDRESSES example:
-
 {
     exchange_address: [tokenA_address, tokenB_address],
     "0x58Db2937B08713214014d2a579C3088db826Fad1": ["0xCAa7349CEA390F89641fe306D93591f87595dc1F","0x263026E7e53DBFDce5ae55Ade22493f828922965"],

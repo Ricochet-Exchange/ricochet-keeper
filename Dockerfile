@@ -36,7 +36,7 @@
 # Use the same builder frontend version for everyone
 # syntax=docker/dockerfile:1.3
 ARG AIRFLOW_VERSION="2.2.3"
-ARG AIRFLOW_EXTRAS="amazon,async,celery,cncf.kubernetes,dask,docker,elasticsearch,ftp,google,google_auth,grpc,hashicorp,http,ldap,microsoft.azure,mysql,odbc,pandas,postgres,redis,sendgrid,sftp,slack,ssh,statsd,virtualenv"
+ARG AIRFLOW_EXTRAS="async,celery,dask,docker,grpc,http,odbc,postgres,redis,sendgrid,sftp,ssh,statsd,virtualenv"
 ARG ADDITIONAL_AIRFLOW_EXTRAS=""
 ARG ADDITIONAL_PYTHON_DEPS=""
 
@@ -46,7 +46,7 @@ ARG AIRFLOW_USER_HOME_DIR=/home/airflow
 
 ARG PYTHON_BASE_IMAGE="python:3.7-slim-buster"
 
-ARG AIRFLOW_PIP_VERSION=21.3.1
+ARG AIRFLOW_PIP_VERSION=22.0.3
 ARG AIRFLOW_IMAGE_REPOSITORY="https://github.com/apache/airflow"
 ARG AIRFLOW_IMAGE_README_URL="https://raw.githubusercontent.com/apache/airflow/main/docs/docker-stack/README.md"
 
