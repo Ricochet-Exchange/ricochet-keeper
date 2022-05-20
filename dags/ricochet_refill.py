@@ -19,29 +19,19 @@ from blocksec_plugin.supertoken_downgrade_operator import SuperTokenDowngradeOpe
 from blocksec_plugin.rex_bank_borrow import RexBankBorrowOperator
 from blocksec_plugin.rex_bank_deposit import RexBankDepositOperator
 from blocksec_plugin.erc20_balanceof_operator import ERC20BalanceOfOperator
-from constants.constants import PriceConstants
+from constants.constants import AddressConstants, PriceConstants, ScheduleConstants, Utils
 
 REX_BANK_ADDRESS = Variable.get("rex-bank-address")
 SWAPPER_WALLET_ADDRESS = Variable.get("distributor-address")
-SCHEDULE_INTERVAL = Variable.get("refill-schedule-interval", "0 * * * *")
-ROUTER_ADDRESS = Variable.get("router-address", "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506") # SushiSwap
-RIC_TOKEN_ADDRESS = Variable.get("ric-token-address","0x263026E7e53DBFDce5ae55Ade22493f828922965")
-USDCX_TOKEN_ADDRESS = Variable.get("usdcx-token-address","0xCAa7349CEA390F89641fe306D93591f87595dc1F")
-USDC_TOKEN_ADDRESS = Variable.get("usdc-token-address","0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174")
-MATIC_TOKEN_ADDRESS = Variable.get("matic-token-address","0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270")
+SCHEDULE_INTERVAL = Variable.get("refill-schedule-interval", ScheduleConstants.RICOCHET_REFILL)
+ROUTER_ADDRESS = Variable.get("router-address", AddressConstants.SUSHI_V2_ROUTER_02) # SushiSwap
+RIC_TOKEN_ADDRESS = Variable.get("ric-token-address", AddressConstants.RIC_TOKEN)
+USDCX_TOKEN_ADDRESS = Variable.get("usdcx-token-address", AddressConstants.USDCx_TOKEN)
+USDC_TOKEN_ADDRESS = Variable.get("usdc-token-address", AddressConstants.USDC_TOKEN)
+MATIC_TOKEN_ADDRESS = Variable.get("matic-token-address", AddressConstants.WMATIC_TOKEN)
 MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
-default_args = {
-    "owner": "ricochet",
-    "depends_on_past": False,
-    "start_date": datetime(2020, 3, 29),
-    "email": ["mike@mikeghen.com"],
-    "email_on_failure": True,
-    "email_on_retry": False,
-    "retries": 0,
-    "retry_delay": timedelta(minutes=1)
-}
-
+default_args = Utils.get_DAG_args()
 
 dag = DAG("ricochet_refill",
           max_active_runs=1,
@@ -74,8 +64,8 @@ approve_deposit = ERC20ApprovalOperator(
     task_id="approve_deposit",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
-    gas_multiplier=1.1,
-    gas=3000000,
+    gas_multiplier=PriceConstants.GAS_MULTIPLIER_DEFAULT,
+    gas=PriceConstants.GAS_DEFAULT,
     max_gas_price=MAX_GAS_PRICE,
     contract_address=RIC_TOKEN_ADDRESS,
     spender=REX_BANK_ADDRESS,
@@ -97,8 +87,8 @@ deposit = RexBankDepositOperator(
     task_id="deposit",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
-    gas_multiplier=1.1,
-    gas=3000000,
+    gas_multiplier=PriceConstants.GAS_MULTIPLIER_DEFAULT,
+    gas=PriceConstants.GAS_DEFAULT,
     max_gas_price=MAX_GAS_PRICE,
     contract_address=REX_BANK_ADDRESS,
     amount="{{task_instance.xcom_pull(task_ids='balance')}}",
@@ -119,8 +109,8 @@ borrow = RexBankBorrowOperator(
     task_id="borrow",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
-    gas_multiplier=1.1,
-    gas=3000000,
+    gas_multiplier=PriceConstants.GAS_MULTIPLIER_DEFAULT,
+    gas=PriceConstants.GAS_DEFAULT,
     max_gas_price=MAX_GAS_PRICE,
     contract_address=REX_BANK_ADDRESS,
     amount=-1, # max borrow
@@ -142,8 +132,8 @@ downgrade = SuperTokenDowngradeOperator(
     task_id="downgrade",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
-    gas_multiplier=1.1,
-    gas=3000000,
+    gas_multiplier=PriceConstants.GAS_MULTIPLIER_DEFAULT,
+    gas=PriceConstants.GAS_DEFAULT,
     max_gas_price=MAX_GAS_PRICE,
     contract_address=USDCX_TOKEN_ADDRESS,
     amount=-1, # 0.6 USDCx
@@ -164,8 +154,8 @@ approve_swap = ERC20ApprovalOperator(
     task_id="approve_swap",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
-    gas_multiplier=1.1,
-    gas=3000000,
+    gas_multiplier=PriceConstants.GAS_MULTIPLIER_DEFAULT,
+    gas=PriceConstants.GAS_DEFAULT,
     max_gas_price=MAX_GAS_PRICE,
     contract_address=USDC_TOKEN_ADDRESS,
     spender=ROUTER_ADDRESS,
@@ -188,8 +178,8 @@ swap = UniswapSwapExactTokensForETHOperator(
     task_id="swap",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
-    gas_multiplier=1.2,
-    gas=3000000,
+    gas_multiplier=PriceConstants.GAS_MULTIPLIER_SWAP,
+    gas=PriceConstants.GAS_DEFAULT,
     max_gas_price=MAX_GAS_PRICE,
     contract_address=ROUTER_ADDRESS,
     amount_in=-1,

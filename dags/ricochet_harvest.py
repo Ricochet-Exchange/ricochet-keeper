@@ -13,24 +13,15 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_harvest_operator import RicochetHarvestOperator
-from constants.constants import PriceConstants
+from constants.constants import PriceConstants, ScheduleConstants, Utils
 
 HARVESTER_WALLET_ADDRESS = Variable.get("harvester-address")
 EXCHANGE_ADDRESSES = Variable.get("ricochet-lp-addresses", deserialize_json=True)
-SCHEDULE_INTERVAL = Variable.get("harvester-schedule-interval", "0 * * * *")
-GAS_MULTIPLIER = Variable.get("harvester-gas-multiplier", 1.2)
+SCHEDULE_INTERVAL = Variable.get("harvester-schedule-interval", ScheduleConstants.RICOCHET_HARVEST)
+GAS_MULTIPLIER = Variable.get("harvester-gas-multiplier", PriceConstants.GAS_MULTIPLIER_SWAP)
 MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
-default_args = {
-    "owner": "ricochet",
-    "depends_on_past": False,
-    "start_date": datetime(2020, 3, 29),
-    "email": ["mike@mikeghen.com"],
-    "email_on_failure": True,
-    "email_on_retry": False,
-    "retries": 0,
-    "retry_delay": timedelta(minutes=1)
-}
+default_args = Utils.get_DAG_args()
 
 
 dag = DAG("ricochet_harvest",
@@ -54,7 +45,7 @@ for nonce_offset, exchange_address in enumerate(EXCHANGE_ADDRESSES):
         web3_conn_id="infura",
         ethereum_wallet=HARVESTER_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
-        gas=3000000,
+        gas=PriceConstants.GAS_DEFAULT,
         max_gas_price=MAX_GAS_PRICE,
         contract_address=exchange_address,
         nonce=current_nonce + nonce_offset,

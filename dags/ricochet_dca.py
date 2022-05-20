@@ -12,23 +12,14 @@ from airflow.operators.bash_operator import BashOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.uniswap_swap_exact_tokens_for_tokens_operator import UniswapSwapExactTokensForTokensOperator
 from blocksec_plugin.random_sleep_operator import RandomSleepOperator
-from constants.constants import PriceConstants
+from constants.constants import AddressConstants, PriceConstants, ScheduleConstants, Utils
 
 SWAPPER_WALLET_ADDRESS = Variable.get("swapper-address")
-SCHEDULE_INTERVAL = Variable.get("swap-schedule-interval", "0 * * * *")
-SWAP_AMOUNT = Variable.get("ric-dca-swap-amount", 100000000) # 100 USDC
+SCHEDULE_INTERVAL = Variable.get("swap-schedule-interval", ScheduleConstants.RICOCHET_DCA)
+SWAP_AMOUNT = Variable.get("ric-dca-swap-amount", PriceConstants.RIC_DCA_SWAP_AMOUNT) # 100 USDC
 MAX_GAS_PRICE = Variable.get("max-gas-price", PriceConstants.MAX_GAS_PRICE_DEFAULT)
 
-default_args = {
-    "owner": "ricochet",
-    "depends_on_past": False,
-    "start_date": datetime(2020, 3, 29),
-    "email": ["mike@mikeghen.com"],
-    "email_on_failure": True,
-    "email_on_retry": False,
-    "retries": 0,
-    "retry_delay": timedelta(minutes=1)
-}
+default_args = Utils.get_DAG_args()
 
 
 dag = DAG("ricochet_dca",
@@ -57,14 +48,14 @@ swap = UniswapSwapExactTokensForTokensOperator(
     task_id="swap",
     web3_conn_id="infura",
     ethereum_wallet=SWAPPER_WALLET_ADDRESS,
-    gas_multiplier=1.2,
-    gas=3000000,
+    gas_multiplier=PriceConstants.GAS_MULTIPLIER_SWAP,
+    gas=PriceConstants.GAS_DEFAULT,
     max_gas_price=MAX_GAS_PRICE,
-    contract_address="0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
+    contract_address=AddressConstants.SUSHI_V2_ROUTER_02,
     amount_in=SWAP_AMOUNT,
     amount_out_min=0,
     to=SWAPPER_WALLET_ADDRESS,
-    path=["0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174","0x263026E7e53DBFDce5ae55Ade22493f828922965"],
+    path=[AddressConstants.USDC_TOKEN, AddressConstants.RIC_TOKEN],
     dag=dag
 )
 

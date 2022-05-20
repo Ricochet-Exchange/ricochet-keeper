@@ -15,7 +15,7 @@ from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTra
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_distributeV2_operator import RicochetDistributeOperator
 from blocksec_plugin.ricochet_update_price_operator import RicochetUpdatePriceOperator
-
+from constants.constants import AddressConstants, PriceConstants, ScheduleConstants, Utils
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-v2-address")
 """
@@ -27,21 +27,12 @@ V2_EXCHANGE_ADDRESSES example:
 }
 """
 V2_EXCHANGE_ADDRESSES = Variable.get("rexmarket-v2-addresses", deserialize_json=True)
-SCHEDULE_INTERVAL = Variable.get("distribution-v2-schedule-interval", "0 * * * *")
-GAS_MULTIPLIER = float(Variable.get("distribution-v2-gas-multiplier", 1.1))
-USDCX_ADDRESS = "0xCAa7349CEA390F89641fe306D93591f87595dc1F"
-RIC_ADDRESS = "0x263026E7e53DBFDce5ae55Ade22493f828922965"
+SCHEDULE_INTERVAL = Variable.get("distribution-v2-schedule-interval", ScheduleConstants.RICOCHET_DISTRIBUTE_V2)
+GAS_MULTIPLIER = float(Variable.get("distribution-v2-gas-multiplier", PriceConstants.GAS_MULTIPLIER_DEFAULT))
+USDCX_ADDRESS = AddressConstants.USDCx_TOKEN
+RIC_ADDRESS = AddressConstants.RIC_TOKEN
 
-default_args = {
-    "owner": "ricochet",
-    "depends_on_past": False,
-    "start_date": datetime(2020, 1, 17),
-    "email": ["mike@mikeghen.com"],
-    "email_on_failure": True,
-    "email_on_retry": False,
-    "retries": 1,
-    "retry_delay": timedelta(minutes=5)
-}
+default_args = Utils.get_DAG_args(start_date=datetime(2020, 1, 17), retries=1, retry_delay=timedelta(minutes=5))
 
 
 dag = DAG("ricochet_distribute_v2",
@@ -67,7 +58,7 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
-        gas=3000000,
+        gas=PriceConstants.GAS_DEFAULT,
         contract_address=exchange_address,
         token_address=tokens[0],
         nonce=current_nonce,
@@ -79,7 +70,7 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
-        gas=3000000,
+        gas=PriceConstants.GAS_DEFAULT,
         contract_address=exchange_address,
         token_address=tokens[1],
         nonce=current_nonce + len(V2_EXCHANGE_ADDRESSES),
@@ -91,7 +82,7 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
-        gas=3000000,
+        gas=PriceConstants.GAS_DEFAULT,
         contract_address=exchange_address,
         nonce=current_nonce + 2 * len(V2_EXCHANGE_ADDRESSES),
         dag=dag
