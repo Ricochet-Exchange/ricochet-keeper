@@ -14,7 +14,7 @@ from airflow.operators.python_operator import PythonOperator
 from blocksec_plugin.ethereum_transaction_confirmation_sensor import EthereumTransactionConfirmationSensor
 from blocksec_plugin.tellor_oracle_operator import TellorOracleOperator
 from blocksec_plugin.ricochet_distributeV2_operator import RicochetDistributeOperator
-from blocksec_plugin.ricochet_update_price_operator import RicochetUpdatePriceOperator
+from blocksec_plugin.ricochet_update_prices_operator import RicochetUpdatePricesOperator
 from constants.constants import AddressConstants, PriceConstants, ScheduleConstants, Utils
 
 DISTRIBUTOR_WALLET_ADDRESS = Variable.get("distributor-v2-address")
@@ -53,27 +53,14 @@ done = BashOperator(
 for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
 
     # Update input price
-    update_a = RicochetUpdatePriceOperator(
-        task_id="update_a_" + exchange_address,
+    update_prices = RicochetUpdatePricesOperator(
+        task_id="update_prices_" + exchange_address,
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
         gas=PriceConstants.GAS_DEFAULT,
         contract_address=exchange_address,
-        token_address=tokens[0],
         nonce=current_nonce,
-        dag=dag
-    )
-
-    update_b = RicochetUpdatePriceOperator(
-        task_id="update_b_" + exchange_address,
-        web3_conn_id="infura",
-        ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
-        gas_multiplier=GAS_MULTIPLIER,
-        gas=PriceConstants.GAS_DEFAULT,
-        contract_address=exchange_address,
-        token_address=tokens[1],
-        nonce=current_nonce + len(V2_EXCHANGE_ADDRESSES),
         dag=dag
     )
 
@@ -84,10 +71,10 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
         gas_multiplier=GAS_MULTIPLIER,
         gas=PriceConstants.GAS_DEFAULT,
         contract_address=exchange_address,
-        nonce=current_nonce + 2 * len(V2_EXCHANGE_ADDRESSES),
+        nonce=current_nonce + len(V2_EXCHANGE_ADDRESSES),
         dag=dag
     )
     current_nonce += 1
 
 
-    done << distribute << update_a << update_b
+    done << distribute << update_prices
