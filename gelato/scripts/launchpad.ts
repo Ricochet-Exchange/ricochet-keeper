@@ -5,6 +5,8 @@ import launchPadABI from "../contracts/abis/rexLaunchpad.json";
 import { getLaunchpadsByNetwork } from "../constants/launchpad";
 import { BigNumber, Contract } from "ethers/lib/ethers";
 
+// TODO: Use gelato ops to create a new task and send it to the relayer 
+
 async function main() {
   const { LAUNCHPADS, ETH, GELATO_RELAY_TRANSIT } = getLaunchpadsByNetwork(hre.network.name);
 
