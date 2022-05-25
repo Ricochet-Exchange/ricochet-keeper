@@ -38,7 +38,7 @@ async function main() {
       name: `${launchpadName} Launchpad`,
       interval: 3600, // Seconds
     });
-    console.log(`Task created, taskId: ${res.taskId} (tx hash: ${res.transactionHash})`);
+    console.log(`${launchpadAddress} task created, taskId: ${res.taskId} (tx hash: ${res.transactionHash})`);
     console.log(`> https://app.gelato.network/task/${res.taskId}?chainId=${chainId}`);
   }
 }
