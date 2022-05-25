@@ -32,3 +32,4 @@ dist
 # VS Code
 .vscode
 
+yarn.lock
