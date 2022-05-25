@@ -34,10 +34,7 @@ async function main() {
     );
 
     // Encode our function call
-    const data = launchpad.interface.encodeFunctionData("distribute", [
-      estimatedFees,
-      ETH,
-    ]);
+    const data = launchpad.interface.encodeFunctionData("distribute");
 
     // Send our tx to Gelato Relay
     console.log(`Sending launchpad tx to Gelato Relay...`);
