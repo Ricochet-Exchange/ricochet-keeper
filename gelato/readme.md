@@ -2,7 +2,7 @@
 This repository contains scripts for adding keeper tasks for Ricochet Exchange to gelato.
 
 ## Setup
-Create a .env variable file suing .env.example
+Create a .env variable file using .env.example
 ```
 ALCHEMY_ID=
 PRIVATE_KEY=
