@@ -9,6 +9,7 @@ import * as dotenv from "dotenv";
 dotenv.config({ path: __dirname + "/.env" });
 
 const ALCHEMY_ID = process.env.ALCHEMY_ID ?? "";
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 const config: HardhatUserConfig = {
   defaultNetwork: "ropsten",
@@ -17,10 +18,12 @@ const config: HardhatUserConfig = {
 
     matic: {
       chainId: 137,
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
       url: `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_ID}`,
     },
     boba: {
       chainId: 288,
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
       url: `https://mainnet.boba.network`,
     },
   },

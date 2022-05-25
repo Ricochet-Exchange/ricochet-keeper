@@ -1,53 +1,45 @@
+
 import hre from "hardhat";
-import { Interface } from "ethers/lib/utils";
-import { RelaySDK } from "@gelatonetwork/relay-sdk";
-import launchPadABI from "../contracts/abis/rexLaunchpad.json";
 import { getLaunchpadsByNetwork } from "../constants/launchpad";
-import { BigNumber, Contract } from "ethers/lib/ethers";
+import { GelatoOpsSDK, isGelatoOpsSupported, TaskReceipt } from "@gelatonetwork/ops-sdk";
+import { Contract } from "ethers";
+import launchPadABI from "../contracts/abis/rexLaunchpad.json";
 
 // TODO: Use gelato ops to create a new task and send it to the relayer 
 
 async function main() {
   const { LAUNCHPADS, ETH, GELATO_RELAY_TRANSIT } = getLaunchpadsByNetwork(hre.network.name);
 
-  // Verify that current network is supported by Gelato Multichain Relay
   const chainId = hre.network.config.chainId ?? 0;
-  const isChainSupported = await RelaySDK.isChainSupported(chainId);
-  if (!isChainSupported) {
-    console.log("ChainId not supported");
+  if (!isGelatoOpsSupported(chainId)) {
+    console.log(`Gelato Ops network not supported (${chainId})`);
     return;
   }
 
-  // loop over all launchpads
-  for (const launchpadAddress of LAUNCHPADS) {
+  // Init GelatoOpsSDK
+  const [signer] = await hre.ethers.getSigners();
+  const gelatoOps = new GelatoOpsSDK(chainId, signer);
 
-    // Estimate gas limit for our helloWorld call
-    const launchpad = new Contract(launchpadAddress, launchPadABI, hre.ethers.provider);
-    const gasLimit: BigNumber = await launchpad
-      .connect(GELATO_RELAY_TRANSIT) // Gelato relay transit will be our contract caller
-      .estimateGas.distribute();
+  // loop over all launchpads key values
+  for (const [launchpadName, launchpadAddress] of Object.entries(LAUNCHPADS)) {
 
-    // Estimate the fees to pay to the relayer for the given gas limit
-    const estimatedFees: BigNumber = await RelaySDK.getEstimatedFee(
-      chainId,
-      ETH,
-      gasLimit,
-      false // Set to true for high priority fees
-    );
+    // Prepare Task data to automate
+    const counter = new Contract(launchpadAddress, launchPadABI, signer);
+    const selector = counter.interface.getSighash("distribute()");
+    const execData = counter.interface.encodeFunctionData("distribute");
 
-    // Encode our function call
-    const data = launchpad.interface.encodeFunctionData("distribute");
-
-    // Send our tx to Gelato Relay
-    console.log(`Sending launchpad tx to Gelato Relay...`);
-    const relayTx = await RelaySDK.sendRelayTransaction(
-      chainId,
-      launchpadAddress, // Smart contract address
-      data,
-      ETH, // Payment token address
-      estimatedFees
-    );
-    console.log(`RelayTransaction Id: ${relayTx.taskId}`);
+    // Create task
+    console.log("Creating Task...");
+    const res: TaskReceipt = await gelatoOps.createTask({
+      execAddress: launchpadAddress,
+      execSelector: selector,
+      execAbi: JSON.stringify(launchPadABI),
+      execData,
+      name: `${launchpadName} Launchpad`,
+      interval: 3600, // Seconds
+    });
+    console.log(`Task created, taskId: ${res.taskId} (tx hash: ${res.transactionHash})`);
+    console.log(`> https://app.gelato.network/task/${res.taskId}?chainId=${chainId}`);
   }
 }
 

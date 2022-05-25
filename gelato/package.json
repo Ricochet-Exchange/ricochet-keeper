@@ -6,7 +6,7 @@
     "format": "prettier --write '*/**/*.*{js,json,md,ts}'",
     "format:check": "prettier --check '*/**/*.*{js,json,md,ts}'",
     "lint": "eslint -c .eslintrc.json --ext \"**/*.ts\" \"**/*.test.ts\"",
-    "tx-launchpad": "npx hardhat run scripts/launchpad.ts"
+    "launchpad": "npx hardhat run scripts/launchpad.ts"
   },
   "license": "ISC",
   "devDependencies": {
