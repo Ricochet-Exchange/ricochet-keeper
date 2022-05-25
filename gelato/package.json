@@ -1,0 +1,41 @@
+{
+  "name": "ricochet-keeper-gelato",
+  "version": "0.0.1",
+  "description": "Ricochet gelato config scripts",
+  "scripts": {
+    "format": "prettier --write '*/**/*.*{js,json,md,ts}'",
+    "format:check": "prettier --check '*/**/*.*{js,json,md,ts}'",
+    "lint": "eslint -c .eslintrc.json --ext \"**/*.ts\" \"**/*.test.ts\"",
+    "tx-launchpad": "npx hardhat run scripts/launchpad.ts"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@nomiclabs/hardhat-waffle": "2.0.1",
+    "@tsconfig/recommended": "1.0.1",
+    "@types/chai": "4.2.21",
+    "@types/mocha": "9.0.0",
+    "@types/node": "16.7.10",
+    "@typescript-eslint/eslint-plugin": "4.30.0",
+    "@typescript-eslint/parser": "4.30.0",
+    "chai": "4.3.4",
+    "dotenv": "10.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "ethereum-waffle": "3.4.0",
+    "ethers": "5.4.6",
+    "hardhat": "2.6.2",
+    "lint-staged": "11.1.2",
+    "prettier": "2.3.2",
+    "ts-node": "10.2.1",
+    "typescript": "4.4.2"
+  },
+  "lint-staged": {
+    "*.*{js,json,md,ts,yml,yaml}": "prettier --write",
+    "*.*{ts,js}": "eslint -c .eslintrc.json"
+  },
+  "dependencies": {
+    "@gelatonetwork/relay-sdk": "^0.4.0"
+  }
+}
