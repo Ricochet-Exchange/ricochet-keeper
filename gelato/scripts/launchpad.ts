@@ -30,17 +30,22 @@ async function main() {
 
     // Create task
     console.log("Creating Task...");
-    const res: TaskReceipt = await gelatoOps.createTask({
-      execAddress: launchpadAddress,
-      execSelector: selector,
-      execAbi: JSON.stringify(launchPadABI),
-      execData,
-      name: `${launchpadName} Launchpad`,
-      interval: 3600, // Seconds
-    });
-    console.log(`${launchpadAddress} task created, taskId: ${res.taskId} (tx hash: ${res.transactionHash})`);
-    console.log(`> https://app.gelato.network/task/${res.taskId}?chainId=${chainId}`);
-  }
+    
+    // Create try catch block to catch any errors
+    try {
+      const task: TaskReceipt = await gelatoOps.createTask({
+        execAddress: launchpadAddress,
+        execSelector: selector,
+        execAbi: JSON.stringify(launchPadABI),
+        execData: execData,
+        name: `${launchpadName} distribute`,
+        interval: 3600, // Seconds
+      });
+      console.log(`Task created, taskId: ${task.taskId})`);
+      console.log(`> https://app.gelato.network/task/${task.taskId}?chainId=${chainId}`);
+    } catch (error) {
+      console.log(`Error: ${launchpadName} launchpad might already exist.`);
+    }
 }
 
 main()
