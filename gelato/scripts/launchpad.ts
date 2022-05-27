@@ -46,6 +46,7 @@ async function main() {
     } catch (error) {
       console.log(`Error: ${launchpadName} launchpad might already exist.`);
     }
+  }
 }
 
 main()
