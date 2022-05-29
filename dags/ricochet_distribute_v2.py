@@ -52,27 +52,14 @@ done = BashOperator(
 
 for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
 
-    # Update input price
-    update_a = RicochetUpdatePriceOperator(
-        task_id="update_a_" + exchange_address,
+    # Update token prices
+    update_prices = RicochetUpdatePriceOperator(
+        task_id="update_" + exchange_address,
         web3_conn_id="infura",
         ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
         gas_multiplier=GAS_MULTIPLIER,
         gas=PriceConstants.GAS_DEFAULT,
         contract_address=exchange_address,
-        token_address=tokens[0],
-        nonce=current_nonce,
-        dag=dag
-    )
-
-    update_b = RicochetUpdatePriceOperator(
-        task_id="update_b_" + exchange_address,
-        web3_conn_id="infura",
-        ethereum_wallet=DISTRIBUTOR_WALLET_ADDRESS,
-        gas_multiplier=GAS_MULTIPLIER,
-        gas=PriceConstants.GAS_DEFAULT,
-        contract_address=exchange_address,
-        token_address=tokens[1],
         nonce=current_nonce + len(V2_EXCHANGE_ADDRESSES),
         dag=dag
     )
@@ -90,4 +77,4 @@ for exchange_address, tokens in V2_EXCHANGE_ADDRESSES.items():
     current_nonce += 1
 
 
-    done << distribute << update_a << update_b
+    done << distribute << update_prices
